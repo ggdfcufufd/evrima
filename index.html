@@ -116,6 +116,40 @@ body.inmenu .b,body.inmenu #js{display:none!important}
 #wm{position:fixed;inset:0;z-index:30;display:none;flex-direction:column;align-items:center;justify-content:center;background:rgba(5,9,7,.92);gap:8px}#wm.on{display:flex;animation:wmi .3s ease-out}@keyframes wmi{from{opacity:0;transform:scale(.96)}}
 #wmc{border:1px solid rgba(255,255,255,.2);box-shadow:0 0 40px #000}#wmi{color:#e8e2c8;text-align:center;font:13px system-ui;display:flex;flex-direction:column;gap:2px}#wmi b{font-weight:300;letter-spacing:.3em;text-transform:uppercase;font-size:14px}#wmi small{opacity:.55;font-size:10px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+/* Holographic status / mutations interface inspired by the supplied reference */
+#ov.tb{background:rgba(0,8,9,.88);backdrop-filter:blur(7px);padding:0;align-items:stretch}
+#ov.tb .tab{width:86vw;max-width:1500px;height:91vh;max-height:100%;margin:auto;padding:0;position:relative;border:2px solid #8befff;box-shadow:0 0 5px #8befff,inset 0 0 22px rgba(70,220,235,.08);background:rgba(0,8,9,.38)}
+#ov.tb .tabs{height:58px;flex:none;display:flex;gap:3px;padding:3px 4px 0;border:0;overflow:hidden}
+#ov.tb .tabs button{flex:1;min-width:0;height:54px;padding:8px 12px;border:2px solid #83eafa;color:#b9f8ff;opacity:1;background:rgba(0,0,0,.66);font-size:clamp(10px,1.35vw,19px);font-weight:300;letter-spacing:.12em;white-space:nowrap;box-shadow:0 0 4px rgba(104,237,255,.35)}
+#ov.tb .tabs button.a{background:linear-gradient(135deg,rgba(143,239,250,.95),rgba(96,204,220,.78));color:#071719;border-color:#a4f7ff;box-shadow:0 0 12px rgba(113,236,255,.45)}
+#ov.tb .body{flex:1;min-height:0;overflow:auto;padding:clamp(16px,3vw,42px);color:#b8f5f8}
+#ov.tb .body h2{color:#a8f4fb;font-size:clamp(18px,2vw,29px);font-weight:300;letter-spacing:.08em;border-bottom:1px solid rgba(170,244,250,.32);padding-bottom:10px}
+#ov.tb .kv{border-bottom:1px solid rgba(170,244,250,.16);color:#b7e8eb}
+#ov.tb .kv b,#ov.tb .pts b{color:#d3fcff}
+#ov.tb .nb i{border-color:rgba(137,237,246,.45)}
+#ov.tb .nb em,#ov.tb .pts small{color:#a9dce0}
+#ov.tb .tabback{height:48px;flex:none;border-top:1px solid rgba(145,235,245,.55);display:flex;align-items:center;padding-left:18px}
+#ov.tb .tabback button{height:46px;min-width:110px;padding:0 20px;border:1px solid #8cebf5;border-top:0;background:rgba(0,0,0,.6);color:#baf7fc;font:16px Bahnschrift,Arial,sans-serif;letter-spacing:.08em}
+#ov.tb .tabback button:active{background:#a5f4fb;color:#071719}
+#ov.tb .row2{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+#ov.tb .body.mutbody{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(390px,1.5fr);align-items:center;gap:24px}
+#ov.tb .mutbody .pts{grid-column:1;grid-row:1;margin:0 0 10px;font-size:17px}
+#ov.tb .mutbody .hw{grid-column:2;grid-row:1 / span 2;position:relative;width:min(100%,570px);height:280px!important;margin:0 auto;transform:scale(.98);background:radial-gradient(ellipse at 50% 50%,rgba(58,199,211,.08),transparent 65%)}
+#ov.tb .mutbody .hw:before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 570 280'%3E%3Cg fill='none' stroke='%237cecf5' stroke-width='5' opacity='.9'%3E%3Cpath d='M96 70 L201 195 L306 70 L411 195'/%3E%3Cpath d='M96 70 L201 195 M306 70 L411 195' stroke-width='2'/%3E%3C/g%3E%3Cg fill='%23071012' stroke='%237cecf5' stroke-width='3'%3E%3Cpath d='M25 42l17-10 17 10v20L42 72 25 62z M500 35l17-10 17 10v20l-17 10-17-10z M25 210l17-10 17 10v20l-17 10-17-10z M500 210l17-10 17 10v20l-17 10-17-10z'/%3E%3C/g%3E%3C/svg%3E");background-size:100% 100%;pointer-events:none}
+#ov.tb .mutbody .hx{width:104px;height:118px;background:#9bf5fc;filter:drop-shadow(0 0 8px rgba(112,240,255,.85));z-index:1}
+#ov.tb .mutbody .hx i{inset:3px;background:#061416;color:#bdfaff;font-size:11px}
+#ov.tb .mutbody .hx.own i{background:rgba(115,224,235,.38)}
+#ov.tb .mutbody .hx.s i{background:rgba(130,238,247,.8);color:#061416}
+#ov.tb .mutbody .dt,#ov.tb .mutbody>p:not(.pts){grid-column:1;grid-row:2;border:0;border-top:1px solid rgba(160,240,246,.35);background:transparent;color:#b8eef1;padding:18px 0}
+#ov.tb .mutbody .dt h4{color:#aef7fc;font-size:19px;font-weight:300;letter-spacing:.08em}
+#ov.tb .mutbody .dt button{background:rgba(110,220,232,.18);border:1px solid #8beaf3;color:#c7fbff}
+#ov.tb .mutbody .dt button:disabled{opacity:.35}
+#ov.tb .mutbody .ml{gap:5px}
+#ov.tb .mutbody .dt .mb{width:auto;background:rgba(0,0,0,.45);border:1px solid rgba(130,230,240,.5);color:#c4f6f8}
+#ov.tb .mutbody .g{color:#aaf4fb}#ov.tb .mutbody .r{color:#e7a6a0}
+@media(max-width:760px){#ov.tb .tab{width:94vw;height:94vh}#ov.tb .tabs{height:48px}#ov.tb .tabs button{height:44px;padding:5px 4px;font-size:9px;letter-spacing:.02em}#ov.tb .body.mutbody{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:14px}#ov.tb .mutbody .hw{width:100%;height:235px!important;transform:scale(.88);transform-origin:top center;margin-bottom:-25px}#ov.tb .mutbody .hx{transform:scale(.78);transform-origin:top left}#ov.tb .row2{grid-template-columns:1fr}#ov.tb .tabback{height:42px}}
+
 </style></head><body>
 <canvas id="c3"></canvas><canvas id="c"></canvas>
 <div id="js"><div id="kn"></div></div>
@@ -289,7 +323,7 @@ if(tabN==0){const sp=Math.round((p.k?100:115)*s.spd*(1-p.gr/100*.12)*m('spd')*(1
 b='<div class="row2"><div><h2>'+s.n+'</h2>'+[['Стадия',stg()],['Вес',Math.round(3+p.gr*p.gr*.012)+' кг'],['Возраст',Math.floor(p.age/60)+' мин'],['Вес = здоровье',fkg(p.hp)+' / '+fkg(mh)],['Скорость',sp],['Урон укуса',dm],['Броня',Math.round((m('arm')-1)*100)+'%'],['Способность',AB[p.s][0]+' · '+AB[p.s][1]+' с']].map(r=>'<div class="kv"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>').join('')+'</div><div>'+nb('Сытость',p.fd,'#d98a3d','')+nb('Вода',p.wt,'#3f9ad6','')+nb('Белки',p.n[0],'#c8607f','Ускоряют лечение')+nb('Липиды',p.n[1],'#c9b94e','Восстанавливают выносливость')+nb('Углеводы',p.n[2],'#6fb85a','Добавляют скорость')+'</div></div><div style="margin-top:14px">'+nb('Вес',100*p.hp/mh,'#c0463c',fkg(p.hp)+' / '+fkg(mh))+nb('Рост',p.gr,'#cfd8c0','Растёт, пока сыт и не мучает жажда')+'</div>'}
 else if(tabN==1){b=hexTab();if(0)b='<p class="pts">Очки мутаций: <b>'+p.pts+'</b> · занято слотов '+p.mu.length+' из 3<small>'+(p.got<3?'Следующее очко на '+[25,55,85][p.got]+'% роста':'Все очки получены')+'</small></p><div class="cards">'+M.map((x,i)=>{const own=p.mu.indexOf(i)>=0;return'<div class="mc'+(own?' own':'')+'"><h4>'+x[0]+'</h4>'+Object.keys(x[2]).map(k=>{const v=x[2][k],gd=(k=='tdec'||k=='hdec')?v<0:v>0;return'<div class="'+(gd?'g':'r')+'">'+(gd?'+ ':'− ')+ML[k]+' '+(v>0?'+':'−')+Math.round(Math.abs(v)*100)+'%</div>'}).join('')+(own?'<span class="ok">Приобретена</span>':'<button '+(p.pts>0?'':'disabled')+' onclick="take2('+i+')">Мутировать</button>')+'</div>'}).join('')+'</div>'}
 else if(tabN==3)b=plHtml2();else if(tabN==5)b=nestHtml();else if(tabN==4)b=skHtml();else b='<canvas id="mp" width="300" height="300"></canvas>';
-if(tabN==0)b+=safeHtml();ov.className='tb';ov.innerHTML='<div class="tab"><div class="tabs">'+TB.map((t,i)=>i==2||(i==5&&!NET)?'':'<button class="'+(i==tabN?'a':'')+'" onclick="tabN='+i+';tabUi()">'+t+(i==1&&p.pts>0||i==4&&p.sp>0?' ●':'')+'</button>').join('')+'<button class="x" onclick="toggleTab()">✕</button></div><div class="body">'+b+'</div></div>';
+if(tabN==0)b+=safeHtml();ov.className='tb';ov.innerHTML='<div class="tab"><div class="tabs">'+[[0,'STATUS REPORT'],[3,'GROUP'],[1,'MUTATIONS'],[5,'NEST']].filter(x=>x[0]!=5||NET).map(x=>'<button class="'+(x[0]==tabN?'a':'')+'" onclick="tabN='+x[0]+';tabUi()">'+x[1]+(x[0]==1&&p.pts>0?' ●':'')+'</button>').join('')+'</div><div class="body '+(tabN==1?'mutbody':'')+'">'+b+'</div><div class="tabback"><button onclick="toggleTab()">Back</button></div></div>';
 }
 const TH=[['#c9a45c','#e6e1d3','#2b2a24','#0b0b0a','Янтарь'],['#8aa66a','#e1e6d6','#242c20','#090b08','Мох'],['#b6473b','#eadcd8','#2e1a17','#0b0706','Кровь'],['#9fb0b8','#e0e6e8','#1f272b','#080a0b','Сталь']];
 let th=0,AC=TH[0][0],selM=-1;
@@ -336,7 +370,7 @@ if(t==5)tree(x,y);else if(t==6)rock(x,y);else if(t==7)bush(o);else if(t==8)carc(
 else if(t==9){const sub=o.ty==8&&o.dv&&!o.held,vis=!sub||sniffOn()||P.s==8;if(o.held)g.translate(0,-P.r*.8);if(o.held&&P.dv)g.globalAlpha=.45;if(sub)g.globalAlpha=.38;if(o.sp>0){g.save();g.globalAlpha=o.sp*.7;g.strokeStyle='#e1f5ff';g.lineWidth=2.5;const rr=o.r+(1-o.sp)*o.r*4.5;g.beginPath();g.ellipse(0,0,rr,rr*K,0,0,7);g.stroke();g.restore()}if(vis)dino(dAng(o),o.r,o.c,o.fl,o.ty,o.ea>0,dPh(o,x,y));g.globalAlpha=1;if(o.held){const by=-o.r*2.4-8;g.fillStyle='rgba(0,0,0,.6)';g.fillRect(-17,by,34,6);g.fillStyle='#4aa8e8';g.fillRect(-16,by+1,32*Math.max(0,o.ox)/100,4)}}else{if(o.dv)g.globalAlpha=.4;dino(o===P?o.a:dAng(o),o.r,S[o.s].c,o.hf,o.s,o.bt>0,dPh(o,x,y));g.globalAlpha=1}if(t==11)tag(o);if(t==9&&o.al)aTag(o);g.restore()})}
 const det=(i,can)=>{const x=M[i];return'<div class="dt"><h4>'+IC[i]+' '+x[0]+'</h4>'+Object.keys(x[2]).map(k=>{const v=x[2][k],gd=(k=='tdec'||k=='hdec')?v<0:v>0;return'<div class="'+(gd?'g':'r')+'">'+(gd?'+ ':'− ')+ML[k]+' '+(v>0?'+':'−')+Math.round(Math.abs(v)*100)+'%</div>'}).join('')+(M[i][3]||[]).map(t=>'<div class="g">✦ '+t+'</div>').join('')+(can?'<button '+(P.pts>0?'':'disabled')+' onclick="take3()">Мутировать слот '+(selS+1)+'</button>':'')+'</div>'};
 function take3(){if(selS<0||selM<0||P.pts<1||P.sl[selS]!=null||P.mu.indexOf(selM)>=0||!mAv(selM))return;P.sl[selS]=selM;P.mu.push(selM);P.pts--;P.hp=Math.min(maxhp(),P.hp+20*PSC());tabUi()}
-function hexTab(){const p=P,ps=[[0,0],[96,0],[48,83],[144,83]];
+function hexTab(){const p=P,ps=[[48,10],[258,10],[153,150],[363,150]];
 let h='<p class="pts">Очки мутаций: <b>'+p.pts+'</b><small>'+(p.got<4?'Следующий слот откроется на '+SL[p.got]+'% роста':'Все слоты открыты')+'</small></p><div class="hw">'+ps.map((q,i)=>{const mi=p.sl[i],lk=i>=p.got;return'<button class="hx'+(mi!=null?' own':'')+(i==selS?' s':'')+'" style="left:'+q[0]+'px;top:'+q[1]+'px" onclick="selS='+i+';selM='+(mi!=null?mi:-1)+';tabUi()"><i>'+(lk?'<span>🔒</span>'+SL[i]+'%':mi!=null?'<span>'+IC[mi]+'</span>'+M[mi][0]:'<span>＋</span>Свободно')+'</i></button>'}).join('')+'</div>';
 if(selS<0)h+='<p style="text-align:center;opacity:.6;font-size:13px">Выбери шестиугольник-слот</p>';
 else if(selS>=p.got)h+='<p class="dt">Слот откроется на '+SL[selS]+'% роста.</p>';
@@ -417,7 +451,7 @@ IC.push('🧬','👃','🦷');
 const MX={8:0,10:0},SEC=[10],mAv=i=>SEC.indexOf(i)<0&&(MX[i]==null||MX[i]===P.k||S[P.s].k==2),hasMu=i=>!!P&&P.mu.indexOf(i)>=0,hasPs=id=>!!P&&P.ps.indexOf(id)>=0;
 const RAD=[16,24,9,14,22,30,13,15,36,15,19,32,7,24,14,34,22];
 let TS=[],nests=[],NH=null,VF=1,OFF=0,TEAM='';
-const msg=t=>{TS.push({t,e:Date.now()});if(TS.length>3)TS.shift()};
+const msg=t=>{TS.push({t,e:Date.now()});if(TS.length>5)TS.shift()};
 // ---------- пассивные навыки ----------
 const PS=[
 {id:'hp',n:'Стойкость',i:'❤️',k:2,d:'Здоровье +12%',m:{hp:.12}},
@@ -549,7 +583,7 @@ if(sniffOn())sniffList(1500,0).forEach(t=>dot(t.x,t.y,t.cr?'#4ac8ff':t.c,2.6));
 npcs.forEach(n=>{if(n.al)dot(n.x,n.y,'#ffd75a',3)});rem.forEach(o=>{if(o.al&&TEAM&&o.tm==TEAM)dot(o.x,o.y,'#7fe08a',3)});nests.forEach(n=>{if(n.own)dot(n.x,n.y,'#d6a24a',3)});
 g.textAlign='right';g.font='12px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle='#e9e4cf';const wi={clear:dayL()>.4?'☀️':'🌙',cloud:'☁️',rain:'🌧️',fog:'🌫️',storm:'⛈️'}[wx.ty];g.fillText(clock()+' '+wi,W-10,124);g.fillStyle='rgba(233,228,207,.7)';g.font='11px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillText(WN[wx.ty],W-10,138);
 g.textAlign='left';g.font='11px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle='#e9e4cf';const y0=154+p.mu.length*14+6;p.ps.forEach((id,k)=>g.fillText('◆ '+PSX[id].n,12,y0+k*14));
-const tn=Date.now();TS=TS.filter(t=>tn-t.e<6000);g.textAlign='center';g.font='bold 13px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle=AC;TS.forEach((t,i)=>g.fillText(t.t,W/2,H-205-(TS.length-1-i)*16));g.textAlign='left';
+const tn=Date.now();TS=TS.filter(t=>tn-t.e<6000);g.textAlign='left';g.font='bold 13px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle=AC;TS.forEach((t,i)=>{const a=tn-t.e;g.globalAlpha=Math.min(1,(6000-a)/1000);g.fillStyle='rgba(0,0,0,.6)';g.fillText(t.t,15,H*.4+i*18+1);g.fillStyle=AC;g.fillText(t.t,14,H*.4+i*18)});g.globalAlpha=1;
 [['a2',0],['a3',1]].forEach(([id,i])=>{const e=$(id),un=p.gr>=ASL[i],ax=p.xs[i]&&AXD[p.xs[i]],tx=!ax?'＋':p.xcd[i]>0?String(Math.ceil(p.xcd[i])):ax.s,d=un?'flex':'none';if(e.style.display!=d)e.style.display=d;if(e.textContent!=tx)e.textContent=tx;e.style.opacity=ax&&p.xcd[i]>0?.5:1});
 const ng=$('ng'),nt2=NH&&NH.e.length?(NET?'':'ВЫСИДЕТЬ'):'ГНЕЗДО',dn=nt2?'flex':'none';if(ng.style.display!=dn)ng.style.display=dn;if(ng.textContent!=nt2)ng.textContent=nt2;ng.style.opacity=NH||p.lay<=0&&p.gr>=30?1:.5}
 function plHtml2(){let h=plHtml();
@@ -724,13 +758,13 @@ function qDone(q){q.d=1;EV.qd++;const pts=Math.round((120+q.n*(q.k=='croc'?150:q
 // --- события мира ---
 function spawnPos(min,max,tiles){for(let k=0;k<60;k++){const a=R()*TAU,d=min+R()*(max-min),x=P.x+Math.cos(a)*d,y=P.y+Math.sin(a)*d;if(x<0||y<0||x>=WS||y>=WS)continue;if(tiles.indexOf(tile(x,y))>=0)return[x,y]}return null}
 function evCap(){let c=0;for(let i=npcs.length-1;i>=0;i--)if(npcs[i].ev){c++;if(c>26)npcs.splice(i,1)}}
-function banner(t){EV.ban={t,e:Date.now()};msg(t)}
+function banner(t){EV.ban={t,e:Date.now()}}
 const EVS=[
 {w:3,f:()=>{const c=spawnPos(450,800,[2,3,5]);if(!c)return 0;for(let i=0;i<9;i++){const n=mkNpc('h',0);let x=c[0]+(R()-.5)*160,y=c[1]+(R()-.5)*160;if([2,3,5].indexOf(tile(x,y))<0){x=c[0];y=c[1]}n.x=x;n.y=y;n.ev=1;npcs.push(n)}evCap();banner('🦕 Мимо проходит стадо травоядных!');return 1}},
 {w:2,f:()=>{EV.dry=60;banner('🏜️ Засуха: жажда сильнее целую минуту');return 1}},
 {w:2,f:()=>{bushes.forEach(b=>{if(Math.hypot(b.x-P.x,b.y-P.y)<2200){b.l=60;b.t=0}});for(let i=0;i<2;i++){const c=spawnPos(300,600,[2,3,5]);if(c)cars.push({x:c[0],y:c[1],l:220,t:100,r:18,q:[.45,.4,.15],ty:0})}banner('🍃 Щедрый сезон: кусты и туши обновились');return 1}},
 {w:2,f:()=>{if(P.s==8)return 0;let a=0;for(let i=0,n2=3+DIF().pack*2;i<n2;i++){const c=spawnPos(500,1400,[0]);if(!c)continue;const n=mkCroc();n.x=c[0];n.y=c[1];n.ev=1;npcs.push(n);a++}if(!a)return 0;evCap();banner('🌊 Вода неспокойна: в реках стало больше дейнозухов');return 1}},
-{w:3,f:()=>{if(!DIF().pack)return 0;let a=0;for(let i=0,n2=2+DIF().pack;i<n2;i++){const c=spawnPos(450,650,[2,3,5]);if(!c)continue;const n=mkNpc('p',0);n.x=c[0];n.y=c[1];n.ch=1;n.hg=20;n.ev=1;npcs.push(n);a++}if(!a)return 0;evCap();banner('🐾 Стая хищников вышла на твой след!');return 1}}];
+{w:3,f:()=>{if(!DIF().pack)return 0;let a=0;for(let i=0,n2=2+DIF().pack;i<n2;i++){const c=spawnPos(450,650,[2,3,5]);if(!c)continue;const n=mkNpc('p',0);n.x=c[0];n.y=c[1];n.ch=1;n.hg=20;n.ev=1;npcs.push(n);a++}if(!a)return 0;evCap();msg('🐾 Стая хищников вышла на твой след!');return 1}}];
 function fireEvent(){const pl=EVS.slice();let tot=pl.reduce((s,e)=>s+e.w,0);for(let t=0;t<6&&pl.length;t++){let r=R()*tot,i=0;for(;i<pl.length-1&&r>=pl[i].w;i++)r-=pl[i].w;const e=pl[i];if(e.f())return;tot-=e.w;pl.splice(i,1)}}
 
 function extUpd(dt){if(!P||P.dead)return;
@@ -875,8 +909,30 @@ const _pickSp=pickSp;pickSp=function(){_pickSp();ov.className='mn mt';MS=2};
 const _ctrl=ctrl;ctrl=function(){_ctrl();ov.className='mn'};
 const _mpMenu=mpMenu;mpMenu=function(){_mpMenu();ov.className='mn'};
 const _st2=start;start=function(si){MS=0;_st2(si)};
-let _im=null;const _draw=draw;draw=function(){const m=!!MS;if(m!==_im){_im=m;document.body.classList.toggle('inmenu',m)}if(MS){g.clearRect(0,0,W,H);G3.menu();return}_draw()};
+let _im=null;const _draw=draw;draw=function(){const m=!!MS;if(m!==_im){_im=m;document.body.classList.toggle('inmenu',m)}const hv=MS==1;if(hv!==_hv){_hv=hv;const c3=$('c3');if(c3)c3.style.visibility=hv?'hidden':''}if(MS==1){drawDNA();return}if(MS){g.clearRect(0,0,W,H);G3.menu();return}_draw()};var _hv=false;
 function menuBg(){const t=TH[th],gr=g.createRadialGradient(W*.15,H*.6,0,W*.15,H*.6,Math.max(W,H)*.9);gr.addColorStop(0,t[2]);gr.addColorStop(.7,t[3]);gr.addColorStop(1,t[3]);g.fillStyle=gr;g.fillRect(0,0,W,H)}
+// ====== ГЛАВНОЕ МЕНЮ: чёрный фон и анимированная ДНК выбранного цвета ======
+function drawDNA(){g.fillStyle='#000';g.fillRect(0,0,W,H);
+ const col=TH[th][0],wide=W>H,cx=wide?W*.68:W*.5,cy=H*.5,L=Math.hypot(W,H),A=Math.min(W,H)*.15*(wide?1:1.1),step=16,n=Math.ceil(L/step)+2,t=TM,nodes=[];
+ g.save();g.translate(cx,cy);g.rotate(.32);g.lineCap='round';
+ for(let i=0;i<n;i++){const y=-L/2+i*step,ph=i*.3+t*1.1,s=Math.sin(ph),z=Math.cos(ph);nodes.push({y,x1:s*A,x2:-s*A,z})}
+ g.strokeStyle=col;
+ // перекладины (пары оснований)
+ for(let i=0;i<n;i+=2){const o=nodes[i],d=Math.abs(o.z);g.globalAlpha=.12+.3*(1-d)*0+.22*(1-d)+.08;g.lineWidth=2;g.beginPath();g.moveTo(o.x1,o.y);g.lineTo(o.x2,o.y);g.stroke()}
+ // нити: сначала дальние сегменты, потом ближние
+ const seg=(k,sign)=>{for(let i=1;i<n;i++){const a=nodes[i-1],b=nodes[i],z=(sign*(a.z+b.z))/2;if(k==(z>=0)){g.globalAlpha=.25+.55*(z+1)/2;g.lineWidth=2+2*(z+1)/2;g.beginPath();g.moveTo(sign>0?a.x1:a.x2,a.y);g.lineTo(sign>0?b.x1:b.x2,b.y);g.stroke()}}};
+ seg(false,1);seg(false,-1);
+ g.fillStyle=col;
+ for(let i=0;i<n;i+=2){const o=nodes[i];[[o.x1,o.z],[o.x2,-o.z]].forEach(p=>{if(p[1]<0){g.globalAlpha=.3;g.beginPath();g.arc(p[0],o.y,3,0,7);g.fill()}})}
+ seg(true,1);seg(true,-1);
+ g.shadowColor=col;g.shadowBlur=14;
+ for(let i=0;i<n;i+=2){const o=nodes[i];[[o.x1,o.z],[o.x2,-o.z]].forEach(p=>{if(p[1]>=0){g.globalAlpha=.55+.45*p[1];g.beginPath();g.arc(p[0],o.y,4+3*p[1],0,7);g.fill()}})}
+ g.restore();g.globalAlpha=1;g.shadowBlur=0}
+function drawMenu(){if(MS==2){drawMenuOld();return}drawDNA()}
+// --- свой цвет интерфейса ---
+const hx2=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)),mxH=(a,b,p)=>{const A=hx2(a),B=hx2(b);return'#'+A.map((v,i)=>Math.round(v*p+B[i]*(1-p)).toString(16).padStart(2,'0')).join('')};
+function customTheme(h){const c=hx2(h),lum=(.299*c[0]+.587*c[1]+.114*c[2])/255;if(lum<.35)h=mxH('#ffffff',h,(.35-lum)/(1-lum));return[h,mxH(h,'#e9e9e9',.14),mxH(h,'#000000',.17),mxH(h,'#000000',.04),'Свой']}
+function setCustomColor(h){if(!/^#[0-9a-f]{6}$/i.test(h))return;TH[4]=customTheme(h.toLowerCase());try{localStorage.setItem('isle2d_themec',h.toLowerCase())}catch(e){}applyTheme(4)}
 function newDuel(){const pr=[0,1,4,5,9,10,11,12,8];const A=pr[R()*pr.length|0];let D;do{D=R()*17|0}while(D==A);
  Object.assign(FT,{A,D,t:0,hA:100,hD:100,end:0,et:0,cyc:-1,f1:0,f2:0,flA:0,flD:0,pA:0,pD:0,pa:[],lt:TM,ax:0,ay:0,dx:0,dy:0,win:-1})}
 const tri=(tc,s,up,dn_)=>{const u=tc-s;if(u<0||u>up+dn_)return 0;return u<up?u/up:1-(u-up)/dn_};
@@ -886,7 +942,7 @@ function hitFx(side){const A=FT.A,D=FT.D;
  else{FT.hA-=Math.round(17*S[D].dmg/S[A].hp*(.8+R()*.5));FT.flA=.14;spark(FT.ax,FT.ay-RAD[A]*2)}
  if(FT.hA<=0||FT.hD<=0){FT.end=1;FT.et=0;FT.win=FT.hA<=0?D:A}}
 function spark(x,y){for(let i=0;i<16;i++){const an=R()*TAU,v=120+R()*260;FT.pa.push({x,y,vx:Math.cos(an)*v,vy:Math.sin(an)*v-80,l:.5+R()*.4,k:0})}for(let i=0;i<4;i++)FT.pa.push({x:x+(R()-.5)*30,y:y+40+(R()-.5)*10,vx:(R()-.5)*60,vy:-20,l:.9,k:1,r:6+R()*8})}
-function drawMenu(){menuBg();if(MS==2){drawPreview();return}
+function drawMenuOld(){menuBg();if(MS==2){drawPreview();return}
 if(FT.A==null)newDuel();
 const dt=Math.min(.05,Math.max(0,TM-FT.lt));FT.lt=TM;FT.t+=dt;const CYC=3.4;
 if(!FT.end){const cy=Math.floor(FT.t/CYC);if(cy!=FT.cyc){FT.cyc=cy;FT.f1=0;FT.f2=0}const tc=FT.t%CYC;if(tc>=1&&!FT.f1){FT.f1=1;hitFx(1)}if(tc>=2.3&&!FT.f2&&!FT.end){FT.f2=1;hitFx(2)}}else{FT.et+=dt;if(FT.et>4.2)newDuel()}
@@ -1113,6 +1169,7 @@ const isAdm=()=>!!(NET&&FBA.v&&SRV.owner&&ACC.user&&ACC.user.uid==SRV.owner);
 function onAdm(m){const d=m.data;if(!d||!SRV.owner||m.peer!==SRV.owner||!P)return;
  if(d.k=='ann'){const t=String(d.t||'').slice(0,80);banner('📢 '+t);feed('📢 '+t)}
  else if(d.k=='kick'){if(d.to===me()){leaveNet();paused=true;menu();setTimeout(()=>alert('Вас исключил администратор сервера'),50)}}
+ else if(d.k=='car'){if(d.to==='*'||d.to===me())admCarFor(d.ty|0,d.g,d.to==='*')}
  else if(d.k=='heal'){P.hp=maxhp();P.fd=P.wt=100;P.st=160*m_('stm');msg('💚 Администратор вылечил всех')}
  else if(d.k=='time'||d.k=='wx'||d.k=='gr'||d.k=='feed'||d.k=='nut'){if(!m.isMe)admApply(d)}
  else if(d.k=='ai'){SRV.ai=d.v?1:0;if(!SRV.ai)npcs=npcs.filter(n=>!(n.k=='p'&&!n.kin&&!n.nc&&!n.held&&P.lt!==n&&P.carry!==n));else{for(let i=0,k=Math.round(66*DIF().pr*SC());i<k;i++)npcs.push(mkNpc('p',1));for(let i=0,k=Math.round(DIF().crocs*SC());i<k;i++)npcs.push(mkCroc())}
@@ -1126,7 +1183,7 @@ function admHtml(){let pl='';rem.forEach((o,k)=>{pl+='<div class="sr"><b>'+esc(o
  let tg=so('*','Все игроки',ADM.tg=='*')+so('me','Только я',ADM.tg=='me');rem.forEach((o,k)=>{tg+=so(k,o.n+' · '+(S[o.s]?S[o.s].n:''),ADM.tg==k)});
  return'<div class="dt"><h4>⚙ Админ-панель</h4><p>'+esc(SRV.name)+' · '+sizeName(N)+' · ИИ-враги: '+(SRV.ai?'вкл':'выкл')+' · день '+DAYD+' с · ночь '+NIGHTD+' с</p>'
  +'<label>Объявление всем<input id="am" maxlength="80"></label><button onclick="admAnn()">Отправить</button>'
- +'<div class="ml"><button class="mb" onclick="admAi()">ИИ-враги: '+(SRV.ai?'выключить':'включить')+'</button><button class="mb" onclick="admEmit({k:\'heal\'})">Вылечить всех</button></div>'
+ +'<div class="ml"><button class="mb" onclick="admAi()">ИИ-враги: '+(SRV.ai?'выключить':'включить')+'</button></div>'
  +'<h4 style="margin-top:14px">Время суток · сейчас '+clock()+' ('+todName()+')</h4><div class="ml">'+[['Рассвет',.25],['Утро',.32],['Полдень',.5],['Закат',.74],['Ночь',0]].map(x=>B(x[0],'admTime('+x[1]+')')).join('')+'</div>'
  +'<h4 style="margin-top:14px">Погода'+(wx.ov?' · закреплена':' · авто')+'</h4><div class="ml">'+B('Авто','admWx(\'\')',!wx.ov)+WXT.map(t=>B(WN[t],'admWx(\''+t+'\')',wx.ov==t)).join('')+'</div>'
  +'<h4 style="margin-top:14px">Туша динозавра</h4><div class="ml"><select onchange="ADM.sp=+this.value">'+S.map((x,i)=>so(i,x.n,ADM.sp==i)).join('')+'</select><label>Выросший на <input type="number" min="0" max="100" step="5" value="'+ADM.g+'" style="width:70px" onchange="ADM.g=Math.max(0,Math.min(100,+this.value||0))"> %</label><button class="mb" onclick="admCar()">Создать тушу рядом</button></div>'
@@ -1134,7 +1191,7 @@ function admHtml(){let pl='';rem.forEach((o,k)=>{pl+='<div class="sr"><b>'+esc(o
  +'<div class="ml"><label>Вырастить на <input type="number" min="1" max="100" value="'+ADM.gv+'" style="width:70px" onchange="ADM.gv=Math.max(1,Math.min(100,+this.value||1))"> %</label><button class="mb" onclick="admAct(\'gr\')">Вырастить</button><button class="mb" onclick="admAct(\'feed\')">Накормить и напоить</button></div>'
  +'<div class="ml"><select onchange="ADM.ni=+this.value">'+so(0,'Белки',ADM.ni==0)+so(1,'Липиды',ADM.ni==1)+so(2,'Углеводы',ADM.ni==2)+so(3,'Все нутриенты',ADM.ni==3)+'</select><label>+<input type="number" min="1" max="100" value="'+ADM.nv+'" style="width:70px" onchange="ADM.nv=Math.max(1,Math.min(100,+this.value||1))"></label><button class="mb" onclick="admAct(\'nut\')">Добавить нутриенты</button></div>'
  +'<h4 style="margin-top:14px">Игроки</h4>'+(pl||'<p style="opacity:.6">Других игроков нет</p>')
- +'<h4 style="margin-top:14px">Для себя</h4><div class="ml"><button class="mb" onclick="admSelf(\'gr\')">+20% роста</button><button class="mb" onclick="admSelf(\'hp\')">Вылечить</button><button class="mb" onclick="admSelf(\'car\')">Туша рядом</button></div></div>'}
+ +'</div>'}
 // применить команду у себя (сам администратор и получатели): время, погода, рост, корм, нутриенты
 function admApply(d){if(!P)return;
  if(d.k=='time'){const o=+d.off;if(isFinite(o))TOFF=o;return}
@@ -1148,10 +1205,13 @@ function admAct(k){if(!isAdm()||!P)return;const d={k,to:ADM.tg=='me'?me():ADM.tg
 function admTime(ph){if(!isAdm())return;const T=DAYD+NIGHTD,f=DAYD/T;let u;if(ph>=.25&&ph<.75)u=(ph-.25)/.5*f;else{const q=((ph-.75)%1+1)%1;u=f+q/.5*(1-f)}
  const x=((u-.75)%1+1)%1;TOFF=(((x*T-(GT()%T))%T)+T)%T;SRV.toff=TOFF;try{srvRef(SRV.code).update({toff:TOFF})}catch(e){}admEmit({k:'time',off:TOFF});msg('🕒 Время изменено: '+clock());if(tabOn)tabUi()}
 function admWx(t){if(!isAdm())return;wx.ov=WXT.indexOf(t)>=0?t:null;SRV.wx=wx.ov||'';try{srvRef(SRV.code).update({wx:SRV.wx})}catch(e){}admEmit({k:'wx',ty:SRV.wx});if(tabOn)tabUi()}
+function admCarFor(ty,gp,all){if(!P||P.dead||!S[ty])return;const g=Math.max(0,Math.min(100,+gp||0))/100,r=(8+g*100*.14)*S[ty].sz*1.1,l=(S[ty].k==0?220:110)*(.2+.8*g);let x=P.x,y=P.y;
+ for(let q=0;q<6;q++){const a=P.a+q*1.05,dd=P.r+r+30,cx=P.x+Math.cos(a)*dd,cy=P.y+Math.sin(a)*dd;if(tile(cx,cy)>=2){x=cx;y=cy;break}}
+ cars.push({x,y,l,l0:l,t:240,r,q:(NQ[ty]||[.45,.4,.15]).slice(),ty});msg('🦖 Администратор создал тушу: '+S[ty].n);if(all)feed('🦖 Администратор создал тушу всем: '+S[ty].n)}
 function admCar(){if(!isAdm()||!P)return;const ty=ADM.sp,g=ADM.g/100,r=(8+ADM.g*.14)*S[ty].sz*1.1,l=(S[ty].k==0?220:110)*(.2+.8*g);let x=P.x,y=P.y;
  for(let q=0;q<6;q++){const a=P.a+q*1.05,dd=P.r+r+30,cx=P.x+Math.cos(a)*dd,cy=P.y+Math.sin(a)*dd;if(tile(cx,cy)>=2){x=cx;y=cy;break}}
  cars.push({x,y,l,l0:l,t:240,r,q:(NQ[ty]||[.45,.4,.15]).slice(),ty});msg('🦖 Туша: '+S[ty].n+' · '+ADM.g+'% роста')}
-function srvManage(code){if(!FBA.v)return;ADMGO=1;srvJoin(code)}
+function srvManage(code){srvMgr(code)}
 const _startAG=start;start=function(si){_startAG(si);if(ADMGO){ADMGO=0;if(isAdm()){tabN=3;toggleTab()}}};
 function admEmit(d){if(NET&&isAdm())NET.emit('adm',d).catch(()=>{})}
 function admAnn(){const t=($('am')&&$('am').value.trim())||'';if(t)admEmit({k:'ann',t});if($('am'))$('am').value=''}
@@ -1231,7 +1291,7 @@ async function nestJoin(){const st=$('ncs'),code=($('nci').value||'').toLowerCas
   NI={team:String(v.team).slice(0,12),name:String(v.name||'?').slice(0,14),t:0};msg('🥚 Яйцо высиживается: '+HATCH+' с');tabUi()}catch(e){st.textContent='Не удалось проверить код: '+(e&&(e.code||e.message)||'')}}
 function nestCancel(){NI=null;if(tabOn)tabUi()}
 function nestTick(dt){if(!NI)return;if(!NET||!P||P.dead){NI=null;return}NI.t+=dt;if(tabOn&&tabN==5&&((NI.t*2|0)!=((NI.t-dt)*2|0)))tabUi();
- if(NI.t>=HATCH){const n=NI;NI=null;NT=n.team;TEAM=NT;lsS(NTK,NT);nestPublish();msg('🐣 Ты вылупился! Теперь ты навсегда союзник команды «'+NT+'»');banner('🐣 Вылупился! Навсегда союзник гнезда '+n.name);if(NET)NET.emit('feed',{t:NICK+' вылупился и стал союзником гнезда '+n.name}).catch(()=>{});if(tabOn)tabUi()}}
+ if(NI.t>=HATCH){const n=NI;NI=null;NT=n.team;TEAM=NT;lsS(NTK,NT);nestPublish();msg('🐣 Ты вылупился! Теперь ты навсегда союзник команды «'+NT+'»');msg('🐣 Вылупился! Навсегда союзник гнезда '+n.name);if(NET)NET.emit('feed',{t:NICK+' вылупился и стал союзником гнезда '+n.name}).catch(()=>{});if(tabOn)tabUi()}}
 const _upN=upX;upX=function(dt){_upN(dt);nestTick(dt)};
 // смена команды вручную запрещена тем, кто вылупился в гнезде
 const _stT=setTeam;setTeam=function(){if(NT){msg('Ты навсегда в команде гнезда «'+NT+'»');if(tabOn)tabUi();return}_stT()};
@@ -1294,6 +1354,34 @@ async function srvDelAsk(code){if(!(await isFbAdmin()))return;let v=null;try{v=(
  if(!v||!v.delreq){mpMenu();return}ov.className='mn';
  ov.innerHTML='<div class="det" style="width:100%"><h2>! Запрос на удаление</h2><p>Сервер «'+esc(v.name||code)+'»'+(v.on?' · владелец '+esc(v.on):'')+'. '+esc(v.delreq.on||'Владелец')+' просит удалить этот сервер.</p><p id="mps" class="tg"></p><button class="go" onclick="srvDelDecide(\''+code+'\',1)">Подтвердить удаление</button><button class="bk" onclick="srvDelDecide(\''+code+'\',0)">Отклонить запрос</button><button class="bk" onclick="mpMenu()">Назад</button></div>'}
 async function srvDelDecide(code,ok){if(!(await isFbAdmin()))return;try{if(ok)await srvRef(code).remove();else await srvRef(code+'/delreq').remove()}catch(e){const t=$('mps');if(t)t.textContent='Не удалось: '+(e&&(e.code||e.message)||'');return}mpMenu()}
+// ====== УПРАВЛЕНИЕ СЕРВЕРОМ ИЗ СПИСКА (без захода на сервер) ======
+// Настройки пишутся в servers/<код>, команды игрокам — в rooms/<код>/adm, как это делает админ-панель внутри игры.
+var MG=null,MGC={sp:0,g:100,to:'*'};
+function mgCar(){mgCmd({k:'car',to:MGC.to,ty:MGC.sp,g:MGC.g},'Туша создана у '+(MGC.to=='*'?'всех игроков':'выбранного игрока'))}
+async function srvMgr(code){if(!(await isFbAdmin()))return;ov.className='mn';let v=null;try{v=(await srvRef(code).once('value')).val()}catch(e){}
+ if(!v||v.owner!==ACC.user.uid){mpMenu();return}MG={code,v};mgDraw('')}
+async function mgDraw(note){if(!MG)return;const{code,v}=MG,dd=clT(v.dd),nn=clT(v.nn);let pl='',ps=[];
+ try{const sn=await db_().ref('rooms/'+code+'/players').once('value');sn.forEach(c=>{const o=c.val()||{};ps.push([c.key,o.n||'Игрок']);pl+='<div class="sr"><b>'+esc(o.n||'Игрок')+'</b><small>'+esc(S[o.s]?S[o.s].n:'')+'</small>'+(c.key==ACC.user.uid?'':'<button class="dl" onclick="mgKick(\''+c.key+'\')">Кик</button>')+'</div>'})}catch(e){}
+ const B=(t,f,on)=>'<button class="mb'+(on?' s':'')+'" onclick="'+f+'">'+t+'</button>';
+ ov.className='mn';
+ ov.innerHTML='<div class="det" style="width:100%;overflow:auto;max-height:100%"><h2>⚙ '+esc(v.name||code)+'</h2><div class="dt"><p>'+sizeName(v.size|0||885)+' · ИИ-враги: '+(v.ai?'вкл':'выкл')+' · день '+dd+' с · ночь '+nn+' с</p><p id="mgs" class="tg">'+esc(note||'')+'</p>'
+ +'<label>Объявление всем<input id="mga" maxlength="80"></label><button onclick="mgAnn()">Отправить</button>'
+ +'<div class="ml"><button class="mb" onclick="mgAi()">ИИ-враги: '+(v.ai?'выключить':'включить')+'</button><button class="mb" onclick="mgCmd({k:\'feed\',to:\'*\'},\'Все накормлены\')">Накормить всех</button></div>'
+ +'<h4 style="margin-top:14px">Время суток</h4><div class="ml">'+[['Рассвет',.25],['Утро',.32],['Полдень',.5],['Закат',.74],['Ночь',0]].map(x=>B(x[0],'mgTime('+x[1]+')')).join('')+'</div>'
+ +'<h4 style="margin-top:14px">Погода'+(v.wx?' · закреплена':' · авто')+'</h4><div class="ml">'+B('Авто','mgWx(\'\')',!v.wx)+WXT.map(t=>B(WN[t],'mgWx(\''+t+'\')',v.wx==t)).join('')+'</div>'
+ +'<h4 style="margin-top:14px">Туша динозавра</h4><div class="ml"><select onchange="MGC.sp=+this.value">'+S.map((x,i)=>'<option value="'+i+'"'+(MGC.sp==i?' selected':'')+'>'+esc(x.n)+'</option>').join('')+'</select><label>Выросший на <input type="number" min="0" max="100" step="5" value="'+MGC.g+'" style="width:70px" onchange="MGC.g=Math.max(0,Math.min(100,+this.value||0))"> %</label></div>'
+ +'<div class="ml"><label>Кому <select onchange="MGC.to=this.value"><option value="*"'+(MGC.to=='*'?' selected':'')+'>Всем игрокам</option>'+ps.map(p=>'<option value="'+esc(p[0])+'"'+(MGC.to==p[0]?' selected':'')+'>'+esc(p[1])+'</option>').join('')+'</select></label><button class="mb" onclick="mgCar()">Заспавнить тушу</button></div>'
+ +'<h4 style="margin-top:14px">Игроки на сервере</h4>'+(pl||'<p style="opacity:.6">Сейчас на сервере никого нет</p>')+'</div>'
+ +'<button class="bk" onclick="mgDraw(\'\')">Обновить</button><button class="bk" onclick="MG=null;mpMenu()">Назад к серверам</button></div>'}
+function mgNote(t){const e=$('mgs');if(e)e.textContent=t}
+async function mgEmit(d){const r=db_().ref('rooms/'+MG.code+'/adm').push();setTimeout(()=>r.remove().catch(()=>{}),12000);await r.set({k:'adm',u:ACC.user.uid,d})}
+async function mgCmd(d,ok){try{await mgEmit(d);mgNote(ok||'Отправлено')}catch(e){mgNote('Не удалось: '+(e&&(e.code||e.message)||''))}}
+function mgAnn(){const t=($('mga')&&$('mga').value.trim())||'';if(t)mgCmd({k:'ann',t},'Объявление отправлено')}
+async function mgAi(){const v=MG.v.ai?0:1;try{await srvRef(MG.code).update({ai:v});MG.v.ai=v;await mgEmit({k:'ai',v});mgDraw('ИИ-враги: '+(v?'включены':'выключены'))}catch(e){mgNote('Не удалось: '+(e&&(e.code||e.message)||''))}}
+async function mgTime(ph){const dd=clT(MG.v.dd),nn=clT(MG.v.nn),T=dd+nn,f=dd/T;let u;if(ph>=.25&&ph<.75)u=(ph-.25)/.5*f;else{const q=((ph-.75)%1+1)%1;u=f+q/.5*(1-f)}
+ const x=((u-.75)%1+1)%1,off=(((x*T-(GT()%T))%T)+T)%T;try{await srvRef(MG.code).update({toff:off});MG.v.toff=off;await mgEmit({k:'time',off});mgNote('Время изменено')}catch(e){mgNote('Не удалось: '+(e&&(e.code||e.message)||''))}}
+async function mgWx(t){const w=WXT.indexOf(t)>=0?t:'';try{await srvRef(MG.code).update({wx:w});MG.v.wx=w;await mgEmit({k:'wx',ty:w});mgDraw('Погода: '+(w?WN[w]:'авто'))}catch(e){mgNote('Не удалось: '+(e&&(e.code||e.message)||''))}}
+function mgKick(k){if(confirm('Исключить игрока?'))mgCmd({k:'kick',to:k},'Игрок исключён')}
 {const _mn=menu;menu=function(){_mn();if(!ACC.user)return;isFbAdmin().then(ad=>{const n=ov.querySelector('nav');if(ad&&n&&ov.querySelector('.ttl')&&!n.querySelector('.tl')){const b=document.createElement('button');b.className='tl';b.textContent='Tools';b.onclick=()=>toolsMenu();n.appendChild(b)}})}}
 // админ нажал «Перезагрузка»: меняем метку servers/<код>/rs, все игроки сервера её видят
 async function srvRestart(code){if(!await isFbAdmin())return;if(!confirm('Перезагрузить сервер? Все игроки будут сохранены и выйдут в течение 5 секунд, ИИ выключится.'))return;const st=$('mps');
@@ -1851,6 +1939,7 @@ const free=k=>!Object.keys(BIND).some(a=>BIND[a].indexOf(k)>=0);
 addEventListener('keydown',e=>{if(e.target.tagName=='INPUT'||e.repeat)return;if(e.code=='KeyM'&&free('KeyM'))toggle();else if(e.code=='KeyH'&&free('KeyH'))call();else if(e.code=='Escape'&&open)toggle()});
 $('evm').onclick=toggle;$('evc').onclick=call;wm.onclick=()=>{if(open)toggle()};
 setInterval(()=>{bx.style.display=P&&!P.dead&&!MS?'flex':'none'},400)})();
+try{const c=localStorage.getItem('isle2d_themec');if(/^#[0-9a-f]{6}$/i.test(c||''))TH[4]=customTheme(c)}catch(e){}
 let th0=0;try{th0=+localStorage.getItem('isle2d_theme')||0}catch(e){}if(!TH[th0])th0=0;
 accInit();applyTheme(th0);menu();requestAnimationFrame(loop);
 
@@ -1859,7 +1948,7 @@ function setVol(v){try{localStorage.setItem('isle2d_vol',String(v/100))}catch(e)
 function settings(){ov.className='mn mt';MS=1;const v=Math.round(VOLM()*100);
 ov.innerHTML='<div class="det" style="width:100%;overflow:auto;max-height:100%"><h2>Настройки</h2>'
 +'<div class="dt"><h4>Звук</h4><div class="kv"><span>Громкость</span><b id="vl">'+v+'%</b></div><input type="range" min="0" max="100" value="'+v+'" style="width:100%" oninput="setVol(this.value);document.getElementById(\'vl\').textContent=this.value+\'%\'"></div>'
-+'<div class="dt"><h4>Цвет интерфейса</h4><div class="sw">'+TH.map((x,i)=>'<button style="background:'+x[0]+'" class="'+(i==th?'a':'')+'" title="'+x[4]+'" onclick="applyTheme('+i+');settings()"></button>').join('')+'</div></div>'
++'<div class="dt"><h4>Цвет интерфейса</h4><div class="sw">'+TH.slice(0,4).map((x,i)=>'<button style="background:'+x[0]+'" class="'+(i==th?'a':'')+'" title="'+x[4]+'" onclick="applyTheme('+i+');settings()"></button>').join('')+'</div><div class="ml" style="margin-top:10px"><label>Свой цвет <input type="color" value="'+(th==4?TH[4][0]:TH[th][0])+'" oninput="setCustomColor(this.value)" style="width:56px;height:36px;padding:0;border:1px solid var(--bd);background:none"></label>'+(th==4?'<span class="tg">выбран свой цвет</span>':'')+'</div></div>'
 +'<div class="dt"><h4>Управление</h4><p>Назначь свои клавиши на каждое действие.</p><button class="mb" onclick="ctrl()">Настроить управление</button></div>'
 +'<button class="bk" onclick="menu()">Назад</button></div>'}
 const _pk3=pickSp;pickSp=function(){if(!NET&&!VIEWER){mpMenu();return}_pk3()};
