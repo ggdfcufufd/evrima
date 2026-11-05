@@ -117,39 +117,42 @@ body.inmenu .b,body.inmenu #js{display:none!important}
 #wmc{border:1px solid rgba(255,255,255,.2);box-shadow:0 0 40px #000}#wmi{color:#e8e2c8;text-align:center;font:13px system-ui;display:flex;flex-direction:column;gap:2px}#wmi b{font-weight:300;letter-spacing:.3em;text-transform:uppercase;font-size:14px}#wmi small{opacity:.55;font-size:10px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 
-/* Holographic status / mutations interface inspired by the supplied reference */
-#ov.tb{background:rgba(0,8,9,.88);backdrop-filter:blur(7px);padding:0;align-items:stretch}
-#ov.tb .tab{width:86vw;max-width:1500px;height:91vh;max-height:100%;margin:auto;padding:0;position:relative;border:2px solid #8befff;box-shadow:0 0 5px #8befff,inset 0 0 22px rgba(70,220,235,.08);background:rgba(0,8,9,.38)}
-#ov.tb .tabs{height:58px;flex:none;display:flex;gap:3px;padding:3px 4px 0;border:0;overflow:hidden}
-#ov.tb .tabs button{flex:1;min-width:0;height:54px;padding:8px 12px;border:2px solid #83eafa;color:#b9f8ff;opacity:1;background:rgba(0,0,0,.66);font-size:clamp(10px,1.35vw,19px);font-weight:300;letter-spacing:.12em;white-space:nowrap;box-shadow:0 0 4px rgba(104,237,255,.35)}
-#ov.tb .tabs button.a{background:linear-gradient(135deg,rgba(143,239,250,.95),rgba(96,204,220,.78));color:#071719;border-color:#a4f7ff;box-shadow:0 0 12px rgba(113,236,255,.45)}
-#ov.tb .body{flex:1;min-height:0;overflow:auto;padding:clamp(16px,3vw,42px);color:#b8f5f8}
-#ov.tb .body h2{color:#a8f4fb;font-size:clamp(18px,2vw,29px);font-weight:300;letter-spacing:.08em;border-bottom:1px solid rgba(170,244,250,.32);padding-bottom:10px}
-#ov.tb .kv{border-bottom:1px solid rgba(170,244,250,.16);color:#b7e8eb}
-#ov.tb .kv b,#ov.tb .pts b{color:#d3fcff}
-#ov.tb .nb i{border-color:rgba(137,237,246,.45)}
-#ov.tb .nb em,#ov.tb .pts small{color:#a9dce0}
-#ov.tb .tabback{height:48px;flex:none;border-top:1px solid rgba(145,235,245,.55);display:flex;align-items:center;padding-left:18px}
-#ov.tb .tabback button{height:46px;min-width:110px;padding:0 20px;border:1px solid #8cebf5;border-top:0;background:rgba(0,0,0,.6);color:#baf7fc;font:16px Bahnschrift,Arial,sans-serif;letter-spacing:.08em}
-#ov.tb .tabback button:active{background:#a5f4fb;color:#071719}
-#ov.tb .row2{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
-#ov.tb .body.mutbody{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(390px,1.5fr);align-items:center;gap:24px}
-#ov.tb .mutbody .pts{grid-column:1;grid-row:1;margin:0 0 10px;font-size:17px}
-#ov.tb .mutbody .hw{grid-column:2;grid-row:1 / span 2;position:relative;width:min(100%,570px);height:280px!important;margin:0 auto;transform:scale(.98);background:radial-gradient(ellipse at 50% 50%,rgba(58,199,211,.08),transparent 65%)}
-#ov.tb .mutbody .hw:before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 570 280'%3E%3Cg fill='none' stroke='%237cecf5' stroke-width='5' opacity='.9'%3E%3Cpath d='M96 70 L201 195 L306 70 L411 195'/%3E%3Cpath d='M96 70 L201 195 M306 70 L411 195' stroke-width='2'/%3E%3C/g%3E%3Cg fill='%23071012' stroke='%237cecf5' stroke-width='3'%3E%3Cpath d='M25 42l17-10 17 10v20L42 72 25 62z M500 35l17-10 17 10v20l-17 10-17-10z M25 210l17-10 17 10v20l-17 10-17-10z M500 210l17-10 17 10v20l-17 10-17-10z'/%3E%3C/g%3E%3C/svg%3E");background-size:100% 100%;pointer-events:none}
-#ov.tb .mutbody .hx{width:104px;height:118px;background:#9bf5fc;filter:drop-shadow(0 0 8px rgba(112,240,255,.85));z-index:1}
-#ov.tb .mutbody .hx i{inset:3px;background:#061416;color:#bdfaff;font-size:11px}
-#ov.tb .mutbody .hx.own i{background:rgba(115,224,235,.38)}
-#ov.tb .mutbody .hx.s i{background:rgba(130,238,247,.8);color:#061416}
-#ov.tb .mutbody .dt,#ov.tb .mutbody>p:not(.pts){grid-column:1;grid-row:2;border:0;border-top:1px solid rgba(160,240,246,.35);background:transparent;color:#b8eef1;padding:18px 0}
-#ov.tb .mutbody .dt h4{color:#aef7fc;font-size:19px;font-weight:300;letter-spacing:.08em}
-#ov.tb .mutbody .dt button{background:rgba(110,220,232,.18);border:1px solid #8beaf3;color:#c7fbff}
-#ov.tb .mutbody .dt button:disabled{opacity:.35}
-#ov.tb .mutbody .ml{gap:5px}
-#ov.tb .mutbody .dt .mb{width:auto;background:rgba(0,0,0,.45);border:1px solid rgba(130,230,240,.5);color:#c4f6f8}
-#ov.tb .mutbody .g{color:#aaf4fb}#ov.tb .mutbody .r{color:#e7a6a0}
-@media(max-width:760px){#ov.tb .tab{width:94vw;height:94vh}#ov.tb .tabs{height:48px}#ov.tb .tabs button{height:44px;padding:5px 4px;font-size:9px;letter-spacing:.02em}#ov.tb .body.mutbody{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:14px}#ov.tb .mutbody .hw{width:100%;height:235px!important;transform:scale(.88);transform-origin:top center;margin-bottom:-25px}#ov.tb .mutbody .hx{transform:scale(.78);transform-origin:top left}#ov.tb .row2{grid-template-columns:1fr}#ov.tb .tabback{height:42px}}
-
+/* Evrima-inspired character report tab */
+#ov.tb{background:rgba(2,8,9,.88);backdrop-filter:blur(8px);padding:0}
+#ov.tb .tab{max-width:1500px;width:100%;padding:10px 5vw;height:100%;gap:0}
+#ov.tb .tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;border:0;border-bottom:1px solid rgba(139,231,238,.45);padding-bottom:8px}
+#ov.tb .tabs button{min-width:0;border:2px solid rgba(139,231,238,.75);height:64px;padding:8px 10px;color:#a9e8e9;opacity:.82;font-size:clamp(11px,1.7vw,22px);font-weight:300;letter-spacing:.12em;background:rgba(0,0,0,.38)}
+#ov.tb .tabs button.a{background:rgba(151,232,237,.9);color:#071315;border-color:#b5faff;opacity:1}
+#ov.tb .tabs button.x{position:absolute;right:10px;top:84px;width:34px;height:34px;border:1px solid rgba(139,231,238,.5);font-size:15px;padding:0}
+#ov.tb .body{padding:22px 0 30px;color:#a8dfe0;font-family:Bahnschrift,Roboto,Arial,sans-serif}
+.sr-top{border-bottom:1px solid rgba(155,220,220,.32);padding:0 4px 18px;margin-bottom:12px}
+.sr-kicker{font-size:16px;letter-spacing:.12em;color:#b9eff0;margin-bottom:8px}
+.sr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px 22px;font-size:clamp(11px,1.25vw,17px);color:#8dbfc0}
+.sr-grid b{font-weight:400;color:#c2eeee}
+.sr-columns{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.45fr);min-height:360px}
+.sr-columns section{padding:8px 18px 20px 4px}
+.sr-columns .sr-food{border-left:2px solid rgba(155,220,220,.48);padding-left:22px}
+.sr-columns h2{font-size:clamp(17px,2vw,27px);font-weight:300;letter-spacing:.04em;color:#a8e8e9;border:0;padding:0;margin:0 0 12px}
+.sr-line{display:flex;justify-content:space-between;gap:12px;padding:4px 0;color:#8bbfc0;font-size:clamp(12px,1.2vw,16px)}
+.sr-line b{font-weight:400;color:#c5e8e7;text-align:right}
+.sr-positive{color:#a5e5d1!important}
+.sr-sub{margin-top:18px;margin-bottom:6px;font-size:11px;letter-spacing:.18em;color:#8bc7c8}
+.sr-muted{font-size:13px;opacity:.65}
+.sr-foodline{display:flex;align-items:flex-start;gap:12px;margin:8px 0;color:#a7d6d5;font-size:clamp(12px,1.2vw,17px)}
+.sr-alpha{font-size:21px;line-height:1;color:#a7f0ec}
+.sr-foodline strong{font-weight:400;color:#c8e9e8}
+.sr-foodline small{display:block;margin-top:2px;font-size:.9em;color:#8ebdbc}
+@media(max-width:650px){
+ #ov.tb .tab{padding:8px 10px}
+ #ov.tb .tabs{gap:3px;padding-bottom:6px}
+ #ov.tb .tabs button{height:48px;letter-spacing:.04em;font-size:10px;padding:5px 2px;border-width:1px}
+ #ov.tb .tabs button.x{right:7px;top:64px;width:28px;height:28px}
+ #ov.tb .body{padding-top:16px}
+ .sr-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 10px}
+ .sr-columns{grid-template-columns:1fr}
+ .sr-columns section{padding:8px 4px 16px}
+ .sr-columns .sr-food{border-left:0;border-top:1px solid rgba(155,220,220,.4);padding:16px 4px}
+}
 </style></head><body>
 <canvas id="c3"></canvas><canvas id="c"></canvas>
 <div id="js"><div id="kn"></div></div>
@@ -167,26 +170,52 @@ const T=32;let N=885,WS=N*T,map=new Uint8Array(N*N),FX=new Float32Array(N*N),FY=
 const hs=(x,y)=>{let n=Math.sin(x*127.1+y*311.7+9.3)*43758.5453;return n-Math.floor(n)};
 function vn(x,y){let xi=Math.floor(x),yi=Math.floor(y),xf=x-xi,yf=y-yi,u=xf*xf*(3-2*xf),v=yf*yf*(3-2*yf);return(hs(xi,yi)*(1-u)+hs(xi+1,yi)*u)*(1-v)+(hs(xi,yi+1)*(1-u)+hs(xi+1,yi+1)*u)*v}
 const fb=(x,y)=>vn(x*.06,y*.06)*.6+vn(x*.13,y*.13)*.3+vn(x*.3,y*.3)*.1;
+// ---------- БИОМЫ (часть 3): всё считается только через hs/vn, поэтому карта одинакова у всех игроков ----------
+function moist(x,y){const v=vn(x*.011+13,y*.011+71)*.65+vn(x*.03+5,y*.03+9)*.35;return Math.max(0,Math.min(1,(v-.5)*1.7+.5))}
+function cf(t,s){switch(t){case 0:return'hsl(212,55%,'+(22+s*6)+'%)';case 1:return'hsl(195,50%,'+(38+s*6)+'%)';case 2:return'hsl(42,45%,'+(60+s*6)+'%)';
+case 5:return'hsl(112,35%,'+(23+s*5)+'%)';case 6:return'hsl(30,6%,'+(40+s*10)+'%)';case 7:return'hsl(128,46%,'+(16+s*5)+'%)';case 8:return'hsl(52,45%,'+(44+s*6)+'%)';
+case 9:return'hsl(76,28%,'+(21+s*5)+'%)';case 10:return'hsl(18,50%,'+(46+s*6)+'%)';case 11:return'hsl(14,38%,'+(32+s*9)+'%)';case 12:return'hsl(28,12%,'+(15+s*5)+'%)';
+case 13:return'hsl(100,48%,'+(38+s*6)+'%)';default:return'hsl(92,35%,'+(30+s*6)+'%)'}}
+// n — высота острова; возвращает тип клетки:
+// 0 глубокая вода, 1 мелководье, 2 песок, 3 трава, 5 лес, 6 скалы/горы, 7 джунгли, 8 саванна, 9 болото, 10 дно каньона, 11 красная стена каньона, 12 пещера, 13 луг/речная долина
+function biT(x,y,n){
+ if(n<.37)return 0;if(n<.42)return 1;
+ const lk=vn(x*.04+200,y*.04+300);
+ if(n>.5&&n<.8&&lk>.78)return lk>.82?0:1;                                  // озёра (в том числе горные)
+ if(n<.45+(vn(x*.2+3,y*.2+8)-.5)*.04)return 2;                             // извилистые пляжи
+ if(n>.5&&n<.74&&lk>.71)return 2;                                          // берег озера
+ const rg=1-Math.abs(2*vn(x*.013+30,y*.013+50)-1);
+ if(n>.74||(rg>.92&&n>.5&&vn(x*.05+70,y*.05+20)>.4))return 6;             // горные хребты с проходами
+ const mo=moist(x,y),fo=vn(x*.09+40,y*.09+40);let t;
+ if(mo>.64){if(n<.54&&vn(x*.07+11,y*.07+17)>.55)return 9;t=fo>.45?7:fo>.3?13:3}              // влажный пояс: болота, джунгли
+ else if(mo<.34){if(n>.5){const c=Math.abs(vn(x*.03+90,y*.03+130)-.5);if(c<.03)return 10;if(c<.06)return vn(x*.25+2,y*.25+4)>.4?11:8}t=8} // сухой пояс: саванна, каньоны
+ else t=fo>.58?5:(vn(x*.05+21,y*.05+4)>.66?13:3);                        // умеренный: леса и луга
+ if((t==5||t==7)&&vn(x*.16+60,y*.16+90)>.8)t=13;                           // поляны
+ return t}
+function carve(cx,cy,r){const q=Math.ceil(r);for(let j=-q;j<=q;j++)for(let i=-q;i<=q;i++){const x=cx+i,y=cy+j;if(x<1||y<1||x>=N-1||y>=N-1||Math.hypot(i,j)>r)continue;const k=y*N+x;if(map[k]==6){map[k]=12;col[k]=cf(12,hs(x,y))}}}
+function caves(){const R=14;for(let cy=10;cy<N-10;cy+=R)for(let cx=10;cx<N-10;cx+=R){if(hs(cx*.37+1,cy*.53+2)>.7)continue;
+ let px=0,py=0,ok=0;for(let k=0;k<6&&!ok;k++){px=cx+(hs(cx+3.1+k,cy+7)*R|0);py=cy+(hs(cx+5,cy+2.7+k)*R|0);if(px<10||py<10||px>=N-10||py>=N-10||map[py*N+px]!=6)continue;let rk=0;for(let j=-3;j<=3;j++)for(let i=-3;i<=3;i++)if(map[(py+j)*N+px+i]==6)rk++;if(rk>=26)ok=1}
+ if(!ok)continue;
+ let b=null;for(let a=0;a<8;a++){const dx=Math.round(Math.cos(a*.7854)),dy=Math.round(Math.sin(a*.7854));for(let L=1;L<=8;L++){const q=map[(py+dy*L)*N+px+dx*L];if(q!=6){if((q==2||q==3||q==5||q==7||q==8||q==10||q==13)&&(!b||L<b[2]))b=[dx,dy,L];break}}}
+ if(!b||b[2]<3)continue;
+ for(let L=0;L<b[2];L++)carve(px+b[0]*L,py+b[1]*L,L==0?2.4:1.4)}}
+
 function genWorld(n){N=n;WS=N*T;map=new Uint8Array(N*N);FX=new Float32Array(N*N);FY=new Float32Array(N*N);RV=new Uint8Array(N*N);col=[];
-(function gen(){const mc=mm.getContext('2d'),mcol=['#1d4a7a','#3a8fb0','#cdb872','#4f7a35','','#2d5a2c','#777'];
-for(let y=0;y<N;y++)for(let x=0;x<N;x++){let n=fb(x,y),d=Math.max(Math.abs(x-N/2),Math.abs(y-N/2))/(N/2);n-=Math.pow(d,4)*.55;
-const m=vn(x*.09+40,y*.09+40),t=n<.37?0:n<.42?1:n<.45?2:n>.74?6:m>.8?5:3,s=hs(x,y);map[y*N+x]=t;
-col[y*N+x]=['hsl(212,55%,'+(22+s*6)+'%)','hsl(195,50%,'+(38+s*6)+'%)','hsl(42,45%,'+(60+s*6)+'%)','hsl(92,35%,'+(30+s*6)+'%)','','hsl(112,35%,'+(23+s*5)+'%)','hsl(30,6%,'+(40+s*10)+'%)'][t];
-mc.fillStyle=mcol[t];mc.fillRect(x,y,1,1)}})();
+(function gen(){for(let y=0;y<N;y++)for(let x=0;x<N;x++){let n=fb(x,y),d=Math.max(Math.abs(x-N/2),Math.abs(y-N/2))/(N/2);n-=Math.pow(d,4)*.55;const t=biT(x,y,n),i=y*N+x;map[i]=t;col[i]=cf(t,hs(x,y))}caves()})();
 
 [.4,1.1,1.8,2.5,3.2,3.9,4.5,5.2,5.9].forEach(a0=>{const mc=mm.getContext('2d'),c=N/2;let px=c-Math.cos(a0)*N*.26,py=c-Math.sin(a0)*N*.26,cnt=0;
 for(let st=0,sm=Math.round(2900*N/885);st<sm;st++){const an=a0+.7*Math.sin(st*.05)+.3*Math.sin(st*.13+1),tx=Math.cos(an),ty=Math.sin(an),ford=Math.sin(st*.09+.5)>.86;px+=tx*.5;py+=ty*.5;if(px<3||py<3||px>N-3||py>N-3)break;
 const bx=Math.floor(px),by=Math.floor(py);if(map[by*N+bx]==0&&!RV[by*N+bx]){if(++cnt>8)break}else cnt=0;
-for(let yy=-3;yy<=3;yy++)for(let xx=-3;xx<=3;xx++){const ix=bx+xx,iy=by+yy;if(ix<0||iy<0||ix>=N||iy>=N)continue;const dd=Math.hypot(ix+.5-px,iy+.5-py),i=iy*N+ix,s2=hs(ix,iy);
+for(let yy=-8;yy<=8;yy++)for(let xx=-8;xx<=8;xx++){const ix=bx+xx,iy=by+yy;if(ix<0||iy<0||ix>=N||iy>=N)continue;const dd=Math.hypot(ix+.5-px,iy+.5-py),i=iy*N+ix,s2=hs(ix,iy);
 if(dd<=1.35&&!ford){map[i]=0;col[i]='hsl(198,62%,'+(34+s2*5)+'%)';mc.fillStyle='#2f86b8';mc.fillRect(ix,iy,1,1);FX[i]=tx*62;FY[i]=ty*62;RV[i]=1}
-else if(dd<=2.3){if(map[i]==0)continue;map[i]=1;col[i]='hsl(190,52%,'+(50+s2*5)+'%)';mc.fillStyle='#6ab6d0';mc.fillRect(ix,iy,1,1);FX[i]=tx*(ford?30:38);FY[i]=ty*(ford?30:38);RV[i]=1}}}});
+else if(dd<=2.3){if(map[i]==0)continue;map[i]=1;col[i]='hsl(190,52%,'+(50+s2*5)+'%)';mc.fillStyle='#6ab6d0';mc.fillRect(ix,iy,1,1);FX[i]=tx*(ford?30:38);FY[i]=ty*(ford?30:38);RV[i]=1}else if(dd<=7.5&&!RV[i]){const q=map[i];if((q==3||q==5||q==7||q==8)&&hs(ix+7,iy+3)*6.2>dd-1.2){map[i]=moist(ix,iy)>.55&&dd<4.6&&hs(ix+1,iy+9)>.55?9:13;col[i]=cf(map[i],hs(ix,iy))}}}}});
 }genWorld(885);
 function flowM(e,dt){const x=e.x/T|0,y=e.y/T|0;if(x<0||y<0||x>=N||y>=N)return;const i=y*N+x;if(RV[i])mv(e,FX[i]*dt,FY[i]*dt)}
 let TM=0;
-const tile=(x,y)=>{x=x/T|0;y=y/T|0;return x<0||y<0||x>=N||y>=N?6:map[y*N+x]},solid=(x,y)=>tile(x,y)==6;
+const tile=(x,y)=>{x=x/T|0;y=y/T|0;return x<0||y<0||x>=N||y>=N?6:map[y*N+x]},solid=(x,y)=>{const t=tile(x,y);return t==6||t==11},isF=t=>t==5||t==7,LANDT=[2,3,5,7,8,10,13];
 let DBH=null;// коллизия пней и стволов (часть 2): только крупные динозавры
 function mv(e,dx,dy){if(!solid(e.x+dx+Math.sign(dx)*e.r*.6,e.y)&&!(DBH&&DBH(e.x+dx,e.y,e.x,e.y,e.r)))e.x+=dx;if(!solid(e.x,e.y+dy+Math.sign(dy)*e.r*.6)&&!(DBH&&DBH(e.x,e.y+dy,e.x,e.y,e.r)))e.y+=dy}
-function rp(far){let x,y,k=0;do{x=R()*WS;y=R()*WS;k++}while(([2,3,5].indexOf(tile(x,y))<0||(far&&P&&Math.hypot(x-P.x,y-P.y)<500))&&k<500);return[x,y]}
+function rp(far){let x,y,k=0;do{x=R()*WS;y=R()*WS;k++}while((LANDT.indexOf(tile(x,y))<0||(far&&P&&Math.hypot(x-P.x,y-P.y)<500))&&k<500);return[x,y]}
 // ---------- МУТАЦИИ ----------
 const M=[['Толстая шкура','Броня +25%, скорость −8%',{arm:.25,spd:-.08}],['Усиленные сухожилия','Скорость +12%, здоровье −12%',{spd:.12,hp:-.12}],
 ['Остеосклероз','Здоровье +25%, скорость −10%',{hp:.25,spd:-.1}],['Гемомания','Урон +30%, регенерация −30%',{dmg:.3,reg:-.3}],
@@ -243,7 +272,7 @@ while(p.got<4&&p.gr>=SL[p.got]){p.got++;p.pts++}upX(dt);
 // еда и вода
 hint='';let tg=null,td=1e9;const src=p.k?bushes:cars;
 const _ef=s=>{if(s.l>0&&!s.rcb){const d=Math.hypot(s.x-p.x,s.y-p.y);if(d<p.r*1.6+s.r+14&&d<td){tg=s;td=d}}};src.forEach(_ef);if(S[p.s].k==2)cars.forEach(_ef);
-const wa=tile(p.x,p.y)<2||tile(p.x+Math.cos(p.a)*(p.r+10),p.y+Math.sin(p.a)*(p.r+10))<2;
+const wa=tile(p.x,p.y)<2||tile(p.x,p.y)==9||tile(p.x+Math.cos(p.a)*(p.r+10),p.y+Math.sin(p.a)*(p.r+10))<2;
 if(tg){hint=(S[p.s].k==2?cars.indexOf(tg)<0:p.k)?'Удерживай '+EK()+' — куст':'Удерживай '+EK()+' — '+carHint(tg);if(hold.eat||dn('eat')){eatT(tg,dt)}}
 else if(wa){hint='Удерживай '+EK()+' — вода';if(hold.eat||dn('eat'))p.wt=Math.min(100,p.wt+35*dt)}
 if(p.s==8&&tile(p.x,p.y)==0)hint=p.dv?'Под водой · '+DK()+' — всплыть, '+BK()+' — атака из засады':(coarse()?'ВНИЗ':DK())+' — нырнуть';
@@ -289,7 +318,7 @@ let y=22;const st=['Малыш','Подросток','Субвзрослый','�
 hexHud();
 
 
-$('tb').classList.toggle('on',P.pts>0||P.sp>0);hudX();{const e=$('dv'),t2=P.dv?'ВВЕРХ':'ВНИЗ';e.style.display=P.s==8?'flex':'none';if(e.textContent!=t2)e.textContent=t2}{const a=AB[P.s],tx=P.carry?'Бросок':P.acd>0?String(Math.ceil(P.acd)):a[0],e=$('ab');if(e.textContent!=tx)e.textContent=tx;e.style.opacity=P.carry||!(P.acd>0)?1:.5}if(P.pts>0||P.sp>0){g.textAlign='center';g.font='bold 14px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle=AC;g.fillText('Доступна '+(P.pts>0?'мутация':'')+(P.pts>0&&P.sp>0?' и ':'')+(P.sp>0?'навык':'')+' — Tab / ☰',W/2,H-175)}if(P.carry){const c=P.carry,bw=130,bx=W/2-bw/2,by=H-132;g.textAlign='center';g.font='9px Bahnschrift,Oswald,Roboto,Arial,sans-serif';[['Кислород добычи',c.ox,100,'#4aa8e8'],['Здоровье добычи',c.hp,c.mh,'#c0463c']].forEach((r,i)=>{const yy=by+i*15;g.fillStyle='rgba(0,0,0,.6)';g.fillRect(bx,yy,bw,11);g.fillStyle=r[3];g.fillRect(bx,yy,bw*Math.max(0,r[1])/r[2],11);g.fillStyle='#fff';g.fillText(r[0],W/2,yy+8.5)});g.textAlign='left'}if(hint){g.textAlign='center';g.font='13px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle='#e9e4cf';g.fillText(hint,W/2,H-150)}g.textAlign='left';if(NET){const tn=Date.now();FD=FD.filter(f=>tn-f.e<9000);g.textAlign='center';g.font='11px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle=AC;g.fillText('● '+ROOMN+' · игроков: '+(rem.size+1)+(!NET.connected||NET.connected()?'':' · нет связи'),W/2,16);g.fillStyle='#e9e4cf';FD.forEach((f,i)=>g.fillText(f.t,W/2,32+i*13));g.textAlign='left'}}
+$('tb').classList.toggle('on',P.pts>0||P.sp>0);hudX();{const e=$('dv'),t2=P.s==18?(P.hc?'СПУСК':'ЛАЗАТЬ'):P.dv?'ВВЕРХ':'ВНИЗ';e.style.display=P.s==8||P.s==18?'flex':'none';if(e.textContent!=t2)e.textContent=t2}{const a=AB[P.s],tx=P.carry?'Бросок':P.acd>0?String(Math.ceil(P.acd)):a[0],e=$('ab');if(e.textContent!=tx)e.textContent=tx;e.style.opacity=P.carry||!(P.acd>0)?1:.5}if(P.pts>0||P.sp>0){g.textAlign='center';g.font='bold 14px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle=AC;g.fillText('Доступна '+(P.pts>0?'мутация':'')+(P.pts>0&&P.sp>0?' и ':'')+(P.sp>0?'навык':'')+' — Tab / ☰',W/2,H-175)}if(P.carry){const c=P.carry,bw=130,bx=W/2-bw/2,by=H-132;g.textAlign='center';g.font='9px Bahnschrift,Oswald,Roboto,Arial,sans-serif';[['Кислород добычи',c.ox,100,'#4aa8e8'],['Здоровье добычи',c.hp,c.mh,'#c0463c']].forEach((r,i)=>{const yy=by+i*15;g.fillStyle='rgba(0,0,0,.6)';g.fillRect(bx,yy,bw,11);g.fillStyle=r[3];g.fillRect(bx,yy,bw*Math.max(0,r[1])/r[2],11);g.fillStyle='#fff';g.fillText(r[0],W/2,yy+8.5)});g.textAlign='left'}if(hint){g.textAlign='center';g.font='13px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle='#e9e4cf';g.fillText(hint,W/2,H-150)}g.textAlign='left';if(NET){const tn=Date.now();FD=FD.filter(f=>tn-f.e<9000);g.textAlign='center';g.font='11px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle=AC;g.fillText('● '+ROOMN+' · игроков: '+(rem.size+1)+(!NET.connected||NET.connected()?'':' · нет связи'),W/2,16);g.fillStyle='#e9e4cf';FD.forEach((f,i)=>g.fillText(f.t,W/2,32+i*13));g.textAlign='left'}}
 function loop(t){const dt=Math.min(.05,(t-last)/1000||0);last=t;TM=t/1000;if(P)wxTick(dt);if(P&&!paused){upd(dt);dinoCol()}netTick(dt);draw();requestAnimationFrame(loop)}
 // ---------- УПРАВЛЕНИЕ ----------
 addEventListener('keyup',e=>delete keys[e.code]);
@@ -318,12 +347,50 @@ const nb=(l,v,c,n)=>'<div class="nb"><span>'+l+'</span><i><b style="width:'+Math
 function toggleTab(){if(!P||P.dead||(paused&&!tabOn))return;tabOn=!tabOn;paused=tabOn&&!NET;if(tabOn)tabUi();else{ov.className='';ov.innerHTML=''}}
 $('tb').onclick=toggleTab;
 function take2(i){P.mu.push(i);P.pts--;P.hp=Math.min(maxhp(),P.hp+20*PSC());tabUi()}
+
+function statusReportHtml(){
+ const p=P,s=S[p.s],diet=s.k==0?'Хищник':s.k==1?'Травоядный':'Всеядный';
+ const wt=fkg(wNow(p.s,p.gr)),age=Math.floor(p.age/60)+' мин';
+ const speed=Math.round((p.k?100:115)*s.spd*(1-p.gr/100*.12)*m('spd')*(1+p.n[2]/100*.12));
+ const bite=Math.round((p.k?11:18)*s.dmg*(.5+p.gr/100)*m('dmg'));
+ const zone=({0:'Вода',1:'Мелководье',2:'Пляж',3:'Равнина',5:'Лес',6:'Скалы'})[tile(p.x,p.y)]||'Остров';
+ const statRows=[
+  ['Рацион',diet],['Стадия роста',stg()],['Рост',Math.round(p.gr)+'%'],
+  ['Здоровье',fkg(p.hp)+' / '+fkg(maxhp())],
+  ['Регенерация',Math.round(m('reg')*100)+'%'],
+  ['Сопротивление кровотечению',Math.round(Math.max(0,m('arm')-1)*100)+'%']
+ ];
+ const food=s.k==0?[
+  ['Мясо','Туши динозавров','Остров'],
+  ['Добыча','Живые животные','Остров']
+ ]:s.k==1?[
+  ['Растительность','Съедобные кусты','Лес, равнины'],
+  ['Вода','Пресная вода','Водоёмы']
+ ]:[
+  ['Мясо','Туши динозавров','Остров'],
+  ['Растительность','Съедобные кусты','Лес, равнины'],
+  ['Вода','Пресная вода','Водоёмы']
+ ];
+ return '<div class="sr-top">'+
+  '<div class="sr-profile"><div class="sr-kicker">PROFILE DATA</div>'+
+  '<div class="sr-grid">'+
+   '<span>Species: <b>'+s.n+'</b></span><span>Diet: <b>'+diet+'</b></span><span>Growth: <b>'+Math.round(p.gr)+'%</b></span>'+
+   '<span>Weight: <b>'+wt+'</b></span><span>Age: <b>'+age+'</b></span><span>Max Speed: <b>'+speed+' KM/h</b></span>'+
+   '<span>Bite Force: <b>'+bite+'</b></span><span>Location: <b>'+zone+'</b></span><span>Coordinates: <b>'+Math.round(p.x)+', '+Math.round(p.y)+'</b></span>'+
+  '</div></div></div>'+
+  '<div class="sr-columns"><section class="sr-report"><h2>STATUS REPORT:</h2>'+
+   statRows.map(r=>'<div class="sr-line"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>').join('')+
+   '<div class="sr-sub">ACTIVE MUTATIONS</div>'+
+   (p.mu.length?p.mu.map(i=>'<div class="sr-line"><span>'+M[i][0]+'</span><b class="sr-positive">Активна</b></div>').join(''):'<div class="sr-muted">Нет активных мутаций</div>')+
+  '</section><section class="sr-food"><h2>PREFERRED FOOD:</h2>'+
+   food.map((f,i)=>'<div class="sr-foodline"><b class="sr-alpha">'+(i<2?'α':'β')+'</b><span><strong>'+f[0]+'</strong><small>'+f[1]+' · Located: '+f[2]+'</small></span></div>').join('')+
+  '</section></div>';
+}
 function tabUi(){const p=P,s=S[p.s];let b='';
-if(tabN==0){const sp=Math.round((p.k?100:115)*s.spd*(1-p.gr/100*.12)*m('spd')*(1+p.n[2]/100*.12)),dm=Math.round((p.k?11:18)*s.dmg*(.5+p.gr/100)*m('dmg')),mh=maxhp();
-b='<div class="row2"><div><h2>'+s.n+'</h2>'+[['Стадия',stg()],['Вес',Math.round(3+p.gr*p.gr*.012)+' кг'],['Возраст',Math.floor(p.age/60)+' мин'],['Вес = здоровье',fkg(p.hp)+' / '+fkg(mh)],['Скорость',sp],['Урон укуса',dm],['Броня',Math.round((m('arm')-1)*100)+'%'],['Способность',AB[p.s][0]+' · '+AB[p.s][1]+' с']].map(r=>'<div class="kv"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>').join('')+'</div><div>'+nb('Сытость',p.fd,'#d98a3d','')+nb('Вода',p.wt,'#3f9ad6','')+nb('Белки',p.n[0],'#c8607f','Ускоряют лечение')+nb('Липиды',p.n[1],'#c9b94e','Восстанавливают выносливость')+nb('Углеводы',p.n[2],'#6fb85a','Добавляют скорость')+'</div></div><div style="margin-top:14px">'+nb('Вес',100*p.hp/mh,'#c0463c',fkg(p.hp)+' / '+fkg(mh))+nb('Рост',p.gr,'#cfd8c0','Растёт, пока сыт и не мучает жажда')+'</div>'}
+if(tabN==0){b=statusReportHtml()} 
 else if(tabN==1){b=hexTab();if(0)b='<p class="pts">Очки мутаций: <b>'+p.pts+'</b> · занято слотов '+p.mu.length+' из 3<small>'+(p.got<3?'Следующее очко на '+[25,55,85][p.got]+'% роста':'Все очки получены')+'</small></p><div class="cards">'+M.map((x,i)=>{const own=p.mu.indexOf(i)>=0;return'<div class="mc'+(own?' own':'')+'"><h4>'+x[0]+'</h4>'+Object.keys(x[2]).map(k=>{const v=x[2][k],gd=(k=='tdec'||k=='hdec')?v<0:v>0;return'<div class="'+(gd?'g':'r')+'">'+(gd?'+ ':'− ')+ML[k]+' '+(v>0?'+':'−')+Math.round(Math.abs(v)*100)+'%</div>'}).join('')+(own?'<span class="ok">Приобретена</span>':'<button '+(p.pts>0?'':'disabled')+' onclick="take2('+i+')">Мутировать</button>')+'</div>'}).join('')+'</div>'}
 else if(tabN==3)b=plHtml2();else if(tabN==5)b=nestHtml();else if(tabN==4)b=skHtml();else b='<canvas id="mp" width="300" height="300"></canvas>';
-if(tabN==0)b+=safeHtml();ov.className='tb';ov.innerHTML='<div class="tab"><div class="tabs">'+[[0,'STATUS REPORT'],[3,'GROUP'],[1,'MUTATIONS'],[5,'NEST']].filter(x=>x[0]!=5||NET).map(x=>'<button class="'+(x[0]==tabN?'a':'')+'" onclick="tabN='+x[0]+';tabUi()">'+x[1]+(x[0]==1&&p.pts>0?' ●':'')+'</button>').join('')+'</div><div class="body '+(tabN==1?'mutbody':'')+'">'+b+'</div><div class="tabback"><button onclick="toggleTab()">Back</button></div></div>';
+if(tabN==0)b+=safeHtml();ov.className='tb';const tabDefs=[['STATUS REPORT',0],['GROUP',3],['MUTATIONS',1],['NEST',5]];ov.innerHTML='<div class="tab"><div class="tabs">'+tabDefs.map(([t,i])=>'<button class="'+(i==tabN?'a':'')+'" onclick="tabN='+i+';tabUi()">'+t+(i==1&&p.pts>0?' ●':'')+'</button>').join('')+'<button class="x" onclick="toggleTab()">✕</button></div><div class="body">'+b+'</div></div>';
 }
 const TH=[['#c9a45c','#e6e1d3','#2b2a24','#0b0b0a','Янтарь'],['#8aa66a','#e1e6d6','#242c20','#090b08','Мох'],['#b6473b','#eadcd8','#2e1a17','#0b0706','Кровь'],['#9fb0b8','#e0e6e8','#1f272b','#080a0b','Сталь']];
 let th=0,AC=TH[0][0],selM=-1;
@@ -331,8 +398,9 @@ function applyTheme(i){th=i;const t=TH[i],s=document.documentElement.style,cm=(a
 const v={'--ac':t[0],'--tx':t[1],'--g1':t[2],'--g2':t[3],'--bg':t[3],'--sf':cm(t[0],t[3],9),'--bd':cm(t[0],t[3],32),'--hv':cm(t[0],'transparent',12),'--ov':cm(t[3],'transparent',94),'--pn':cm(t[3],'transparent',94)};
 for(const k in v)s.setProperty(k,v[k])}
 const IC=['🛡️','🦵','🦴','🩸','🌵','⚡','🫁','💚'];
-function hexTab(){const p=P,pos=i=>{let r=0,n=i;while(n>=(r%2?2:3)){n-=r%2?2:3;r++}return[(r%2?48:0)+n*96,r*83]};
-let h='<p class="pts">Очки мутаций: <b>'+p.pts+'</b> · слоты '+p.mu.length+' из 3<small>'+(p.got<3?'Следующее очко на '+[25,55,85][p.got]+'% роста':'Все очки получены')+'</small></p><div class="hw" style="height:'+(Math.ceil(M.length*.4)*83+28)+'px">'+M.map((x,i)=>{const q=pos(i),own=p.mu.indexOf(i)>=0;return'<button class="hx'+(own?' own':'')+(i==selM?' s':'')+'" style="left:'+q[0]+'px;top:'+q[1]+'px" onclick="selM='+i+';tabUi()"><i><span>'+IC[i]+'</span>'+x[0]+'</i></button>'}).join('')+'</div>';
+function hexTab(){const p=P,visible=M.map((x,i)=>i).filter(i=>mAv(i)||p.mu.indexOf(i)>=0),pos=i=>{let r=0,n=i;while(n>=(r%2?2:3)){n-=r%2?2:3;r++}return[(r%2?48:0)+n*96,r*83]};
+if(selM>=0&&!visible.includes(selM))selM=-1;
+let h='<p class="pts">Очки мутаций: <b>'+p.pts+'</b> · слоты '+p.mu.length+' из 3<small>'+(p.got<3?'Следующее очко на '+[25,55,85][p.got]+'% роста':'Все очки получены')+'</small></p><div class="hw" style="height:'+(Math.ceil(visible.length*.4)*83+28)+'px">'+visible.map((i,j)=>{const x=M[i],q=pos(j),own=p.mu.indexOf(i)>=0;return'<button class="hx'+(own?' own':'')+(i==selM?' s':'')+'" style="left:'+q[0]+'px;top:'+q[1]+'px" onclick="selM='+i+';tabUi()"><i><span>'+IC[i]+'</span>'+x[0]+'</i></button>'}).join('')+'</div>';
 if(selM>=0){const x=M[selM],own=p.mu.indexOf(selM)>=0;h+='<div class="dt"><h4>'+IC[selM]+' '+x[0]+'</h4>'+Object.keys(x[2]).map(k=>{const v=x[2][k],gd=(k=='tdec'||k=='hdec')?v<0:v>0;return'<div class="'+(gd?'g':'r')+'">'+(gd?'+ ':'− ')+ML[k]+' '+(v>0?'+':'−')+Math.round(Math.abs(v)*100)+'%</div>'}).join('')+(own?'<span class="ok">Мутация приобретена</span>':'<button '+(p.pts>0?'':'disabled')+' onclick="take2('+selM+')">Мутировать</button>')+'</div>'}
 else h+='<p style="text-align:center;opacity:.6;font-size:13px">Выбери шестиугольник, чтобы увидеть, что даёт мутация</p>';
 return h}
@@ -370,13 +438,13 @@ if(t==5)tree(x,y);else if(t==6)rock(x,y);else if(t==7)bush(o);else if(t==8)carc(
 else if(t==9){const sub=o.ty==8&&o.dv&&!o.held,vis=!sub||sniffOn()||P.s==8;if(o.held)g.translate(0,-P.r*.8);if(o.held&&P.dv)g.globalAlpha=.45;if(sub)g.globalAlpha=.38;if(o.sp>0){g.save();g.globalAlpha=o.sp*.7;g.strokeStyle='#e1f5ff';g.lineWidth=2.5;const rr=o.r+(1-o.sp)*o.r*4.5;g.beginPath();g.ellipse(0,0,rr,rr*K,0,0,7);g.stroke();g.restore()}if(vis)dino(dAng(o),o.r,o.c,o.fl,o.ty,o.ea>0,dPh(o,x,y));g.globalAlpha=1;if(o.held){const by=-o.r*2.4-8;g.fillStyle='rgba(0,0,0,.6)';g.fillRect(-17,by,34,6);g.fillStyle='#4aa8e8';g.fillRect(-16,by+1,32*Math.max(0,o.ox)/100,4)}}else{if(o.dv)g.globalAlpha=.4;dino(o===P?o.a:dAng(o),o.r,S[o.s].c,o.hf,o.s,o.bt>0,dPh(o,x,y));g.globalAlpha=1}if(t==11)tag(o);if(t==9&&o.al)aTag(o);g.restore()})}
 const det=(i,can)=>{const x=M[i];return'<div class="dt"><h4>'+IC[i]+' '+x[0]+'</h4>'+Object.keys(x[2]).map(k=>{const v=x[2][k],gd=(k=='tdec'||k=='hdec')?v<0:v>0;return'<div class="'+(gd?'g':'r')+'">'+(gd?'+ ':'− ')+ML[k]+' '+(v>0?'+':'−')+Math.round(Math.abs(v)*100)+'%</div>'}).join('')+(M[i][3]||[]).map(t=>'<div class="g">✦ '+t+'</div>').join('')+(can?'<button '+(P.pts>0?'':'disabled')+' onclick="take3()">Мутировать слот '+(selS+1)+'</button>':'')+'</div>'};
 function take3(){if(selS<0||selM<0||P.pts<1||P.sl[selS]!=null||P.mu.indexOf(selM)>=0||!mAv(selM))return;P.sl[selS]=selM;P.mu.push(selM);P.pts--;P.hp=Math.min(maxhp(),P.hp+20*PSC());tabUi()}
-function hexTab(){const p=P,ps=[[48,10],[258,10],[153,150],[363,150]];
+function hexTab(){const p=P,ps=[[0,0],[96,0],[48,83],[144,83]];
 let h='<p class="pts">Очки мутаций: <b>'+p.pts+'</b><small>'+(p.got<4?'Следующий слот откроется на '+SL[p.got]+'% роста':'Все слоты открыты')+'</small></p><div class="hw">'+ps.map((q,i)=>{const mi=p.sl[i],lk=i>=p.got;return'<button class="hx'+(mi!=null?' own':'')+(i==selS?' s':'')+'" style="left:'+q[0]+'px;top:'+q[1]+'px" onclick="selS='+i+';selM='+(mi!=null?mi:-1)+';tabUi()"><i>'+(lk?'<span>🔒</span>'+SL[i]+'%':mi!=null?'<span>'+IC[mi]+'</span>'+M[mi][0]:'<span>＋</span>Свободно')+'</i></button>'}).join('')+'</div>';
 if(selS<0)h+='<p style="text-align:center;opacity:.6;font-size:13px">Выбери шестиугольник-слот</p>';
 else if(selS>=p.got)h+='<p class="dt">Слот откроется на '+SL[selS]+'% роста.</p>';
 else{const mi=p.sl[selS];if(mi==null)h+='<div class="dt"><b>Выбери мутацию</b><div class="ml">'+M.map((x,i)=>p.mu.indexOf(i)>=0||!mAv(i)?'':'<button class="mb'+(i==selM?' s':'')+'" onclick="selM='+i+';tabUi()">'+IC[i]+' '+x[0]+'</button>').join('')+'</div></div>';
 if(selM>=0)h+=det(selM,mi==null)}
-return h+secBox()}
+return h}
 const near=(d,f)=>npcs.filter(n=>!n.al&&Math.hypot(n.x-P.x,n.y-P.y)<d).forEach(f);
 const AB=[['Прыжок',10,()=>{P.dh=.3},'прыжок на врага: вцепляешься и кусаешь до 7 раз подряд (повторно — отпустить)'],['Рёв',20,()=>{P.t.d=6;near(350,n=>{if(n.k=='h')n.fear=5})},'пугает травоядных, урон +25% на 6 с'],['Спурт',15,()=>{P.t.s=5;P.st=160*m('stm')},'скорость +60% на 5 с'],['Таран',14,()=>{P.dh=.35},'таран с оглушением, урон ×2.2'],['Кровотечение',18,()=>{P.t.b=8},'укусы вызывают кровотечение 8 с'],['Сокрушение',22,()=>{P.t.c=8},'следующий укус ×3 и оглушение'],['Зов',22,()=>{P.hp=Math.min(maxhp(),P.hp+25*PSC());near(420,n=>{if(n.k=='p'){n.stun=4;n.ch=0}})},'оглушает хищников, лечит 25'],['Панцирь',20,()=>{P.t.a=6},'урон по вам −70% на 6 с']];
 function useAb(){if(paused||!P||P.dead)return;if(P.lt){P.lt=null;P.acd=Math.max(P.acd,2);return}P.dv=0;if(P.carry){throwC();return}if(P.acd>0)return;if(AB[P.s][2]()===false)return;snd('ab');P.acd=AB[P.s][1]}
@@ -387,7 +455,7 @@ else{q.hp-=(q.sc||1)*bd*(P.s==3?2.2:1.8);q.fl=.12;q.stun=1.2;if(q.k=='h')q.fear=
 function relC(esc){const n=P.carry;if(!n)return;P.carry=null;n.held=0;if(solid(n.x,n.y)){n.x=P.x;n.y=P.y}n.stun=esc?.8:2.5;if(n.k=='h')n.fear=5;else n.ch=1;n.fl=.12}
 function throwC(){const n=P.carry;if(!n)return;const d=P.r*2.5+n.r+34,x=P.x+Math.cos(P.a)*d,y=P.y+Math.sin(P.a)*d;relC(0);if(!solid(x,y)){n.x=x;n.y=y}P.acd=Math.max(P.acd,3);n.hp-=n.mh*.15;n.fl=.2;if(n.hp<=0)killN(n)}
 function heldUpd(n,dt){const p=P,d=p.r*2.1+n.r*.8;if(!p.dv)n.ht+=dt;n.hc+=dt;n.ox=p.dv?Math.max(0,n.ox-(n.k=='p'?9:15)*dt):Math.min(100,n.ox+35*dt);if(n.ox<=0){killN(n);return}n.x=p.x+Math.cos(p.a)*d;n.y=p.y+Math.sin(p.a)*d;n.a=p.a+1.5708;if(n.hc>=1.1){n.hc=0;hurt(n.r*(n.k=='p'?.45:.12))}if(P.carry===n&&n.ht>(n.k=='p'?7:11))relC(1)}
-function dive(){if(paused||!P||P.dead||P.s!=8)return;if(P.dv){P.dv=0;return}if(tile(P.x,P.y)==0)P.dv=1}
+function dive(){if(paused||!P||P.dead)return;if(P.s==18){herrDive();return}if(P.s!=8)return;if(P.dv){P.dv=0;return}if(tile(P.x,P.y)==0)P.dv=1}
 bt('ab',0,useAb);bt('dv',0,dive);bt('rs',0,restToggle);bt('carr',0,ccToggle);
 let NET=null,NICK='Дино'+(R()*900+100|0),RC='ostrov',ROOMN='',LH='',FD=[],nt=0;const rem=new Map(),esc=s=>String(s).replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0)+';'),me=()=>{const q=NET&&NET.peers().find(p=>p.sameTab);return q&&q.peer},feed=t=>{FD.push({t,e:Date.now()});if(FD.length>5)FD.shift()};
 function leaveNet(keep){carsStop();rsStop();RSX=null;if(NET&&NET.leave)NET.leave().catch(()=>{});NET=null;rem.clear();FD=[];if(!keep){SRV=SRV_DEF();applyTime();if(N!=885)genWorld(885)}}
@@ -401,9 +469,9 @@ const dm=(P.k?11:18)*S[P.s].dmg*(.5+P.gr/100)*m('dmg')*(P.t.d>0?1.25:1)*(P.t.c>0
 function netDie(){if(NET){NET.emit('feed',{t:NICK+(LH?' погиб от '+LH:' погиб')}).catch(()=>{});NET.presence({al:0}).catch(()=>{})}}
 function netTick(dt){if(!NET||!P)return;carsTick(dt);const seen=new Set();
 NET.peers().forEach(q=>{const t=q.presence;if(q.isMe||q.kind!='viewer'||!t||t.x==null)return;const s=t.s|0;if(!S[s]||!isFinite(+t.x)||!isFinite(+t.y))return;seen.add(q.peer);let o=rem.get(q.peer);if(!o){o={x:+t.x,y:+t.y,a:+t.a||0};rem.set(q.peer,o)}
-const k=Math.min(1,dt*12);o.x+=(t.x-o.x)*k;o.y+=(t.y-o.y)*k;o.a+=(((+t.a||0)-o.a+9.4248)%6.2832-3.1416)*k;Object.assign(o,{s,r:Math.min(40,+t.r||10),n:String(t.n||'?').slice(0,14),hp:Math.max(0,Math.min(100,+t.hp||0)),gr:+t.gr||0,bt:+t.bt?1:0,al:+t.al?1:0,dv:+t.dv?1:0,tm:String(t.tm||'').slice(0,12),cc:+t.cc|0,ct:t.ct==null?-1:+t.ct,cr:Math.max(4,Math.min(60,+t.cr||10)),cf:Math.max(0,Math.min(1,+t.cf||0))})});
+const k=Math.min(1,dt*12);o.x+=(t.x-o.x)*k;o.y+=(t.y-o.y)*k;o.a+=(((+t.a||0)-o.a+9.4248)%6.2832-3.1416)*k;Object.assign(o,{s,r:Math.min(40,+t.r||10),n:String(t.n||'?').slice(0,14),hp:Math.max(0,Math.min(100,+t.hp||0)),gr:+t.gr||0,bt:+t.bt?1:0,al:+t.al?1:0,dv:+t.dv?1:0,tm:String(t.tm||'').slice(0,12),cc:+t.cc|0,ct:t.ct==null?-1:+t.ct,cr:Math.max(4,Math.min(60,+t.cr||10)),cf:Math.max(0,Math.min(1,+t.cf||0)),hz:Math.max(0,Math.min(14,+t.hz||0)),hAct:HAA[t.ha|0]||null,hArc:0})});
 rem.forEach((o,k)=>{if(!seen.has(k))rem.delete(k)});nt-=dt;
-if(nt<=0){nt=.07;NET.presence({x:Math.round(P.x),y:Math.round(P.y),a:+P.a.toFixed(2),r:+P.r.toFixed(1),s:P.s,n:NICK,hp:Math.round(P.hp/maxhp()*100),gr:Math.round(P.gr),bt:P.bt>0?1:0,al:P.dead?0:1,dv:P.dv?1:0,tm:TEAM,cc:P.cc?(P.cc.ch?2:1):0,ct:P.cc&&P.cc.ty!=null?P.cc.ty:-1,cr:P.cc?+P.cc.r.toFixed(1):0,cf:P.cc?+Math.max(0,Math.min(1,P.cc.l/(P.cc.l0||220))).toFixed(2):0}).catch(()=>{})}}
+if(nt<=0){nt=.07;NET.presence({x:Math.round(P.x),y:Math.round(P.y),a:+P.a.toFixed(2),r:+P.r.toFixed(1),s:P.s,n:NICK,hp:Math.round(P.hp/maxhp()*100),gr:Math.round(P.gr),bt:P.bt>0?1:0,al:P.dead?0:1,dv:P.dv?1:0,tm:TEAM,cc:P.cc?(P.cc.ch?2:1):0,ct:P.cc&&P.cc.ty!=null?P.cc.ty:-1,cr:P.cc?+P.cc.r.toFixed(1):0,cf:P.cc?+Math.max(0,Math.min(1,P.cc.l/(P.cc.l0||220))).toFixed(2):0,hz:+(P.hz||0).toFixed(2),ha:HAI(P.hAct)}).catch(()=>{})}}
 function tag(o){const y=-o.r*2.1-10;g.textAlign='center';g.font='bold 11px Bahnschrift,Oswald,Roboto,Arial,sans-serif';g.fillStyle='rgba(0,0,0,.55)';g.fillRect(-20,y+4,40,5);g.fillStyle='#e05a4a';g.fillRect(-19,y+5,38*o.hp/100,3);const tt=TEAM&&o.tm==TEAM;g.fillStyle=tt?'#7fe08a':'#fff';g.fillText((tt?'❖ ':'')+o.n,0,y);g.textAlign='left'}
 function plHtml(){if(!NET)return'<p>Одиночная игра. Чтобы играть с друзьями, войди в комнату через главное меню — «Мультиплеер».</p>';
 const a=[{n:NICK+' (ты)',s:P.s,gr:P.gr,hp:100*P.hp/maxhp()}];rem.forEach(o=>a.push(o));return'<p class="pts">Комната: <b>'+esc(ROOMN)+'</b></p>'+a.map(o=>'<div class="kv"><span>'+esc(o.n)+'</span><b>'+S[o.s].n+' · '+Math.round(o.gr)+'% · ❤ '+Math.round(o.hp)+'%</b></div>').join('')}
@@ -419,7 +487,7 @@ L(r*.55,()=>{F(.7);for(let k=-2;k<=2;k++)el(k*r*.5,0,r*.09,r*.5)});
 L(r*.3-(op?r*.15:0),()=>{F(.6);el(r*2.3,0,r,r*.38)});if(op)L(r*.35,()=>{g.fillStyle='#5a1010';el(r*2.3,0,r*.9,r*.3)});
 L(r*.45,()=>{F(1);el(r*2.35,0,r*1.05,r*.4);el(r*1.6,0,r*.5,r*.6)});
 L(r*.7,()=>{[-1,1].forEach(s=>{g.fillStyle='#e8d58a';el(r*1.7,s*r*.42,r*.13,r*.13);g.fillStyle='#000';el(r*1.72,s*r*.42,r*.06,r*.06)})})}
-function steer(n,a,v,dt){const sl=tile(n.x,n.y)==0?.6:1;for(const o of [0,.6,-.6,1.2,-1.2,2.4]){const b=a+o,t=tile(n.x+Math.cos(b)*(n.r+16),n.y+Math.sin(b)*(n.r+16));if(t!=6&&(!n.wb||t<2)){n.a=b;mv(n,Math.cos(b)*v*sl*dt,Math.sin(b)*v*sl*dt);return}}n.tk=0}
+function steer(n,a,v,dt){const sl=tile(n.x,n.y)==0?.6:1;for(const o of [0,.6,-.6,1.2,-1.2,2.4]){const b=a+o,t=tile(n.x+Math.cos(b)*(n.r+16),n.y+Math.sin(b)*(n.r+16));if(t!=6&&t!=11&&(!n.wb||t<2)){n.a=b;mv(n,Math.cos(b)*v*sl*dt,Math.sin(b)*v*sl*dt);return}}n.tk=0}
 function ai(n,dt){if(n.al){allyAi(n,dt);return}const vf=VF,h=n.k=='h',dx=P.x-n.x,dy=P.y-n.y,d=Math.hypot(dx,dy);n.tk=(n.tk||0)-dt;n.ph=(n.ph||0)+dt;n.tr=(n.tr||0)-dt;n.en=Math.min(100,(n.en==null?100:n.en)+(n.rn?-28:11)*dt);n.sw=tile(n.x,n.y)==0?(n.sw||0)+dt:0;let a=n.a,v=0,ea=0;n.rn=0;
 if(h){n.pv=(n.pv||0)-dt;if((n.ty==3||n.ty==7)&&n.pv>0&&!P.dead&&d<280){n.fear=0;const aa=Math.atan2(dy,dx);if(d<n.r+P.r+8){n.a=aa;n.ea=.2;if(n.cd<=0){n.cd=1.2;hurt(n.r*.5)}}else steer(n,aa,95,dt);return}
 let th=null,td=(n.fear>0?300:200)*vf;if(P.k==0&&!P.dead&&!P.dv&&d<td&&(n.fear>0||P.r>=n.r*.8)){th=P;td=d}
@@ -448,7 +516,7 @@ M.push(
 ['Невероятный нюх','Чует дейнозухов под водой, здоровье −6%',{hp:-.06},['Единственное, что позволяет увидеть затаившегося под водой дейнозуха','Показывает его на экране, у края экрана и на карте знаком 🐊','Других динозавров не показывает']],
 ['Каннибализм','Секретная: урон +20%, здоровье −8%',{dmg:.2,hp:-.08},['Туши питают на 40% сильнее','Урон по сородичам своего вида ×1.5','Мясо сородичей дополнительно лечит']]);
 IC.push('🧬','👃','🦷');
-const MX={8:0,10:0},SEC=[10],mAv=i=>SEC.indexOf(i)<0&&(MX[i]==null||MX[i]===P.k||S[P.s].k==2),hasMu=i=>!!P&&P.mu.indexOf(i)>=0,hasPs=id=>!!P&&P.ps.indexOf(id)>=0;
+const MX={8:0,10:0},SEC=[10],mAv=i=>(SEC.indexOf(i)<0||!!P.secCan)&&(MX[i]==null||MX[i]===P.k||S[P.s].k==2),hasMu=i=>!!P&&P.mu.indexOf(i)>=0,hasPs=id=>!!P&&P.ps.indexOf(id)>=0;
 const RAD=[16,24,9,14,22,30,13,15,36,15,19,32,7,24,14,34,22];
 let TS=[],nests=[],NH=null,VF=1,OFF=0,TEAM='';
 const msg=t=>{TS.push({t,e:Date.now()});if(TS.length>5)TS.shift()};
@@ -500,11 +568,10 @@ function eatT(tg,dt){snd('eat');const p=P,car=S[p.s].k==2?cars.indexOf(tg)>=0:!p
 if(car&&hasMu(8))p.hp=Math.min(maxhp(),p.hp+a*.6*PSC());
 if(car&&!p.k&&tg.ty===p.s){if(hasMu(10))p.hp=Math.min(maxhp(),p.hp+a*.5*PSC());if(!tg.cn){tg.ea2=(tg.ea2||0)+a;if(tg.ea2>=35){tg.cn=1;p.cnb++;if(!hasMu(10)){if(p.cnb>=5)unlockCan();else msg('Сородичей съедено: '+p.cnb+'/5')}}}}
 if(tg.l<=0)tg.t=car?0:45}
-function unlockCan(){P.mu.push(10);P.hp=Math.min(maxhp(),P.hp+40*PSC());msg('🧬 Секретная мутация открыта: КАННИБАЛИЗМ!');if(NET)NET.emit('feed',{t:NICK+' стал каннибалом'}).catch(()=>{})}
+function unlockCan(){if(!P||P.secCan||hasMu(10))return;P.secCan=1;msg('🧬 Открыта новая мутация! Она появилась в выборе мутаций.');if(tabOn&&tabN==1)tabUi();if(NET)NET.emit('feed',{t:NICK+' открыл секретную мутацию'}).catch(()=>{})}
 function mkCroc(kin){let x,y,k=0;do{x=R()*WS;y=R()*WS;k++}while(tile(x,y)!=0&&k<3000);const n=mkNpc('p',0);n.x=x;n.y=y;n.ty=8;n.c=S[8].c;n.r=RAD[8]*.8;n.mh=n.hp=MASS[8]*.51;n.sc=n.mh/(n.r*8);n.wb=1;n.dv=1;n.sf=0;n.rs=6+R()*40;if(kin)n.kin=1;return n}
 function mkKin(ty){if(ty==8)return mkCroc(1);const n=mkNpc('p',1);n.ty=ty;n.c=S[ty].c;n.r=RAD[ty]*.85;n.mh=n.hp=MASS[ty]*.614;n.sc=n.mh/(n.r*7);n.kin=1;return n}
 function respawn(b){const k=b.k,ty=b.ty,kin=b.kin;setTimeout(()=>{if(kin){if(P&&!P.dead&&P.s===ty)npcs.push(mkKin(ty))}else npcs.push(ty==8?mkCroc():mkNpc(k,1))},40000)}
-function secBox(){if(P.k)return'';if(hasMu(10))return det(10,0);return'<div class="dt" style="margin-top:12px"><h4>🔒 Секретная мутация</h4><span style="opacity:.75">'+(P.cnb>0?'Что-то меняется в твоей крови… Сородичей съедено: '+P.cnb+'.':'Говорят, хищник, отведавший плоти себе подобных, меняется навсегда…')+'</span></div>'}
 // ---------- нюх ----------
 const sniffOn=()=>hasMu(9)||P.t.sn>0;
 function sniffList(rad,pOnly){const a=[];npcs.forEach(n=>{if(n.held)return;const d=Math.hypot(n.x-P.x,n.y-P.y);if(d>rad||d<2)return;const pr=n.k=='p';if(pOnly&&(!pr||n.al))return;a.push({x:n.x,y:n.y,c:n.al?'#ffd75a':pr?'#ff6a5a':'#7fe08a',cr:n.ty==8,r:n.r})});
@@ -575,7 +642,7 @@ function latchUpd(dt){const p=P,q=p.lt;if(!q)return;if(q.hp<=0||npcs.indexOf(q)<
 function upX(dt){const p=P;latchUpd(dt);p.asv=(p.asv||0)-dt;if(p.t.th>0){p.thc=(p.thc||0)-dt;if(p.thc<=0){p.thc=.6;near(p.r*3+90,n=>{n.stun=Math.max(n.stun||0,.9);if(n.k=='h')n.fear=Math.max(n.fear||0,3);else n.hp-=(n.sc||1)*dmgB()*.25})}}p.xcd[0]-=dt;p.xcd[1]-=dt;p.lay-=dt;
 while(p.gs<PSL.length&&p.gr>=PSL[p.gs]){p.gs++;p.sp++;msg('✨ Новое очко навыков (Tab → Навыки)')}
 if(p.gr>=ASL[0]&&!p.u0){p.u0=1;msg('✨ Открыт слот способности Z')}if(p.gr>=ASL[1]&&!p.u1){p.u1=1;msg('✨ Открыт слот способности X')}
-VF=DIF().vis*(1-.35*night())*(1-.4*wx.fog)*(p.t.hd>0?.15:1);
+VF=DIF().vis*(1-.35*night())*(1-.4*wx.fog)*(p.t.hd>0?.15:1)*hideF();
 if(wx.rain>.05)p.wt=Math.min(100,p.wt+(hasPs('wx')?4:2)*Math.min(1,wx.rain)*dt)}
 // ---------- интерфейс ----------
 function hudX(){const p=P,mx=W-106,my=12,dot=(x,y,c,s)=>{g.fillStyle=c;g.fillRect(mx+x/WS*96-s/2,my+y/WS*96-s/2,s,s)};
@@ -658,7 +725,7 @@ AB[14]=['Лобовой удар',13,()=>{P.dh=.35},'таран головой: 
 AB[15]=['Громовой шаг',26,()=>{P.t.th=5},'5 с: каждый шаг оглушает и пугает всех вокруг'];
 AB[16]=['Размах когтей',11,()=>{P.bt=.25;arcN(P.r*3.2+40,1.1,n=>{n.hp-=(n.sc||1)*dmgB()*2;n.bl=6;n.fl=.12;if(n.k=='h'){n.fear=3;n.pv=6}else n.ch=1;if(n.hp<=0)pkill(n)})},'полукруг когтями: урон ×2 и кровотечение'];
 // ====================== СПИСОК ИЗМЕНЕНИЙ ======================
-const CL=[['1.17.2','Админы Firebase: перезагрузка серверов',['В списке серверов для админов Firebase появилась кнопка «↻ Перезагрузка»: ИИ выключается, персонажи сохраняются, все игроки выходят с сервера за 5 секунд (с отсчётом на экране); на этот же сервер можно зайти снова и появиться на том же месте','Кнопка «Создать сервер» видна только админам Firebase','Перезагрузка очищает общие туши на сервере']],['1.17.1','Серверы: длительность дня и ночи и панель управления',['При создании сервера можно выбрать длительность дня и ночи в секундах (30–1800 каждая) или готовый вариант; они видны в списке серверов','В списке справа от своего сервера появилась кнопка «⚙ Управление»: заходит на сервер и открывает админ-панель','Админ-панель: смена времени суток (рассвет, утро, полдень, закат, ночь) и погоды (закрепить или вернуть авто) для всех игроков','Создание туши любого динозавра с выбранным % роста; рост, кормление и добавление нутриентов выбранному игроку, всем или себе']],['1.17','Окружение, часть 4 из 5: погода, небо, день и ночь, освещение',['Небо: градиент от горизонта к зениту, рассвет и закат, солнце и луна с ореолом, звёзды ночью, два слоя дрейфующих облаков; их густота зависит от погоды','Цвет тумана совпадает с небом у горизонта; вода отражает то же небо','Свет по времени суток: тёплый закат, холодный лунный свет, ночью растения и земля не чёрные; в пасмурную погоду и дождь свет рассеянный; тени ночью слабые','Дождь с наклоном по ветру (на телефоне капель меньше); гроза: вспышки молний с подсветкой неба и гром с задержкой','Единый ветер: от погоды зависят качание деревьев, подлеска и камыша, дрейф облаков и наклон дождя','Игровая логика времени суток (dayL), погоды, видимости и звука не изменена; плоские эффекты неба, дождя и молнии на 2D-слое убраны','Дальше: финальная проверка и полировка окружения']],['1.16','Окружение, часть 3 из 5: рельеф, вода, берега и река',['Рельеф стал мягче: холмы и долины на лугах, высокие горы из камня, пологие берега, без «ступенек» на границах тайлов и без швов между кусками карты','Цвета земли по высоте и склону: трава, лес, песок, мокрая земля у воды, скалы и обрывы на крутых склонах','Вода с глубиной: мелководье светлее и прозрачнее, глубина темнее, рябь, блики солнца, пена на урезе; в дождь и грозу рябь сильнее','Река с видимым течением по направлению потока; броды видны мелководьем','Камыш в мелководье и галька на берегах; камыш качается на ветру','Высота рельефа считается ровно по треугольникам меша: деревья, подлесок, динозавры и камера стоят точно на земле','Подлесок не растёт на берегах и песке; на телефоне меньше камыша и гальки, дальность деталей берега около 80 ед.','Дальше: погода, небо, день и ночь, освещение']],['1.15','Окружение, часть 2 из 5: подлесок',['Подлесок: папоротники, кустарники, пучки травы, цветы и мох у стволов; растут группами, чаще в тени и рядом с рощами, а не по сетке','Не растёт на воде, в реке, на камнях и песке','Поваленные стволы и пни (размер 70–130%); мешают проходу только крупным динозаврам','Всё через InstancedMesh с цветом вершин и качанием на ветру; в шторм качание сильнее','На телефоне меньше экземпляров; подлесок виден примерно на 80 ед., дальше растения уходят в землю и не обсчитываются','Деревья, съедобные кусты, мультиплеер, аккаунт Google, настройки и выбор динозавра не затронуты','Дальше: рельеф, вода, берега и река']],['1.13','Итог: пять частей обновления',['Модели всех 18 динозавров пересобраны по реальным пропорциям (голова, шея, туловище, ноги, хвост); Дейнозух исправлен','Одиночная игра убрана, играть можно через Мультиплеер с входом Google','Экран «Настройки»: звук, цвет интерфейса, управление; в главном меню остались Мультиплеер, Просмотр видов, Аккаунт, Настройки, Список изменений','Выбор динозавра: Хищные, Травоядные, Всеядные, Гнезда; всеядные едят и мясо, и кусты','Гнёзда убраны из главного меню и живут в выборе динозавра','«Просмотр видов» доступен из главного меню без входа на сервер']],['1.12','Часть 4 из 5: выбор динозавра, всеядные, просмотр видов',['Экран выбора динозавра разбит на разделы: Хищные, Травоядные, Всеядные, Гнёзда','Всеядные: Гипсилофодон, Пахицефалозавр и Теризинозавр едят и кусты, и туши, им доступны навыки и мутации обеих групп','Раздел «Гнёзда»: «Моё гнездо» (код для друзей) и «Вступить в гнездо» (ввод кода, яйцо высиживается после рождения); кнопка «Гнездо» убрана из главного меню','Новая кнопка «Просмотр видов»: листай все виды стрелками или списком, крути модель пальцем','Дальше: финальная проверка и полировка']],['1.11','Часть 3 из 5: настройки, без одиночной игры, Дейнозух',['Убрана одиночная игра: играть можно только через Мультиплеер (вход через Google обязателен)','Новый экран «Настройки»: громкость звука, цвет интерфейса и управление с переназначением клавиш','В главном меню остались: Мультиплеер, Гнездо, Аккаунт, Настройки, Список изменений','Дейнозух: убрано «кольцо» на шее, ноги стали тонкими и короткими, тело лежит низко, хвост соразмерен','Дальше: выбор динозавра с разделами Хищные, Травоядные, Всеядные, Гнезда']],['1.10','Часть 2 из 5: травоядные и Дейнозух',['Модели 8 травоядных (Гипсилофодон, Трицератопс, Паразауролоф, Анкилозавр, Стегозавр, Пахицефалозавр, Диплодок, Теризинозавр) пересобраны по реальным размерам','У четвероногих подобрана толщина ног под размер корпуса: Диплодок и Анкилозавр с массивными ногами, Стегозавр с более тонкими','Дейнозух: длинная морда, низкое широкое тело, короткие ноги и мощный хвост','Дальше: убрать одиночную игру и перенести управление в настройки']],['1.9','Часть 1 из 5: модели хищников',['Модели 9 хищников пересобраны по реальным размерам: голова, шея, туловище, ноги и хвост теперь соразмерны','Ноги двуногих толще и длиннее, голова Тираннозавра и других хищников уменьшена, хвосты удлинены','Следующие части: травоядные и всеядные, настройки, выбор динозавра с гнёздами, финальная проверка']],['1.8','Вес вместо здоровья, аккаунт Google, чище меню',['Здоровье равно весу тела в кг: у каждого вида научная масса взрослой особи (Тираннозавр ~8400 кг, Компсогнат ~3 кг), в росте масса увеличивается как куб длины','Мутации и навыки на здоровье меняют массу тела; чем крупнее зверь, тем сильнее кусает','HUD в стиле Evrima: тонкие сегментированные полосы, веса в кг','Убраны выбор сложности (игра идёт в одном режиме), «Мои динозавры», мини-карта и вкладка «Карта»','Карта мира больше в 10 раз по площади (885×885 клеток): больше рек, гнёзд, кустов и животных; далёкие животные не обсчитываются, пока не подойдёшь','Вход через Google обязателен для мультиплеера; рекорды, ник, управление и цвет хранятся в облаке аккаунта']],['1.7','Баланс',['Дейнозух ослаблен: меньше здоровья и урона, медленнее в воде','Все растут медленнее: чем крупнее вид и чем он взрослее, тем дольше растёт']],['1.6','Территории хищников, меню и река',['Хищники защищают территорию: встречаясь, кружат, кусают друг друга, слабый или меньший убегает','Кнопки управления (укус, способность и др.) скрыты в главном меню','Динозавры в реке плавно поворачиваются и не крутятся вместе с течением']],['1.5','Аккаунт Google и дизайн как в Evrima',['Вход через Google: мультиплеер работает через аккаунт, а сохранённые динозавры, рекорды, управление, ник, цвет и сложность хранятся в облаке аккаунта','Оформление в стиле The Isle: Evrima: тёмные панели, строгий шрифт, тонкие полосы, новые цвета интерфейса','Из выбора динозавра убраны «Сложность» и «Мои динозавры» (они остались в главном меню)']],
+const CL=[['1.18.0','Биомы и Герреразавр-верхолаз',['Новые биомы: густые леса и джунгли, луга и поляны, саванна с акациями, болота, пляжи, красные каньоны, горные хребты с проходами, пещеры-укрытия, озёра и широкие речные долины; границы биомов плавные','Карта по-прежнему одинакова у всех игроков комнаты (генерация детерминирована)','В джунглях, лесу и особенно в пещерах тебя хуже замечают хищники и травоядные; болото замедляет и в нём можно пить','Герреразавр: лазание на деревья (клавиша «Нырок»), прогулки по кронам, прицел на добычу с ветки с поворотом головы на 360° и прыжок с уроном при падении и приземлением'],],['1.17.2','Админы Firebase: перезагрузка серверов',['В списке серверов для админов Firebase появилась кнопка «↻ Перезагрузка»: ИИ выключается, персонажи сохраняются, все игроки выходят с сервера за 5 секунд (с отсчётом на экране); на этот же сервер можно зайти снова и появиться на том же месте','Кнопка «Создать сервер» видна только админам Firebase','Перезагрузка очищает общие туши на сервере']],['1.17.1','Серверы: длительность дня и ночи и панель управления',['При создании сервера можно выбрать длительность дня и ночи в секундах (30–1800 каждая) или готовый вариант; они видны в списке серверов','В списке справа от своего сервера появилась кнопка «⚙ Управление»: заходит на сервер и открывает админ-панель','Админ-панель: смена времени суток (рассвет, утро, полдень, закат, ночь) и погоды (закрепить или вернуть авто) для всех игроков','Создание туши любого динозавра с выбранным % роста; рост, кормление и добавление нутриентов выбранному игроку, всем или себе']],['1.17','Окружение, часть 4 из 5: погода, небо, день и ночь, освещение',['Небо: градиент от горизонта к зениту, рассвет и закат, солнце и луна с ореолом, звёзды ночью, два слоя дрейфующих облаков; их густота зависит от погоды','Цвет тумана совпадает с небом у горизонта; вода отражает то же небо','Свет по времени суток: тёплый закат, холодный лунный свет, ночью растения и земля не чёрные; в пасмурную погоду и дождь свет рассеянный; тени ночью слабые','Дождь с наклоном по ветру (на телефоне капель меньше); гроза: вспышки молний с подсветкой неба и гром с задержкой','Единый ветер: от погоды зависят качание деревьев, подлеска и камыша, дрейф облаков и наклон дождя','Игровая логика времени суток (dayL), погоды, видимости и звука не изменена; плоские эффекты неба, дождя и молнии на 2D-слое убраны','Дальше: финальная проверка и полировка окружения']],['1.16','Окружение, часть 3 из 5: рельеф, вода, берега и река',['Рельеф стал мягче: холмы и долины на лугах, высокие горы из камня, пологие берега, без «ступенек» на границах тайлов и без швов между кусками карты','Цвета земли по высоте и склону: трава, лес, песок, мокрая земля у воды, скалы и обрывы на крутых склонах','Вода с глубиной: мелководье светлее и прозрачнее, глубина темнее, рябь, блики солнца, пена на урезе; в дождь и грозу рябь сильнее','Река с видимым течением по направлению потока; броды видны мелководьем','Камыш в мелководье и галька на берегах; камыш качается на ветру','Высота рельефа считается ровно по треугольникам меша: деревья, подлесок, динозавры и камера стоят точно на земле','Подлесок не растёт на берегах и песке; на телефоне меньше камыша и гальки, дальность деталей берега около 80 ед.','Дальше: погода, небо, день и ночь, освещение']],['1.15','Окружение, часть 2 из 5: подлесок',['Подлесок: папоротники, кустарники, пучки травы, цветы и мох у стволов; растут группами, чаще в тени и рядом с рощами, а не по сетке','Не растёт на воде, в реке, на камнях и песке','Поваленные стволы и пни (размер 70–130%); мешают проходу только крупным динозаврам','Всё через InstancedMesh с цветом вершин и качанием на ветру; в шторм качание сильнее','На телефоне меньше экземпляров; подлесок виден примерно на 80 ед., дальше растения уходят в землю и не обсчитываются','Деревья, съедобные кусты, мультиплеер, аккаунт Google, настройки и выбор динозавра не затронуты','Дальше: рельеф, вода, берега и река']],['1.13','Итог: пять частей обновления',['Модели всех 18 динозавров пересобраны по реальным пропорциям (голова, шея, туловище, ноги, хвост); Дейнозух исправлен','Одиночная игра убрана, играть можно через Мультиплеер с входом Google','Экран «Настройки»: звук, цвет интерфейса, управление; в главном меню остались Мультиплеер, Просмотр видов, Аккаунт, Настройки, Список изменений','Выбор динозавра: Хищные, Травоядные, Всеядные, Гнезда; всеядные едят и мясо, и кусты','Гнёзда убраны из главного меню и живут в выборе динозавра','«Просмотр видов» доступен из главного меню без входа на сервер']],['1.12','Часть 4 из 5: выбор динозавра, всеядные, просмотр видов',['Экран выбора динозавра разбит на разделы: Хищные, Травоядные, Всеядные, Гнёзда','Всеядные: Гипсилофодон, Пахицефалозавр и Теризинозавр едят и кусты, и туши, им доступны навыки и мутации обеих групп','Раздел «Гнёзда»: «Моё гнездо» (код для друзей) и «Вступить в гнездо» (ввод кода, яйцо высиживается после рождения); кнопка «Гнездо» убрана из главного меню','Новая кнопка «Просмотр видов»: листай все виды стрелками или списком, крути модель пальцем','Дальше: финальная проверка и полировка']],['1.11','Часть 3 из 5: настройки, без одиночной игры, Дейнозух',['Убрана одиночная игра: играть можно только через Мультиплеер (вход через Google обязателен)','Новый экран «Настройки»: громкость звука, цвет интерфейса и управление с переназначением клавиш','В главном меню остались: Мультиплеер, Гнездо, Аккаунт, Настройки, Список изменений','Дейнозух: убрано «кольцо» на шее, ноги стали тонкими и короткими, тело лежит низко, хвост соразмерен','Дальше: выбор динозавра с разделами Хищные, Травоядные, Всеядные, Гнезда']],['1.10','Часть 2 из 5: травоядные и Дейнозух',['Модели 8 травоядных (Гипсилофодон, Трицератопс, Паразауролоф, Анкилозавр, Стегозавр, Пахицефалозавр, Диплодок, Теризинозавр) пересобраны по реальным размерам','У четвероногих подобрана толщина ног под размер корпуса: Диплодок и Анкилозавр с массивными ногами, Стегозавр с более тонкими','Дейнозух: длинная морда, низкое широкое тело, короткие ноги и мощный хвост','Дальше: убрать одиночную игру и перенести управление в настройки']],['1.9','Часть 1 из 5: модели хищников',['Модели 9 хищников пересобраны по реальным размерам: голова, шея, туловище, ноги и хвост теперь соразмерны','Ноги двуногих толще и длиннее, голова Тираннозавра и других хищников уменьшена, хвосты удлинены','Следующие части: травоядные и всеядные, настройки, выбор динозавра с гнёздами, финальная проверка']],['1.8','Вес вместо здоровья, аккаунт Google, чище меню',['Здоровье равно весу тела в кг: у каждого вида научная масса взрослой особи (Тираннозавр ~8400 кг, Компсогнат ~3 кг), в росте масса увеличивается как куб длины','Мутации и навыки на здоровье меняют массу тела; чем крупнее зверь, тем сильнее кусает','HUD в стиле Evrima: тонкие сегментированные полосы, веса в кг','Убраны выбор сложности (игра идёт в одном режиме), «Мои динозавры», мини-карта и вкладка «Карта»','Карта мира больше в 10 раз по площади (885×885 клеток): больше рек, гнёзд, кустов и животных; далёкие животные не обсчитываются, пока не подойдёшь','Вход через Google обязателен для мультиплеера; рекорды, ник, управление и цвет хранятся в облаке аккаунта']],['1.7','Баланс',['Дейнозух ослаблен: меньше здоровья и урона, медленнее в воде','Все растут медленнее: чем крупнее вид и чем он взрослее, тем дольше растёт']],['1.6','Территории хищников, меню и река',['Хищники защищают территорию: встречаясь, кружат, кусают друг друга, слабый или меньший убегает','Кнопки управления (укус, способность и др.) скрыты в главном меню','Динозавры в реке плавно поворачиваются и не крутятся вместе с течением']],['1.5','Аккаунт Google и дизайн как в Evrima',['Вход через Google: мультиплеер работает через аккаунт, а сохранённые динозавры, рекорды, управление, ник, цвет и сложность хранятся в облаке аккаунта','Оформление в стиле The Isle: Evrima: тёмные панели, строгий шрифт, тонкие полосы, новые цвета интерфейса','Из выбора динозавра убраны «Сложность» и «Мои динозавры» (они остались в главном меню)']],
 ['1.5','Новые модели, трупы и драка в меню',[
 'Новые модели всех динозавров и дейнозуха: зубы, глаза с бровями, когти, оперение у рапторов, рисунок на шкуре, дыхание и покачивание при ходьбе',
 'Диплодок исправлен: длинная шея вытянута вперёд и плавно покачивается, хвост-плеть, массивные ноги',
@@ -760,11 +827,11 @@ function spawnPos(min,max,tiles){for(let k=0;k<60;k++){const a=R()*TAU,d=min+R()
 function evCap(){let c=0;for(let i=npcs.length-1;i>=0;i--)if(npcs[i].ev){c++;if(c>26)npcs.splice(i,1)}}
 function banner(t){EV.ban={t,e:Date.now()}}
 const EVS=[
-{w:3,f:()=>{const c=spawnPos(450,800,[2,3,5]);if(!c)return 0;for(let i=0;i<9;i++){const n=mkNpc('h',0);let x=c[0]+(R()-.5)*160,y=c[1]+(R()-.5)*160;if([2,3,5].indexOf(tile(x,y))<0){x=c[0];y=c[1]}n.x=x;n.y=y;n.ev=1;npcs.push(n)}evCap();banner('🦕 Мимо проходит стадо травоядных!');return 1}},
+{w:3,f:()=>{const c=spawnPos(450,800,LANDT);if(!c)return 0;for(let i=0;i<9;i++){const n=mkNpc('h',0);let x=c[0]+(R()-.5)*160,y=c[1]+(R()-.5)*160;if(LANDT.indexOf(tile(x,y))<0){x=c[0];y=c[1]}n.x=x;n.y=y;n.ev=1;npcs.push(n)}evCap();banner('🦕 Мимо проходит стадо травоядных!');return 1}},
 {w:2,f:()=>{EV.dry=60;banner('🏜️ Засуха: жажда сильнее целую минуту');return 1}},
-{w:2,f:()=>{bushes.forEach(b=>{if(Math.hypot(b.x-P.x,b.y-P.y)<2200){b.l=60;b.t=0}});for(let i=0;i<2;i++){const c=spawnPos(300,600,[2,3,5]);if(c)cars.push({x:c[0],y:c[1],l:220,t:100,r:18,q:[.45,.4,.15],ty:0})}banner('🍃 Щедрый сезон: кусты и туши обновились');return 1}},
+{w:2,f:()=>{bushes.forEach(b=>{if(Math.hypot(b.x-P.x,b.y-P.y)<2200){b.l=60;b.t=0}});for(let i=0;i<2;i++){const c=spawnPos(300,600,LANDT);if(c)cars.push({x:c[0],y:c[1],l:220,t:100,r:18,q:[.45,.4,.15],ty:0})}banner('🍃 Щедрый сезон: кусты и туши обновились');return 1}},
 {w:2,f:()=>{if(P.s==8)return 0;let a=0;for(let i=0,n2=3+DIF().pack*2;i<n2;i++){const c=spawnPos(500,1400,[0]);if(!c)continue;const n=mkCroc();n.x=c[0];n.y=c[1];n.ev=1;npcs.push(n);a++}if(!a)return 0;evCap();banner('🌊 Вода неспокойна: в реках стало больше дейнозухов');return 1}},
-{w:3,f:()=>{if(!DIF().pack)return 0;let a=0;for(let i=0,n2=2+DIF().pack;i<n2;i++){const c=spawnPos(450,650,[2,3,5]);if(!c)continue;const n=mkNpc('p',0);n.x=c[0];n.y=c[1];n.ch=1;n.hg=20;n.ev=1;npcs.push(n);a++}if(!a)return 0;evCap();msg('🐾 Стая хищников вышла на твой след!');return 1}}];
+{w:3,f:()=>{if(!DIF().pack)return 0;let a=0;for(let i=0,n2=2+DIF().pack;i<n2;i++){const c=spawnPos(450,650,LANDT);if(!c)continue;const n=mkNpc('p',0);n.x=c[0];n.y=c[1];n.ch=1;n.hg=20;n.ev=1;npcs.push(n);a++}if(!a)return 0;evCap();msg('🐾 Стая хищников вышла на твой след!');return 1}}];
 function fireEvent(){const pl=EVS.slice();let tot=pl.reduce((s,e)=>s+e.w,0);for(let t=0;t<6&&pl.length;t++){let r=R()*tot,i=0;for(;i<pl.length-1&&r>=pl[i].w;i++)r-=pl[i].w;const e=pl[i];if(e.f())return;tot-=e.w;pl.splice(i,1)}}
 
 function extUpd(dt){if(!P||P.dead)return;
@@ -804,6 +871,10 @@ eatT=function(tg,dt){const p=P,f0=p.fd,n0=p.n.slice();_eatT(tg,dt);
 const HDM=[[.85,.42],[.8,.6],[.5,.3],[.9,.5],[1,.5],[1.1,.62],[.7,.36],[.6,.5],[1,.4],[.9,.38],[.9,.4],[1.25,.36],[.7,.28],[.5,.26],[.5,.4],[.5,.3],[.5,.34]];
 const CARN=[1,1,0,0,1,1,0,0,1,1,1,1,1,0,0,0,0].map(Boolean),FEATH=[0,10,12];
 const HZ=[.9,.95,.85,.45,.95,1,1.05,.3,0,.9,.9,.9,.8,0,.85,0,1.2];HDM.push([.95,.5]);CARN.push(true);HZ.push(.95);
+// ---- Герреразавр (индекс 18): один из древнейших хищных динозавров ----
+S.push({n:'Герреразавр',k:0,c:'#8c6b43',hp:.95,spd:1.15,dmg:1,sz:.95,d:'Один из древнейших хищных динозавров: стройный быстрый бегун с длинным хвостом, подвижной челюстью и цепкими трёхпалыми руками.'});
+MASS.push(230);RAD.push(17);BM.push(0);HDM.push([.9,.45]);CARN.push(true);HZ.push(.9);
+AB[18]=['Бросок',9,()=>{P.dh=.25},'быстрый рывок на добычу с укусом'];
 function dino(a,r,c,fl,ty,op,ph){const oy=ty;ty=BM[ty];if(oy==8)return croc(a,r,fl>0?'#ffffff':c,op,ph);if(fl>0)c='#ffffff';
 const ca=Math.cos(a),sa=Math.sin(a),pt=(u,v)=>[u*ca-v*sa,(u*sa+v*ca)*K],
 L=(z,f)=>{g.save();g.translate(0,-z);g.scale(1,K);g.rotate(a);f();g.restore()},el=(u,v,x,y)=>{g.beginPath();g.ellipse(u,v,x,y,0,0,7);g.fill()},F=f=>{g.fillStyle=sh(c,f)};
@@ -971,7 +1042,7 @@ function drawPreview(){const e=$('pv');if(!e)return;const b=e.getBoundingClientR
 g.save();g.fillStyle='rgba(0,0,0,.18)';g.beginPath();g.ellipse(x,y+4,b.width*.4,b.height*.14,0,0,7);g.fill();g.translate(x,y);g.scale(s,s);dino(.3*Math.sin(TM*.8),r,S[i].c,0,i,Math.sin(TM*.9)>.88,TM*3);g.restore()}
 
 // ====================== УПРАВЛЕНИЕ: РЕБИНД ======================
-const ACT=[['up','Вперёд (вверх)'],['down','Назад (вниз)'],['left','Влево'],['right','Вправо'],['run','Бег'],['bite','Укус'],['ability','Способность вида'],['eat','Есть / пить (удерживать)'],['dive','Нырок / утопить добычу'],['nest','Гнездо / высиживание яйца'],['ax1','Доп. способность Z (слот 1)'],['ax2','Доп. способность X (слот 2)'],['menu','Меню персонажа'],['carry','Нести / бросить труп (с «Есть» — оторвать кусок)'],['rest','Лечь / встать']];
+const ACT=[['up','Вперёд (вверх)'],['down','Назад (вниз)'],['left','Влево'],['right','Вправо'],['run','Бег'],['bite','Укус'],['ability','Способность вида'],['eat','Есть / пить (удерживать)'],['dive','Нырок / утопить добычу / лазание (Герреразавр)'],['nest','Гнездо / высиживание яйца'],['ax1','Доп. способность Z (слот 1)'],['ax2','Доп. способность X (слот 2)'],['menu','Меню персонажа'],['carry','Нести / бросить труп (с «Есть» — оторвать кусок)'],['rest','Лечь / встать']];
 const BDEF={up:['KeyW','ArrowUp'],down:['KeyS','ArrowDown'],left:['KeyA','ArrowLeft'],right:['KeyD','ArrowRight'],run:['ShiftLeft','ShiftRight'],bite:['Mouse0','Space'],ability:['KeyE',''],eat:['KeyQ',''],dive:['KeyF',''],nest:['KeyR',''],ax1:['KeyZ',''],ax2:['KeyX',''],menu:['Tab',''],carry:['KeyV',''],rest:['KeyC','']};
 const KSK='isle2d_keys_v1';
 let BIND={},OPT={rt:0},RT=0,CAP=null,CMSG='';
@@ -1016,7 +1087,7 @@ ov.innerHTML='<div class="det" style="width:100%;overflow:auto;max-height:100%">
 +'<div class="ml" style="margin-top:12px"><button class="mb" onclick="OPT.rt=OPT.rt?0:1;RT=0;bSave();ctrl()">Бег: '+(OPT.rt?'переключатель (нажал — бежишь, пока идёшь)':'пока удерживаешь')+'</button><button class="mb" onclick="bReset();bSave();CMSG=\'\';ctrl()">Сбросить на стандартные</button></div>'
 +'<p style="margin-top:14px">Телефон: джойстик слева, кнопки УКУС, БЕГ, ЕСТЬ/ПИТЬ и Способность справа, ☰ — меню персонажа. Рывок Дейнозуха хватает динозавра в пасть, повторное нажатие — бросок. С добычей в пасти нырок топит её.</p>'
 +'<p>Хищники едят туши, травоядные — кусты. Пей у воды. Не водные виды в глубокой воде теряют выносливость и тонут; на реке есть мелкие броды, течение сносит. Очко мутации даётся на 20%, 40%, 65% и 90% роста. Дополнительные способности (слоты на 15% и 50% роста) выбираются во вкладке «Навыки». Гнездо строится или яйцо высиживается клавишей гнезда; в мультиплеере яйца только еда, а союзники — игроки твоей команды.</p>'
-+'<button class="bk" onclick="CAP=null;settings()">Назад</button></div>'}
++'<p>Герреразавр: клавиша «Нырок» (на телефоне ЛАЗАТЬ) — залезть на дерево рядом, на ветке можно ходить по кронам, цель с прямой видимостью берётся в прицел, «Способность» — прыжок на добычу с уроном при падении. Тот же клавиша спускает вниз. В джунглях, пещерах и лесу тебя хуже видно, болото замедляет.</p><button class="bk" onclick="CAP=null;settings()">Назад</button></div>'}
 
 
 
@@ -1219,7 +1290,7 @@ function admAi(){const v=SRV.ai?0:1;try{srvRef(SRV.code).update({ai:v})}catch(e)
 function admKick(k){if(confirm('Исключить игрока?'))admEmit({k:'kick',to:k})}
 function admTp(k){const o=rem.get(k);if(o){P.x=o.x+40;P.y=o.y;toggleTab()}}
 function admSelf(k){if(!isAdm())return;if(k=='gr')P.gr=Math.min(100,P.gr+20);else if(k=='hp'){P.hp=maxhp();P.fd=P.wt=100}else if(k=='car')cars.push({x:P.x+60,y:P.y,l:220,l0:220,t:100,r:18,q:[.45,.4,.15],ty:3});if(tabOn)tabUi()}
-const _pl2X=plHtml2;plHtml2=function(){return _pl2X()+(NET&&SRV.code?'<div class="dt"><h4>Сервер</h4><p>'+esc(SRV.name||SRV.code)+' · '+sizeName(N)+' · ИИ-враги: '+(SRV.ai?'да':'нет')+'</p><button onclick="leaveServer()">Выйти с сервера</button></div>':'')+(isAdm()?admHtml():'')};
+const _pl2X=plHtml2;plHtml2=function(){return _pl2X()+(NET&&SRV.code?'<div class="dt"><h4>Сервер</h4><p>'+esc(SRV.name||SRV.code)+' · '+sizeName(N)+' · ИИ-враги: '+(SRV.ai?'да':'нет')+'</p><button onclick="leaveServer()">Выйти с сервера</button></div>':'')};
 function leaveServer(){if(!NET)return;if(!confirm('Выйти с сервера?'))return;tabOn=false;if(NET)NET.emit('feed',{t:NICK+' покинул сервер'}).catch(()=>{});leaveNet();paused=true;if(P)P.dead=true;ov.className='';menu()}
 // ИИ-враги выключены: события с хищниками не запускаются
 [3,4].forEach(i=>{const f=EVS[i].f;EVS[i].f=()=>SRV.ai?f():0});
@@ -1411,7 +1482,7 @@ sun.position.set(150,250,100);sc.add(hemi,sun,sun.target);sun.castShadow=true;su
 function rz(){rd.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}addEventListener('resize',rz);rz();
 const SPH=new THREE.SphereGeometry(1,20,14),SJ=new THREE.SphereGeometry(1,12,8),BOX=new THREE.BoxGeometry(1,1,1),CYL=new THREE.CylinderGeometry(1,1,1,14),CON=new THREE.ConeGeometry(1,1,16),ROK=new THREE.DodecahedronGeometry(1,0);
 // ---------- рельеф из карты тайлов ----------
-const HT=[-2.6,-.9,.25,1.2,1.2,1.3,5.2],TCL=[[.09,.2,.27],[.45,.47,.33],[.8,.72,.46],[.36,.55,.24],[.36,.55,.24],[.19,.38,.18],[.5,.48,.45]];
+const HT=[-2.6,-.9,.25,1.2,1.2,1.3,5.2,1.35,1.0,.28,.75,6.2,2.6,.95],TCL=[[.09,.2,.27],[.45,.47,.33],[.8,.72,.46],[.36,.55,.24],[.36,.55,.24],[.19,.38,.18],[.5,.48,.45],[.1,.3,.12],[.64,.57,.27],[.26,.3,.17],[.62,.34,.2],[.5,.27,.2],[.2,.18,.16],[.42,.62,.26]];
 let TG=[],WL=[],ST=2,V=2,hts=new Float32Array(4),tmap=null;
 const WLV=-.02,WRN={value:0},WSK={value:bgc},WND={value:1}; // WND: единый ветер (1 = штиль, ~3 = шторм)
 // вода: глубина (aD) и течение (aF) идут атрибутами вершин, ряби и блики считаются в шейдере
@@ -1437,14 +1508,14 @@ WMAT.onBeforeCompile=s=>{s.uniforms.uT=WU;s.uniforms.uRain=WRN;s.uniforms.uSky=W
 function hAt(x,y){const u=x/T/ST,v=y/T/ST,i=u<0?0:u>=V-1?V-2:u|0,j=v<0?0:v>=V-1?V-2:v|0,fu=Math.max(0,Math.min(1,u-i)),fv=Math.max(0,Math.min(1,v-j)),k=j*V+i,a=hts[k],b=hts[k+1],c=hts[k+V],d=hts[k+V+1];
  return fu+fv<=1?a+(b-a)*fu+(c-a)*fv:d+(b-d)*(1-fv)+(c-d)*(1-fu)}
 function buildTerr(){TG.forEach(m=>{sc.remove(m);m.geometry.dispose()});TG=[];WL.forEach(m=>{sc.remove(m);m.geometry.dispose()});WL=[];tmap=map;ST=N>1200||(N>=885&&/Android|iPhone|iPad|iPod|Mobi/i.test(navigator.userAgent))?3:2;V=Math.ceil(N/ST)+1;hts=new Float32Array(V*V);
- const cl=new Float32Array(V*V*3),fxv=new Float32Array(V*V),fzv=new Float32Array(V*V),TP=2*ST,W=new Float32Array(TP),ac=new Float32Array(8),q=ST*TQ;for(let k=0;k<TP;k++)W[k]=1-Math.abs(k-ST+.5)/ST;
+ const cl=new Float32Array(V*V*3),fxv=new Float32Array(V*V),fzv=new Float32Array(V*V),TP=2*ST,W=new Float32Array(TP),ac=new Float32Array(16),q=ST*TQ;for(let k=0;k<TP;k++)W[k]=1-Math.abs(k-ST+.5)/ST;
  for(let j=0;j<V;j++)for(let i=0;i<V;i++){const cx=i*ST,cy=j*ST;ac.fill(0);let sw=0,sh=0,fx=0,fy=0;
   for(let b=0;b<TP;b++){const y=cy-ST+b,wy=W[b],iy=y>=0&&y<N;for(let a=0;a<TP;a++){const x=cx-ST+a,w=wy*W[a];let t=0;if(iy&&x>=0&&x<N){const ii=y*N+x;t=map[ii];if(RV[ii]){fx+=w*FX[ii];fy+=w*FY[ii]}}ac[t]+=w;sw+=w;sh+=w*HT[t]}}
-  const iw=1/sw,lw=(ac[3]+ac[4]+ac[5])*iw,rw=ac[6]*iw,wa=(ac[0]+ac[1])*iw,k=j*V+i;let h=sh*iw+((vn(cx*.045+11,cy*.045+5)-.5)*2.6+(vn(cx*.13+3,cy*.13+9)-.5)*.8)*lw*lw*(1-rw);
-  if(rw>0)h+=rw*rw*(vn(cx*.18+21,cy*.18+7)*3.2+(1-Math.abs(2*vn(cx*.07+5,cy*.07+31)-1))*2.2);
+  const iw=1/sw,lw=(ac[3]+ac[4]+ac[5]+ac[7]+ac[8]+ac[13])*iw,rw=(ac[6]+ac[11])*iw,wa=(ac[0]+ac[1]+ac[9])*iw,k=j*V+i;let h=sh*iw+((vn(cx*.045+11,cy*.045+5)-.5)*2.6+(vn(cx*.13+3,cy*.13+9)-.5)*.8)*lw*lw*(1-rw);
+  if(rw>0)h+=rw*rw*(vn(cx*.18+21,cy*.18+7)*3.2+(1-Math.abs(2*vn(cx*.07+5,cy*.07+31)-1))*2.2+rw*2.6*vn(cx*.09+2,cy*.09+8));
   if(lw>.5){const f=Math.min(1,(lw-.5)*4),m=h<.85?.85:h;h+=(m-h)*f}
   h+=(vn(cx*.1+1,cy*.1+2)-.5)*.5*(1-lw)*wa;hts[k]=h;fxv[k]=fx*iw/U;fzv[k]=fy*iw/U;
-  let r=0,g=0,bl=0;for(let t=0;t<7;t++){const f=ac[t]*iw,c=TCL[t];r+=f*c[0];g+=f*c[1];bl+=f*c[2]}
+  let r=0,g=0,bl=0;for(let t=0;t<14;t++){const f=ac[t]*iw,c=TCL[t];r+=f*c[0];g+=f*c[1];bl+=f*c[2]}
   const wet=h>-.9&&h<.45?Math.min(1,(.45-h)/.55)*.4*(1-ac[0]*iw):0,nz=.93+.14*vn(cx*.35+2,cy*.35+8);
   cl[k*3]=(r+(.42-r)*wet)*nz;cl[k*3+1]=(g+(.36-g)*wet)*nz;cl[k*3+2]=(bl+(.24-bl)*wet)*nz}
  const CS=64,mt=new THREE.MeshLambertMaterial({vertexColors:true});
@@ -1466,17 +1537,20 @@ function buildTerr(){TG.forEach(m=>{sc.remove(m);m.geometry.dispose()});TG=[];WL
   const w=new THREE.Mesh(wg,WMAT);w.renderOrder=1;w.frustumCulled=false;sc.add(w);WL.push(w)}
  vx=-1e9}
 // ---------- растительность вокруг игрока (instancing) ----------
-const MT_=6000,MR_=2500,MB_=1800,TR=new THREE.InstancedMesh(CYL,mat(0x4a3a2a),MT_),TCr=new THREE.InstancedMesh(CON,mat(0x1f4a28),MT_),RK=new THREE.InstancedMesh(ROK,mat(0x7a7770),MR_),B1=new THREE.InstancedMesh(SPH,mat(0x3d8a3a),MB_),B2=new THREE.InstancedMesh(SPH,mat(0x5a6a40),MB_);
+const MT_=9000,MR_=2500,MB_=1800,TR=new THREE.InstancedMesh(CYL,mat(0x4a3a2a),MT_),TCr=new THREE.InstancedMesh(CON,mat(0x1f4a28),MT_),RK=new THREE.InstancedMesh(ROK,mat(0x7a7770),MR_),B1=new THREE.InstancedMesh(SPH,mat(0x3d8a3a),MB_),B2=new THREE.InstancedMesh(SPH,mat(0x5a6a40),MB_);
 [TR,TCr,RK,B1,B2].forEach(m=>{m.frustumCulled=false;m.count=0;m.castShadow=true;sc.add(m)});
 const WU={value:0};[TR,TCr,B1,B2].forEach(m=>{m.material=m.material.clone();m.material.onBeforeCompile=s=>{s.uniforms.uT=WU;s.uniforms.uW=WND;s.vertexShader='uniform float uT;uniform float uW;\n'+s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\n#ifdef USE_INSTANCING\nfloat ph=instanceMatrix[3].x*.7+instanceMatrix[3].z*.5;\ntransformed.x+=sin(uT*1.3+ph)*.07*uW*(position.y+.5);\ntransformed.z+=cos(uT*1.1+ph)*.05*uW*(position.y+.5);\n#endif')}});
 const du=new THREE.Object3D();let vx=-1e9,vy=0,bf=0;
 function setI(m,i,x,y,z,sx,sy,sz,ry){du.position.set(x,y,z);du.rotation.y=ry||0;du.scale.set(sx,sy,sz);du.updateMatrix();m.setMatrixAt(i,du.matrix)}
+const WHT=new THREE.Color(1,1,1),CJ=new THREE.Color(.75,1.45,.8),CAC=new THREE.Color(2.2,2.2,.8),CRK=new THREE.Color(1.7,.85,.6);
 function veg(){const tx=P.x/T|0,ty=P.y/T|0;if(Math.abs(tx-vx)<4&&Math.abs(ty-vy)<4)return;vx=tx;vy=ty;let nt=0,nr=0;const RA=60;
- for(let y=Math.max(0,ty-RA);y<=Math.min(N-1,ty+RA);y++)for(let x=Math.max(0,tx-RA);x<=Math.min(N-1,tx+RA);x++){const t=map[y*N+x];if(t!=5&&t!=6)continue;
+ if(!TR.instanceColor)[TR,TCr,RK].forEach(m=>{m.instanceColor=new THREE.InstancedBufferAttribute(new Float32Array(m.instanceMatrix.count*3).fill(1),3)});
+ for(let y=Math.max(0,ty-RA);y<=Math.min(N-1,ty+RA);y++)for(let x=Math.max(0,tx-RA);x<=Math.min(N-1,tx+RA);x++){const t=map[y*N+x];if(t!=5&&t!=6&&t!=7&&t!=8&&t!=11)continue;
   const px=(x+.5+(hs(y,x)-.5)*.6)*TQ,pz=(y+.5+(hs(x+3,y)-.5)*.6)*TQ,h=hAt(px*U,pz*U),s=.8+hs(x,y)*.5;
-  if(t==5&&nt<MT_){setI(TR,nt,px,h+1.2*s,pz,.4*s,2.4*s,.4*s);setI(TCr,nt,px,h+2.4*s+3*s,pz,2.2*s,6*s,2.2*s);nt++}
-  else if(t==6&&(x+y)%2==0&&nr<MR_){setI(RK,nr,px,h+.4,pz,1.6+s,1+s*.5,1.6+s,hs(x,y)*6);nr++}}
- TR.count=TCr.count=nt;RK.count=nr;[TR,TCr,RK].forEach(m=>m.instanceMatrix.needsUpdate=true)}
+  if((t==5||t==7)&&nt<MT_){const k=t==7?1.35:1;setI(TR,nt,px,h+1.2*s*k,pz,.4*s*k,2.4*s*k,.4*s*k);setI(TCr,nt,px,h+5.4*s*k,pz,2.2*s*k,6*s*k,2.2*s*k);TR.setColorAt(nt,WHT);TCr.setColorAt(nt,t==7?CJ:WHT);nt++}
+  else if(t==8&&hs(x*3.1,y*2.3)>.92&&nt<MT_){setI(TR,nt,px,h+1.6*s,pz,.28*s,3.2*s,.28*s);setI(TCr,nt,px,h+3.7*s,pz,3.6*s,1.5*s,3.6*s);TR.setColorAt(nt,WHT);TCr.setColorAt(nt,CAC);nt++}
+  else if((t==6||t==11)&&(x+y)%2==0&&nr<MR_){setI(RK,nr,px,h+.4,pz,1.6+s,1+s*.5,1.6+s,hs(x,y)*6);RK.setColorAt(nr,t==11?CRK:WHT);nr++}}
+ TR.count=TCr.count=nt;RK.count=nr;[TR,TCr,RK].forEach(m=>{m.instanceMatrix.needsUpdate=true;m.instanceColor.needsUpdate=true})}
 function bush3(){let a=0,b=0;for(const o of bushes){if(Math.abs(o.x-P.x)>1500||Math.abs(o.y-P.y)>1500)continue;const on=o.l>0,q=on?.6+.4*o.l/60:.5,h=hAt(o.x,o.y);
   if(on&&a<MB_){setI(B1,a++,o.x/U,h+.5*q,o.y/U,1.3*q,.9*q,1.3*q)}else if(!on&&b<MB_){setI(B2,b++,o.x/U,h+.3,o.y/U,1,.5,1)}}
  B1.count=a;B2.count=b;B1.instanceMatrix.needsUpdate=B2.instanceMatrix.needsUpdate=true}
@@ -1488,7 +1562,7 @@ const MOB=(()=>{try{return matchMedia('(pointer:coarse)').matches||/Android|iPho
 const CAP=MOB?[420,120,800,300,240,50,30]:[900,260,1800,700,520,110,70];
 const FADE=[80,80,60,66,52,90,90]; // дальность прорисовки (ед. сцены), дальше растения уходят в землю
 const BR=96,CSZ=16,CHS=64,BIG=18,SD=13,MRG=14;
-const GR=new Uint8Array(8);GR[3]=GR[4]=GR[5]=1; // растёт только на траве и в лесу
+const GR=new Uint8Array(16);GR[3]=GR[4]=GR[5]=GR[7]=GR[8]=GR[13]=1; // растёт только на траве и в лесу
 // ---------- генератор геометрии с цветами вершин ----------
 const gp=[],gc=[],gw=[];
 function mkr(s){let a=s|0;return()=>{a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
@@ -1546,13 +1620,13 @@ function ok(x,z){const u=x/TQ,v=z/TQ,tx=Math.floor(u),ty=Math.floor(v);if(tx<1||
  if(!(GR[map[a]]==1&&GR[map[b]]==1&&GR[map[c]]==1&&GR[map[d]]==1&&!RV[a]&&!RV[b]&&!RV[c]&&!RV[d]))return false;
  const X=x*U,Z=z*U,h=hAt(X,Z);if(h<.55)return false; // берег, мокрый песок, камыш, галька
  const e=12,gx=hAt(X+e,Z)-hAt(X-e,Z),gz=hAt(X,Z+e)-hAt(X,Z-e);return gx*gx+gz*gz<(2*e/U*.7)*(2*e/U*.7)} // не на крутых склонах
-function nearTrunk(x,z,r){const tx=Math.floor(x/TQ),ty=Math.floor(z/TQ);if(tx<0||ty<0||tx>=N||ty>=N||map[ty*N+tx]!=5)return false;
+function nearTrunk(x,z,r){const tx=Math.floor(x/TQ),ty=Math.floor(z/TQ);if(tx<0||ty<0||tx>=N||ty>=N||!isF(map[ty*N+tx]))return false;
  const px=(tx+.5+(hs(ty,tx)-.5)*.6)*TQ,pz=(ty+.5+(hs(tx+3,ty)-.5)*.6)*TQ,s=.8+hs(tx,ty)*.5,dx=x-px,dz=z-pz,q=r+.4*s;return dx*dx+dz*dz<q*q}
-function dens5(tx,ty){let c=0;for(let j=-2;j<=2;j++)for(let i=-2;i<=2;i++){const x=tx+i,y=ty+j;if(x>=0&&y>=0&&x<N&&y<N&&map[y*N+x]==5)c++}return c/25}
+function dens5(tx,ty){let c=0;for(let j=-2;j<=2;j++)for(let i=-2;i<=2;i++){const x=tx+i,y=ty+j;if(x>=0&&y>=0&&x<N&&y<N&&isF(map[y*N+x]))c++}return c/25}
 // окно плотности рощ вокруг игрока (для кластеров)
 const FW=2*(Math.ceil(BR/TQ)+3)+1,fm=new Uint8Array(FW*FW),dn=new Float32Array(FW*FW);let fx0=0,fy0=0;
 function buildField(px,pz){fx0=Math.floor(px/TQ)-(FW>>1);fy0=Math.floor(pz/TQ)-(FW>>1);
- for(let j=0;j<FW;j++){const y=fy0+j;for(let i=0;i<FW;i++){const x=fx0+i;fm[j*FW+i]=x>=0&&y>=0&&x<N&&y<N&&map[y*N+x]==5?1:0}}
+ for(let j=0;j<FW;j++){const y=fy0+j;for(let i=0;i<FW;i++){const x=fx0+i;fm[j*FW+i]=x>=0&&y>=0&&x<N&&y<N&&isF(map[y*N+x])?1:0}}
  for(let j=0;j<FW;j++)for(let i=0;i<FW;i++){let s=0;for(let b=-2;b<=2;b++){const jj=j+b;if(jj<0||jj>=FW)continue;for(let a=-2;a<=2;a++){const ii=i+a;if(ii<0||ii>=FW)continue;s+=fm[jj*FW+ii]}}dn[j*FW+i]=s/25}}
 function dAt(x,z){const i=Math.floor(x/TQ)-fx0,j=Math.floor(z/TQ)-fy0;return i<0||j<0||i>=FW||j>=FW?0:dn[j*FW+i]}
 const BL=new Float32Array(128);let nbl=0;
@@ -1585,7 +1659,7 @@ function place(kd,x,z,k,cc,px,pz){const dx=x-px,dz=z-pz;if(dx*dx+dz*dz>BR*BR||cn
   if(v<.62)tint(m,i,.85+.3*rn(),.9+.2*rn(),.8+.2*rn());else if(v<.82)tint(m,i,1.35,.8,.6);else tint(m,i,.8,1,1.1)}
  else if(kd==0){if(nearTrunk(x,z,.75)||rn()>.25+.85*d)return;s=(.75+.55*rn())*(1.1-.3*k);put(m,i,x,h-.02,z,s,s*(.9+.2*rn()),s,rn()*TAU);tint(m,i,.85+.3*rn(),.9+.2*rn(),.85+.2*rn())}
  else if(kd==2){if(nearTrunk(x,z,.5)||rn()>.35+.65*(1-d*.7))return;s=.7+.6*rn();put(m,i,x,h-.01,z,s,s*(.8+.5*rn()),s,rn()*TAU);
-  if(rn()<.2)tint(m,i,1.25,1.05,.55);else tint(m,i,.85+.3*rn(),.9+.2*rn(),.8+.25*rn())}
+  if(rn()<.2||map[Math.floor(z/TQ)*N+Math.floor(x/TQ)]==8)tint(m,i,1.45,1.15,.5);else tint(m,i,.85+.3*rn(),.9+.2*rn(),.8+.25*rn())}
  else if(kd==3){if(nearTrunk(x,z,.5))return;s=.75+.5*rn();put(m,i,x,h-.01,z,s,s,s,rn()*TAU);const c=FC[cc],q=.85+.3*rn();tint(m,i,c[0]*q,c[1]*q,c[2]*q)}
  cn[kd]++}
 function cluster(kd,cx,cz,px,pz){let n,rc,el,cc=0;
@@ -1603,7 +1677,7 @@ function rebuild(px,pz){cn.fill(0);buildField(px,pz);
    if(rn()<p)cluster(kd,cx,cz,px,pz)}}
  // мох у стволов
  {const R=14,tx0=Math.floor(px/TQ),ty0=Math.floor(pz/TQ);
-  for(let y=Math.max(0,ty0-R);y<=Math.min(N-1,ty0+R)&&cn[4]<CAP[4];y++)for(let x=Math.max(0,tx0-R);x<=Math.min(N-1,tx0+R);x++){if(map[y*N+x]!=5)continue;
+  for(let y=Math.max(0,ty0-R);y<=Math.min(N-1,ty0+R)&&cn[4]<CAP[4];y++)for(let x=Math.max(0,tx0-R);x<=Math.min(N-1,tx0+R);x++){if(!isF(map[y*N+x]))continue;
    const a=(x-tx0)*(x-tx0)+(y-ty0)*(y-ty0);if(a>R*R||hs(x+19,y+7)>.62)continue;
    const tx=(x+.5+(hs(y,x)-.5)*.6)*TQ,tz=(y+.5+(hs(x+3,y)-.5)*.6)*TQ,s=.8+hs(x,y)*.5,nb=hs(x+5,y+23)<.4?2:1;
    for(let q=0;q<nb;q++){const an=hs(x+1,y+2)*TAU+q*2.6,dd=.42*s+.18,mx=tx+Math.cos(an)*dd,mz=tz+Math.sin(an)*dd;if(!ok(mx,mz))continue;addMoss(mx,mz,hAt(mx*U,mz*U)-.02,.38+.3*hs(x+q,y+9),hs(x+q*3,y+4))}}}
@@ -1635,7 +1709,7 @@ function gPebble(){const r=mkr(88),ico=new THREE.IcosahedronGeometry(1,0).attrib
 const MS=[mk(gReed(),CP[0],.05,FD[0],false,false),mk(gPebble(),CP[1],0,FD[1],false,false)],cn=new Int32Array(2);
 const OFF=(()=>{const a=[],R=Math.ceil(BR/CSZ)+1;for(let j=-R;j<=R;j++)for(let i=-R;i<=R;i++){const d=Math.hypot(i,j);if(d<=R+.5)a.push([d,i,j])}a.sort((p,q)=>p[0]-q[0]);const o=new Int8Array(a.length*2);a.forEach((v,k)=>{o[k*2]=v[1];o[k*2+1]=v[2]});return o})();
 function tt(x,z){const tx=Math.floor(x/TQ),ty=Math.floor(z/TQ);return tx<0||ty<0||tx>=N||ty>=N?6:map[ty*N+tx]}
-function hab(kd,x,z){const t=tt(x,z);if(t!=1&&t!=2)return false;const h=hAt(x*U,z*U);if(kd==0){if(h<-.55||h>.4)return false;const tx=Math.floor(x/TQ),ty=Math.floor(z/TQ);if(RV[ty*N+tx]&&rn()>.45)return false;return true}return h>-.4&&h<.6}
+function hab(kd,x,z){const t=tt(x,z);if(t!=1&&t!=2&&t!=9)return false;const h=hAt(x*U,z*U);if(kd==0){if(h<-.55||h>.4)return false;const tx=Math.floor(x/TQ),ty=Math.floor(z/TQ);if(RV[ty*N+tx]&&rn()>.45)return false;return true}return h>-.4&&h<.6}
 function rebuild(px,pz){cn[0]=cn[1]=0;const bi=Math.floor(px/CSZ),bj=Math.floor(pz/CSZ),lim=(BR+4)*(BR+4);
  for(let o=0;o<OFF.length;o+=2){const ci=bi+OFF[o],cj=bj+OFF[o+1];
   for(let kd=0;kd<2;kd++){if(cn[kd]>=CP[kd])continue;rsd(ci*7+kd*911.3+.7,cj*3+kd*131.9+.2);let cx=0,cz=0,got=false;
@@ -1682,7 +1756,7 @@ const dm=c=>{const k='d'+c.getHex();return MT[k]||(MT[k]=new THREE.MeshStandardM
 // ЧАСТЬ 1: реальные пропорции хищников (метры): t торс, d глубина, w ширина, g нога, n шея, h голова [длина,высота,ширина], l хвост, b толщина хвоста
 const RL={0:{t:1,d:.45,w:.3,g:.75,n:.5,h:[.3,.17,.11],l:1.4,b:.12},1:{t:2.4,d:1.4,w:.95,g:1.9,n:.9,h:[.6,.4,.3],l:3,b:.38},4:{t:2.9,d:1.6,w:1,g:2,n:1.1,h:[1,.6,.4],l:3.9,b:.45},5:{t:3.6,d:1.9,w:1.35,g:3.2,n:1.2,h:[1.5,.8,.6],l:5,b:.55},9:{t:1.8,d:.9,w:.6,g:1.4,n:.9,h:[.5,.3,.2],l:2.4,b:.2},10:{t:1.7,d:.85,w:.6,g:1.3,n:.7,h:[.45,.3,.2],l:2.6,b:.2},11:{t:4.2,d:2,w:1.2,g:2.6,n:1.9,h:[1.7,.5,.4],l:5.5,b:.6},12:{t:.35,d:.15,w:.1,g:.25,n:.2,h:[.08,.05,.04],l:.55,b:.04},17:{t:1.9,d:1.1,w:.75,g:1.6,n:.8,h:[.7,.45,.28],l:2.6,b:.3},2:{t:.6,d:.3,w:.2,g:.5,n:.3,h:[.12,.08,.07],l:.9,b:.07},3:{t:3.2,d:1.9,w:1.6,g:1.2,n:.5,h:[1.4,.9,.8],l:1.6,b:.3,lw:1.1},6:{t:2.7,d:1.4,w:.9,g:1.9,n:1,h:[.9,.4,.3],l:3.8,b:.35},7:{t:2.8,d:1.2,w:1.7,g:.8,n:.4,h:[.6,.4,.5],l:2,b:.3,lw:1.15},13:{t:3,d:1.6,w:1,g:1.3,n:.9,h:[.4,.2,.15],l:2.8,b:.35,lw:.85},14:{t:1.3,d:.75,w:.5,g:1.1,n:.55,h:[.4,.3,.2],l:1.7,b:.15},15:{t:5,d:2.4,w:1.6,g:2.6,n:6.5,h:[.6,.3,.25],l:8.5,b:.7,lw:1.3,nw:.3},16:{t:2.8,d:1.7,w:1,g:2,n:1.5,h:[.45,.3,.2],l:2.2,b:.3},8:{t:3.5,d:.8,w:1.6,g:.6,n:.3,h:[1.7,.5,.7],l:4.6,b:.3,lw:.55,nw:.26,nt:.2}};
 function prc(oy){const r=RL[oy];if(!r)return{};const k=3/r.t,hw=r.h[2]*k/2;return{W:r.w*k/2,H:r.d*k/2,L:r.t*k/1.95,leg:r.g*k,nl:r.n*k,hd:[r.h[0]*k,r.h[1]*k/2,hw],tl:r.l*k,tr:r.b*k,nw:r.nw?r.nw*k:Math.max(hw*1.1,r.w*k/4),lw:r.lw||1,nt:r.nt}}
-function mk3(oy,hex){Zo=oy;Zi=0;
+function mk3(oy,hex){if(oy==HID)return mkHerr(oy,hex);Zo=oy;Zi=0;
  const sp=Object.assign({},CL[BM[oy]||0],OVR[oy]||{},prc(oy)),f=sp.f||[],has=k=>f.indexOf(k)>=0,root=new THREE.Group(),ud=root.userData,C=zcol(hex),
   cm=k=>dm(C.clone().multiplyScalar(k)),M0=cm(1.1),MD=cm(.6),ML=cm(1.3),SK=zmat(oy,hex),EYE=mat(0xd9a521),DK=mat(0x1c120e),W=sp.W,H=sp.H,L=sp.L,leg=sp.leg,bip=sp.bip,hl=sp.hd[0],hh=sp.hd[1],hw=sp.hd[2],nw=sp.nw||W*.46,nl=sp.nl;
  ud.ms=[];ud.legs=[];ud.tail=[];
@@ -1737,7 +1811,151 @@ function mk3(oy,hex){Zo=oy;Zi=0;
  if(has('scutes'))for(let i=0;i<14;i++)for(const s of[-1,1]){const z=(i-6.5)*L*.15;A(bd,SP2,MD,s*W*.2,H*(.55+.45*Math.cos(z/L*1.3))*.98,z,.1,.065,L*.1)}
  const sh=new THREE.Mesh(CIR,shm);sh.rotation.x=-Math.PI/2;sh.position.y=.04;sh.scale.set(W*1.7,L*2.6,1);root.add(sh);
  ud.len=L*2+sp.tl+sp.nl*Math.sin(sp.na)+hl;return root}
-function anim3(g3,t,ph,mv,open){const u=g3.userData,k=u.wk=(u.wk||0)+((mv?1:0)-(u.wk||0))*.12,br=Math.sin(t*1.7),lm=P&&P.brk>0&&EM.get(P)&&EM.get(P).g===g3?1:0;
+// ===== ГЕРРЕРАЗАВР: отдельная модель (скелет из групп) и процедурные анимации =====
+// Метры. Герреразавр ~4.2 м, высота бедра ~1.1 м, череп ~0.55 м, хвост ~1.9 м, три длинных пальца на руках.
+// Внешнее управление (для механик следующих частей): объект игры o.hAct = 'climb'|'branch'|'branchMove'|'aim'|'jump'|'land'|'attack'|null,
+// o.hAy / o.hAp — рыскание и тангаж прицеливания (рад), o.hCv — скорость лазания 0..1, o.hArc=0 — высоту прыжка задаёт игра.
+const HID=18,HY=1.22,T1=.46,T2=.48,T3=.27,HPX=.16,HPY=-.09,HPZ=-.06,HTW=Math.PI*2,HNT=12;
+function mkHerr(oy,hex){
+ Zo=oy;Zi=0;
+ const root=new THREE.Group(),u=root.userData,C=zcol(hex),cm=k=>dm(C.clone().multiplyScalar(k)),
+ SK=zmat(oy,hex),M0=cm(1.1),MD=cm(.6),ML=cm(1.35),EYE=mat(0xd9a521),DK=mat(0x1c120e);
+ u.ms=[];u.herr=1;u.len=4.2;u.legs=[];u.arms=[];u.tail=[];u.nk=[];
+ const A=(p,geo,m,x,y,z,sx,sy,sz,rx,ry,rz)=>{const q=new THREE.Mesh(geo,m);q.position.set(x,y,z);q.scale.set(sx,sy,sz);q.rotation.set(rx||0,ry||0,rz||0);q.castShadow=q.receiveShadow=true;p.add(q);u.ms.push([q,m]);return q},
+ LA=(p,P,R,cap,m)=>A(p,zlof(P,R,cap,0),m||SK,0,0,0,1,1,1),
+ G=(p,x,y,z)=>{const g=new THREE.Group();g.position.set(x,y,z);p.add(g);return g};
+ const bd=G(root,0,HY,0);u.bd=bd;
+ // таз, поясница, грудная клетка
+ LA(bd,[[0,0,-.4],[0,.01,-.2],[0,.02,0],[0,.02,.22]],[[.09,.14],[.16,.22],[.18,.245],[.17,.24]],1);
+ const s1=G(bd,0,.02,.18),s2=G(s1,0,0,.38);u.s1=s1;u.s2=s2;
+ LA(s1,[[0,0,-.04],[0,0,.2],[0,0,.42]],[[.17,.235],[.18,.25],[.17,.24]],0);
+ LA(s2,[[0,0,-.04],[0,.01,.2],[0,0,.44]],[[.17,.24],[.17,.25],[.13,.2]],1);
+ A(s1,SP2,ML,0,-.09,.2,.14,.15,.4);A(s2,SP2,ML,0,-.09,.18,.12,.14,.3);
+ // шея из 4 звеньев (S-изгиб), голова с узким черепом и подвижной нижней челюстью
+ let par=G(s2,0,.08,.38);for(let i=0;i<4;i++){const w=.1-.013*i,h=.115-.014*i;LA(par,[[0,0,-.03],[0,0,.1],[0,0,.21]],[[w,h],[w*.93,h*.94],[w*.86,h*.88]],0);u.nk.push(par);par=G(par,0,0,.18)}
+ const hd=par;u.hd=hd;
+ LA(hd,[[0,0,-.06],[0,.005,.08],[0,0,.22],[0,-.01,.36],[0,-.015,.52]],[[.06,.085],[.075,.095],[.062,.085],[.045,.06],[.028,.04]],1);
+ const jw=G(hd,0,-.045,.04);u.jw=jw;LA(jw,[[0,0,0],[0,-.005,.18],[0,-.012,.34],[0,-.012,.48]],[[.05,.03],[.04,.03],[.03,.022],[.02,.016]],1,ML);
+ for(const s of[-1,1]){A(hd,SP2,MD,s*.056,.075,.13,.034,.024,.06);A(hd,SP2,EYE,s*.07,.035,.15,.026,.026,.026);A(hd,SP2,BLK,s*.088,.035,.152,.008,.02,.012);
+  A(hd,SP2,DK,s*.064,.0,.28,.008,.03,.07);A(hd,SP2,DK,s*.02,.03,.5,.01,.012,.02);
+  for(let i=0;i<7;i++){A(hd,CON,TEETH,s*(.034-i*.0025),-.035,.2+.05*i,.007,.032-i*.002,.007,Math.PI);A(jw,CON,TEETH,s*(.027-i*.002),.02,.15+.05*i,.006,.026-i*.002,.006)}}
+ // хвост: 12 сжатых с боков звеньев
+ const sl=.155;par=G(bd,0,.03,-.36);for(let i=0;i<HNT;i++){const k=1-i/HNT,k2=1-(i+1)/HNT;
+  LA(par,[[0,0,0],[0,0,-sl*1.05]],[[.07*Math.pow(k,1.1)+.01,.115*k+.012],[.07*Math.pow(k2,1.1)+.01,.115*k2+.012]],0);u.tail.push(par);par=G(par,0,0,-sl)}
+ // ноги: бедро, голень, плюсна (пальцехождение), три пальца с когтями
+ for(const s of[-1,1]){const hp=G(bd,s*HPX,HPY,HPZ);A(hp,SP2,M0,0,0,0,.1,.11,.11);
+  LA(hp,[[0,0,0],[0,-T1*.5,.02],[0,-T1,0]],[[.1,.13],[.085,.11],[.05,.06]],0);
+  const k=G(hp,0,-T1,0);A(k,SP2,M0,0,0,0,.055,.06,.06);LA(k,[[0,0,0],[0,-T2*.5,0],[0,-T2,0]],[[.055,.065],[.042,.052],[.03,.034]],0);
+  const a=G(k,0,-T2,0);A(a,SP2,M0,0,0,0,.036,.04,.04);LA(a,[[0,0,0],[0,-T3*.5,0],[0,-T3,0]],[[.03,.036],[.026,.03],[.024,.026]],0);
+  const b=G(a,0,-T3,0);A(b,SP2,MD,0,-.01,.03,.045,.022,.075);const tg=[];
+  for(let j=-1;j<=1;j++){const t=G(b,j*.04,-.01,.02);t.rotation.y=j*.2;LA(t,[[0,0,0],[0,0,.1],[0,0,.2]],[[.02,.017],[.017,.014],[.012,.01]],1,MD);A(t,CON,CLW,0,-.01,.215,.012,.045,.012,Math.PI/2+.35);tg.push(t)}
+  u.legs.push({h:hp,k,a,b,t:tg,s,l:s>0?0:1})}
+ // руки: короткие, цепкие, три длинных пальца
+ for(const s of[-1,1]){const sh=G(s2,s*.16,-.07,.22),el=G(sh,0,-.22,0),wr=G(el,0,-.2,0);A(sh,SP2,M0,0,0,0,.06,.06,.06);
+  LA(sh,[[0,0,0],[0,-.11,0],[0,-.22,0]],[[.045,.055],[.034,.04],[.03,.032]],0);LA(el,[[0,0,0],[0,-.1,0],[0,-.2,0]],[[.03,.034],[.026,.028],[.022,.024]],0);
+  A(wr,SP2,MD,0,-.02,0,.03,.04,.025);const f=[];
+  for(let j=-1;j<=1;j++){const g=G(wr,j*.022,-.03,0);g.rotation.z=-j*.12;LA(g,[[0,0,0],[0,-.07,0],[0,-.13,0]],[[.011,.011],[.009,.009],[.007,.007]],1,MD);A(g,CON,CLW,0,-.14,0,.007,.035,.007,Math.PI);f.push(g)}
+  u.arms.push({sh,el,wr,f,s})}
+ // реквизит для лазания и ветки (скрыт, включается анимацией/демо)
+ const tk=A(root,CYL,mat(0x4a3322),0,2.1,.98,.38,4.2,.38);tk.visible=false;u.trunk=tk;
+ const br=A(root,CYL,mat(0x5a4028),0,-.07,0,.07,5,.07,Math.PI/2);br.visible=false;u.branch=br;
+ const sh=new THREE.Mesh(CIR,shm);sh.rotation.x=-Math.PI/2;sh.position.set(0,.04,-.2);sh.scale.set(.55,1.6,1);root.add(sh);
+ return root}
+const hsm=(a,b,x)=>{x=Math.max(0,Math.min(1,(x-a)/(b-a)));return x*x*(3-2*x)},hlp=(a,b,k)=>a+(b-a)*k;
+// двухзвенная обратная кинематика в плоскости (z вперёд, y вверх): угол первого звена и изгиб сустава
+function hik(L1,L2,dz,dy){let d=Math.hypot(dz,dy);d=Math.min(L1+L2-.002,Math.max(Math.abs(L1-L2)+.002,d));
+ const th=Math.atan2(-dz,-dy),a=Math.acos(Math.max(-1,Math.min(1,(L1*L1+d*d-L2*L2)/(2*L1*d)))),b=Math.acos(Math.max(-1,Math.min(1,(L1*L1+L2*L2-d*d)/(2*L1*L2))));
+ return[th,a,Math.PI-b]}
+const HN0=[-.55,-.32,.25,.42],HN1=[-.2,-.08,.08,.12];
+function herrAnim(g3,t,ph,mv,open){
+ const u=g3.userData,bd=u.bd,PI=Math.PI,mn=Math.min,mx=Math.max,sm=hsm,lp=hlp;
+ let dt=u.lt==null?.016:t-u.lt;u.lt=t;if(!(dt>0)||dt>.2)dt=.016;
+ // скорость (px/s): из смещения модели или заданная вручную (демо)
+ const gx=g3.position.x,gz=g3.position.z;let dv=u.lx==null?0:Math.hypot(gx-u.lx,gz-u.lz)/dt*U;u.lx=gx;u.lz=gz;if(dv>500)dv=u.vs||0;
+ const vt=u.vo!=null?u.vo:dv;u.vs=(u.vs||0)+(vt-(u.vs||0))*(1-Math.exp(-dt*9));const vs=u.vs<8?0:u.vs;
+ // внешнее действие и одноразовые события (прыжок, приземление, атака)
+ const E=u.ext||null,ep=u.pe||null;u.pe=E;
+ if(E=='jump'&&ep!='jump')u.jt=u.j0||0;if(E=='jump')u.jt+=dt;
+ else if(ep=='jump'||(E=='land'&&ep!='land'))u.ld=0;
+ if(u.ld!=null){u.ld+=dt;if(u.ld>.75)u.ld=null}
+ if((open&&!u.po)||(E=='attack'&&ep!='attack'))u.at=0;u.po=open;
+ if(u.at!=null){u.at+=dt;if(u.at>.7)u.at=null}
+ const aimW=E=='aim'?1:0,br=E=='branch'||E=='branchMove',cl=E=='climb',rw=br||cl?0:sm(105,175,vs);
+ const T={H:0,psi:.07,lat:1,sl:1,lf:1,sw:0,tu:0,ts:1,ne:0,hp:0,ar:0,tg:0,cl:cl?1:0,am:aimW,rw};
+ T.psi=lp(.07,.3,rw);T.H=.07*rw;T.tu=.1*rw;T.ne=.55*rw;T.lf=1+.6*rw;
+ if(aimW){T.H+=.16;T.psi+=.22;T.ne=1;T.tu+=.08;T.sl=.65;T.lf=.8}
+ if(br){T.lat=.04;T.H=.14;T.psi=.12;T.sw=.07;T.tu=.28;T.ts=1.8;T.sl=.55;T.lf=.75;T.tg=1;T.ar=1}
+ if(cl){T.psi=-1.1;T.ne=.3;T.tg=1}
+ const p=u.p||(u.p=Object.assign({},T)),kk=1-Math.exp(-dt*8);for(const k in T)p[k]+=(T[k]-p[k])*kk;
+ // темп шага: метры/с -> каденс; бег — больше каденс и длиннее шаг
+ const vm0=vs<=110?vs/110*2:2+mn(1,(vs-110)/80)*4.6,vm=cl?(u.cv!=null?u.cv:(mv?1:0))*1.3:vm0*(br?.5:aimW?.65:1);
+ const f=cl?1.1:lp(mx(.4,mn(1.7,vm/1.5)),mx(1.7,mn(3,vm/3.2)),p.rw);
+ if(vm>.05)u.g=((u.g||0)+f*dt)%1;const g=u.g||0,D=lp(.62,.36,p.rw);
+ const SLt=mn(3.4,vm/f)*p.sl;u.sl=(u.sl||0)+(SLt-(u.sl||0))*(1-Math.exp(-dt*10));const SL=u.sl,mvk=mn(1,SL/.7);
+ // положение тела
+ let H=p.H,ps=p.psi,tu=p.tu,ne=p.ne,hp=p.hp,arc=0,bz=0,jaw=.03+.015*Math.sin(t*1.7),yaw=0,wj=0,jq=0,hs2=0;
+ const arms=p.ar,tgr=p.tg;
+ if(E=='jump'){const jt=u.jt,ca=sm(0,.22,jt);jq=mx(0,mn(1,(jt-.22)/.72));H+=.3*ca*(1-sm(.22,.3,jt));ps+=lp(.25*ca,lp(-.25,.25,jq),sm(.22,.3,jt));tu+=lp(-.1*ca,.35*(1-sm(.3,.9,jq)),sm(.22,.3,jt));ne+=.4*sm(.22,.4,jt);
+  if(u.arc!==0&&jt>.22&&jt<.94)arc=4*.7*jq*(1-jq);wj=sm(.2,.3,jt);jaw=.25}
+ if(u.ld!=null){const ld=u.ld,c=ld<.12?sm(0,.12,ld):Math.exp(-(ld-.12)*5.5);H+=.34*c;ps+=.12*c;tu+=.3*Math.sin(ld*9)*Math.exp(-ld*3.5);wj=mx(wj,1-sm(0,.12,ld));jq=1;hs2=c}
+ if(u.at!=null){const ta=u.at,W=sm(0,.12,ta)*(1-sm(.12,.17,ta)),S=sm(.12,.2,ta)*(1-sm(.28,.5,ta));
+  jaw=ta<.12?.95*sm(0,.12,ta):ta<.26?lp(.95,1.15,sm(.12,.2,ta)):ta<.31?lp(1.15,0,sm(.26,.31,ta)):.03;
+  ne+=-.6*W+1.5*S;ps+=-.1*W+.22*S;bz=.38*S;tu+=.25*S;hp+=.25*S;yaw+=Math.sin(ta*38)*.3*sm(.26,.3,ta)*(1-sm(.3,.6,ta))}
+ // колебания: бег — пружина (низшая точка в середине опоры), шаг — маятник
+ const bob=lp(.03*Math.cos(2*HTW*(g-.31)),-.07*Math.cos(2*HTW*(g-.18)),p.rw)*mvk*(1-p.cl);
+ ps+=.02*Math.sin(2*HTW*g)*mvk;
+ const roll=(Math.sin(HTW*g)*(.03*mvk+p.sw))+Math.sin(t*.4)*.02*(1-mvk);
+ const by=HY-H+bob+arc+p.cl*1.0;
+ bd.position.set(Math.sin(t*.4)*.015*(1-mvk),by,bz);bd.rotation.set(ps,0,roll);
+ u.s1.rotation.set(-ps*.18,-Math.sin(HTW*g)*.05*mvk,0);u.s2.rotation.set(-ps*.18+Math.sin(t*1.8)*.01,0,0);
+ const br2=Math.sin(t*1.8);u.s2.scale.set(1+br2*.012,1+br2*.02,1);
+ // ноги: опора/перенос с ОК, ступня стоит на земле; в лазании цели на стволе; в прыжке — кинематика поз
+ const cs=Math.cos(ps),sn=Math.sin(ps);
+ const solve=(rz,ry,thw)=>{const lz=-ry*sn+rz*cs,ly=ry*cs+rz*sn,t3=thw-ps,r=hik(T1,T2,lz+T3*Math.sin(t3)-HPZ,ly+T3*Math.cos(t3)-HPY);return[r[0]-r[1],r[2],t3]};
+ const jk=(q)=>{const a=[[.3,.1,.55,.7],[-1,1.7,-.2,.4],[-.6,.55,-.15,-.2]],i=q<.45?0:1,k=sm(i?.45:0,i?1:.45,q);return a[i].map((v,n)=>lp(v,a[i+1][n],k))};
+ const jp=jk(jq);
+ u.legs.forEach((L,i)=>{const pp=(g+(i?.5:0))%1;let fz,fy,pw,thw=-.12;const zc=.1;
+  if(pp<D){const k=pp/D;fz=zc+SL*.5*(1-2*k);fy=0;pw=0}
+  else{const q=(pp-D)/(1-D),e=q*q*(3-2*q);fz=zc+SL*.5*(2*e-1);fy=(.1+.18*p.rw)*mvk*p.lf*Math.pow(Math.sin(PI*q),.8);pw=lp(.5,-.35,q)*mvk;thw+=.5*Math.sin(PI*q)*mvk}
+  pw+=tgr*.7;
+  const w=solve(fz-bz,fy+.035-(by-p.cl*1.0),thw);
+  // лазание: ступни на стволе, шаги вверх по диагонали
+  const pc=(g+(i?.5:0))%1,cw=solve(.56,-.62+.22*Math.cos(HTW*pc),-.3+.25*Math.max(0,Math.sin(HTW*pc))),c=p.cl;
+  let h1=lp(w[0],cw[0],c),k1=lp(w[1],cw[1],c),t3=lp(w[2],cw[2],c);
+  if(wj>0){h1=lp(h1,jp[0],wj);k1=lp(k1,jp[1],wj);t3=lp(t3,jp[2],wj)}
+  L.h.rotation.set(h1,0,L.s*HPX*(p.lat-1)/.9);L.k.rotation.x=k1;L.a.rotation.x=t3-(h1+k1);
+  const tp=lp(pw,.9,c)+(wj>0?wj*(jp[3]-pw):0);L.b.rotation.x=tp-ps-t3;L.t.forEach(q=>q.rotation.x=tgr*.5*(pp<D?1:0))});
+ // руки: покой у груди, бег — прижаты и машут, ветка — разведены для баланса, прицел — вперёд, лазание — цепляются за ствол
+ u.arms.forEach((R,i)=>{const s=R.s,pa=(g+(i?0:.5))%1;
+  let sx=.55+Math.sin(t*.8+i)*.04*(1-mvk),ex=-1.25,wx=-.35,sz=0,cv=.4;
+  sx=lp(sx,.95+Math.sin(HTW*pa)*.25*p.rw,p.rw);ex=lp(ex,-1.9,p.rw);
+  sx=lp(sx,-.35,p.am);ex=lp(ex,-.9,p.am);cv=lp(cv,.1,p.am);
+  sx-=.3*arms;sz=s*arms*.7;cv=lp(cv,.9,tgr*.5);
+  if(u.at!=null){const S=sm(.12,.2,u.at)*(1-sm(.28,.5,u.at));sx-=.4*S;cv*=1-S}
+  if(wj>0){sx=lp(sx,-.9,wj);sz=lp(sz,s*.9,wj);ex=lp(ex,-.4,wj)}
+  if(p.cl>.02){const rz=.6-.06*Math.max(0,Math.sin(HTW*pa)),ry=.68+.17*Math.cos(HTW*pa),lz=-ry*sn+rz*cs-.78,ly=ry*cs+rz*sn+.05,r=hik(.22,.2,lz,ly);
+   sx=lp(sx,r[0]+r[1],p.cl);ex=lp(ex,-r[2],p.cl);cv=lp(cv,.9,p.cl)}
+  R.sh.rotation.set(sx,0,sz);R.el.rotation.x=ex;R.wr.rotation.x=wx;R.f.forEach((q,j)=>q.rotation.x=cv*(.8+.2*j*.5))});
+ // шея и голова: сканирование в покое, вытягивание в беге/прицеле, наведение по рысканию/тангажу цели
+ const sc=(1-sm(8,30,vs))*(1-p.am)*(1-p.cl),sy=(Math.sin(t*.37)*.5+Math.sin(t*.91)*.12)*sc,ay=(u.ay||0)*p.am,ap=(u.ap||0)*p.am,cf=.25*(1-p.cl*.5);
+ u.nk.forEach((n,i)=>{n.rotation.set(lp(HN0[i],HN1[i],ne)-ps*cf+(i==3?ap*.3:0)+Math.sin(t*1.7-i*.4)*.012,(sy+yaw)*.18+ay*.2,0)});
+ u.hd.rotation.set(.2+hp+ap*.4-p.cl*.3,(sy+yaw)*.3+ay*.2,0);u.jw.rotation.x=jaw;
+ // хвост: противовес (в беге выше, на ветке — поднят и качается), в прыжке/приземлении — взмах
+ const tt=tu+ps*.8;u.tail.forEach((q,i)=>{const k=i/HNT;
+  q.rotation.set(i<7?tt/7:-.02,-Math.sin(HTW*g)*.09*mvk*(.5+k*.9)+Math.sin(t*(1.3)-i*.45)*.035*(.4+k)*(1-mvk*.6)*p.ts,0)});
+}
+// демо для просмотрщика видов: кнопки анимаций
+let hdm='idle',hbar=null;
+const HDL=[['idle','Ожидание'],['walk','Ходьба'],['run','Бег'],['climb','Лазание'],['branch','Стойка на ветке'],['branchMove','Ход по ветке'],['aim','Прицел'],['jump','Прыжок'],['land','Приземление'],['attack','Атака']];
+function herrBar(on){if(!hbar){hbar=document.createElement('div');hbar.style.cssText='position:fixed;left:50%;transform:translateX(-50%);top:calc(env(safe-area-inset-top,0px) + 8px);z-index:60;display:flex;gap:6px;max-width:96vw;overflow-x:auto;padding:4px;background:rgba(0,0,0,.45);border:1px solid var(--bd);touch-action:pan-x';
+  HDL.forEach(a=>{const b=document.createElement('button');b.textContent=a[1];b.style.cssText='flex:none;padding:7px 10px;background:transparent;color:var(--tx);border:1px solid var(--bd);font:12px Bahnschrift,Oswald,Roboto,Arial,sans-serif;letter-spacing:.06em;white-space:nowrap';b.onclick=()=>{hdm=a[0];herrBar(true)};b.dataset.k=a[0];hbar.appendChild(b)});document.body.appendChild(hbar)}
+ hbar.style.display=on?'flex':'none';[...hbar.children].forEach(b=>{b.style.borderColor=b.dataset.k==hdm?'var(--ac)':'var(--bd)';b.style.color=b.dataset.k==hdm?'var(--ac)':'var(--tx)'})}
+function herrDemo(m,t){const u=m.userData;if(!u.herr)return 0;const d=MS==2?hdm:'idle';let ext=null,vo=0,op=false;u.j0=0;u.ay=0;u.ap=0;u.cv=1;
+ if(d=='idle'&&MS!=2)vo=Math.sin(t*.3)>-.2?100:0;else if(d=='walk')vo=100;else if(d=='run')vo=190;else if(d=='climb')ext='climb';else if(d=='branch')ext='branch';
+ else if(d=='branchMove'){ext='branchMove';vo=60}else if(d=='aim'){ext='aim';u.ay=Math.sin(t*.7)*.6;u.ap=Math.sin(t*.5)*.15}
+ else if(d=='jump'||d=='land'){if(d=='land')u.j0=.55;if(t%2.6<(d=='land'?.5:1.15))ext='jump'}else if(d=='attack')op=t%1.8<.1;
+ u.vo=vo;u.ext=ext;u.trunk.visible=d=='climb'&&MS==2;u.branch.visible=(d=='branch'||d=='branchMove')&&MS==2;herrAnim(m,t,0,vo>8,op);return 1}
+function anim3(g3,t,ph,mv,open){if(g3.userData.herr)return herrAnim(g3,t,ph,mv,open);const u=g3.userData,k=u.wk=(u.wk||0)+((mv?1:0)-(u.wk||0))*.12,br=Math.sin(t*1.7),lm=P&&P.brk>0&&EM.get(P)&&EM.get(P).g===g3?1:0;
  u.bd.position.y=u.y0+(Math.abs(Math.sin(ph))*.06*k+br*.02*(1-k))*u.leg;u.bd.rotation.z=Math.sin(ph)*.05*k+lm*Math.sin(ph)*.08;u.bd.scale.set(1+br*.01,1+br*.02,1);
  u.legs.forEach((l,i)=>{const s=Math.sin(ph+l.o)*k*(lm&&i==0?.3:1);if(l.bip){l.h.rotation.x=.5+s*.6;l.k.rotation.x=-1-Math.max(0,s)*.45;l.a.rotation.x=-(l.h.rotation.x+l.k.rotation.x)}else{l.h.rotation.x=s*.45;if(u.sp)l.h.rotation.z=l.s*(.75-.15*Math.max(0,s))}});
  const n=u.tail.length;u.tail.forEach((q,i)=>{q.rotation.y=Math.sin(t*(mv?5:1.4)-i*.4)*(mv?.08:.035)*(.5+i/n)-Math.sin(ph)*.04*k;q.rotation.x=Math.sin(t*1.1-i*.3)*.012});
@@ -1745,7 +1963,7 @@ function anim3(g3,t,ph,mv,open){const u=g3.userData,k=u.wk=(u.wk||0)+((mv?1:0)-(
  u.jo=(u.jo||0)+((open?.65:.03+Math.sin(t*1.7)*.015)-(u.jo||0))*.35;u.jw.rotation.x=u.jo}
 const EM=new Map();let FR=0;
 function ent(o,oy,col,ang,x,y,lift,ph,fl,op){let e=EM.get(o);if(!e||e.oy!=oy||e.col!=col){if(e)sc.remove(e.g);e={g:mk3(oy,col),oy,col,px:x,py:y,fl:0};EM.set(o,e);sc.add(e.g)}e.f=FR;const g3=e.g,mv=Math.hypot(x-e.px,y-e.py)>.05;e.px=x;e.py=y;
- g3.position.set(x/U,Math.max(hAt(x,y),-.45)+lift,y/U);g3.rotation.y=Math.PI/2-ang;g3.scale.setScalar(o.r*5.2/U/g3.userData.len);anim3(g3,TM,ph,mv,op);
+ g3.position.set(x/U,Math.max(hAt(x,y),-.45)+lift,y/U);g3.rotation.y=Math.PI/2-ang;g3.scale.setScalar(o.r*5.2/U/g3.userData.len);if(g3.userData.herr){const hu=g3.userData;hu.ext=o.hAct||null;hu.ay=o.hAy||0;hu.ap=o.hAp||0;hu.cv=o.hCv;hu.arc=o.hArc}anim3(g3,TM,ph,mv,op);
  const f=fl>0?1:0;if(f!=e.fl){e.fl=f;g3.userData.ms.forEach(([q,mm])=>q.material=f?WM:mm)}}
 // ---------- 3D-сцена меню ----------
 const msc=new THREE.Scene(),mcam=new THREE.PerspectiveCamera(34,1,.5,220);msc.background=new THREE.Color(0x0b130d);msc.fog=new THREE.Fog(0x0b130d,20,70);
@@ -1753,12 +1971,12 @@ const msc=new THREE.Scene(),mcam=new THREE.PerspectiveCamera(34,1,.5,220);msc.ba
  const gr=new THREE.Mesh(new THREE.CircleGeometry(70,48),new THREE.MeshStandardMaterial({color:0x1d2b1a,roughness:1}));gr.rotation.x=-Math.PI/2;msc.add(gr);
  for(let i=0;i<46;i++){const a=hs(i,1)*6.283,d=24+hs(i,2)*30,h=9+hs(i,3)*10,x=Math.cos(a)*d,z=-Math.abs(Math.sin(a))*d-6;
   const tk=new THREE.Mesh(CYL,mat(0x2a2218));tk.scale.set(.5,5,.5);tk.position.set(x,2.5,z);const cr=new THREE.Mesh(CON,mat(0x14301a));cr.scale.set(3.2,h,3.2);cr.position.set(x,h/2+3,z);msc.add(tk,cr)}}
-let mmod=null,mkey=-1,myaw=-.6,mdrag=0,mrt=0,mrand=0;const MPL=[0,1,3,4,5,6,7,9,10,11,13,14,15,16];
+let mmod=null,mkey=-1,myaw=-.6,mdrag=0,mrt=0,mrand=0;const MPL=[0,1,3,4,5,6,7,9,10,11,13,14,15,16,18];
 function menu3(){if(!msc)return;const t=TM,aw=W/H;mcam.aspect=aw;
  if(MS==1&&t-mrt>12){mrt=t;mrand=MPL[Math.random()*MPL.length|0]}const key=MS==2?sel:mrand;
  if(key!=mkey){if(mmod)msc.remove(mmod);mkey=key;mmod=mk3(key,S[key].c);msc.add(mmod);const u=mmod.userData;mmod.scale.setScalar(11/u.len*(.55+.45*RAD[key]/36))}
- const nar=W<760,ox=MS==1&&!nar?3.6:0;mmod.position.set(ox,0,0);mmod.visible=!(nsel&&MS==2);mmod.rotation.y=myaw+(mdrag?0:Math.sin(t*.3)*.12);
- anim3(mmod,t,t*3,Math.sin(t*.3)>-.2,Math.sin(t*.9)>.93);
+ herrBar(MS==2&&key==HID);const nar=W<760,ox=MS==1&&!nar?3.6:0;mmod.position.set(ox,0,0);mmod.visible=!(nsel&&MS==2);mmod.rotation.y=myaw+(mdrag?0:Math.sin(t*.3)*.12);
+ herrDemo(mmod,t)||anim3(mmod,t,t*3,Math.sin(t*.3)>-.2,Math.sin(t*.9)>.93);
  mcam.position.set(0,3,16);mcam.lookAt(0,2.2,0);if(nar)mcam.setViewOffset(W,H,0,H*.16,W,H);else mcam.clearViewOffset();mcam.updateProjectionMatrix();
  rd.render(msc,mcam)}
 // ---------- туши и гнёзда ----------
@@ -1858,11 +2076,11 @@ function render(){if(tmap!==map)buildTerr();const dt=Math.min(.1,Math.max(0,TM-l
  cars.forEach(c=>{if(!c.rcb&&near(c))carc3(c)});nests.forEach(n=>{if(near(n))nest3(n)});
  npcs.forEach(n=>{if(!n.held&&!near(n))return;const sub=n.ty==8&&n.dv&&!n.held;if(sub&&!sniffOn()&&P.s!=8)return;
   const px=n.x,py=n.y;ent(n,n.ty,n.c,dAng(n),px,py,n.held?P.r*.8/U:0,dPh(n,px,py),n.fl,n.ea>0)});
- rem.forEach(o=>{if(!o.al)return;ent(o,o.s,S[o.s].c,dAng(o),o.x,o.y,0,dPh(o,o.x,o.y),o.hf,o.bt>0);
+ rem.forEach(o=>{if(!o.al)return;ent(o,o.s,S[o.s].c,dAng(o),o.x,o.y,o.hz||0,dPh(o,o.x,o.y),o.hf,o.bt>0);
   if(o.cc){const d=o.r*2.1+o.cr*.8,c2=o._cc||(o._cc={});c2.x=o.x+Math.cos(o.a)*d;c2.y=o.y+Math.sin(o.a)*d;c2.r=o.cr;c2.t=100;carc3(c2)}});
- if(!P.dead)ent(P,P.s,S[P.s].c,P.a,P.x,P.y,P.dv?-1.2:0,dPh(P,P.x,P.y),P.hf,P.bt>0);
+ if(!P.dead)ent(P,P.s,S[P.s].c,P.a,P.x,P.y,P.dv?-1.2:(P.hz||0),dPh(P,P.x,P.y),P.hf,P.bt>0);
  EM.forEach((e,k)=>{if(e.f!=FR){sc.remove(e.g);EM.delete(k)}});CM.forEach((e,k)=>{if(e.f!=FR){sc.remove(e.g);e.g.material.dispose();CM.delete(k)}});NM.forEach((e,k)=>{if(e.f!=FR){sc.remove(e.g);NM.delete(k)}});
- const d=(6+P.r/U*3.5)*CZ3,gy=Math.max(hAt(P.x,P.y),-.45),tx=P.x/U,tz=P.y/U,ty=gy+P.r/U*1.1;
+ const d=(6+P.r/U*3.5)*CZ3,gy=Math.max(hAt(P.x,P.y),-.45)+(P.hz||0),tx=P.x/U,tz=P.y/U,ty=gy+P.r/U*1.1;
  const cx=tx-Math.sin(CY3)*Math.cos(CP3)*d,cz=tz-Math.cos(CY3)*Math.cos(CP3)*d;
  cam.position.set(cx,Math.max(ty+Math.sin(CP3)*d,hAt(cx*U,cz*U)+1.5),cz);cam.lookAt(tx,ty,tz);cam.updateMatrixWorld();sun.target.position.set(tx,gy,tz);sun.position.set(tx+LD.x*230,gy+LD.y*230,tz+LD.z*230);skyPost();TG.forEach(m=>m.receiveShadow=true);
  CX=P.x-W/2/Z;CY=P.y-H/2/(Z*K);rd.render(sc,cam)}
@@ -1952,4 +2170,63 @@ ov.innerHTML='<div class="det" style="width:100%;overflow:auto;max-height:100%">
 +'<div class="dt"><h4>Управление</h4><p>Назначь свои клавиши на каждое действие.</p><button class="mb" onclick="ctrl()">Настроить управление</button></div>'
 +'<button class="bk" onclick="menu()">Назад</button></div>'}
 const _pk3=pickSp;pickSp=function(){if(!NET&&!VIEWER){mpMenu();return}_pk3()};
+// ===== ГЕРРЕРАЗАВР: лазание по деревьям, прицел с ветки, прыжок на добычу (перенос логики Herrerasaurus.java) =====
+// Java → игра: inTree() = клетка леса/джунглей; climbing = hc; prey = hv (цель с прямой видимостью, пока сидишь на дереве);
+// jumpT/jv = hj (прыжок с фиксированной скоростью, урон по пути); landing = hl; getMaxHeadYRot 360° = hAy без ограничения.
+const HERR=18,HAA=[null,'climb','branch','branchMove','aim','jump','land','attack'],HAI=a=>Math.max(0,HAA.indexOf(a||null)),wrapA=a=>((a+Math.PI*3)%(Math.PI*2))-Math.PI;
+function trunkAt(x,y){const tx=x/T|0,ty=y/T|0;if(tx<0||ty<0||tx>=N||ty>=N)return null;const t=map[ty*N+tx];if(t!=5&&t!=7)return null;
+ return{x:(tx+.5+(hs(ty,tx)-.5)*.6)*T,y:(ty+.5+(hs(tx+3,ty)-.5)*.6)*T,s:(.8+hs(tx,ty)*.5)*(t==7?1.35:1),j:t==7}}
+function herrTree(p){let b=null,bd=1e9;const tx=p.x/T|0,ty=p.y/T|0;
+ for(let j=-1;j<=1;j++)for(let i=-1;i<=1;i++){const q=trunkAt((tx+i+.5)*T,(ty+j+.5)*T);if(!q)continue;const d=Math.hypot(q.x-p.x,q.y-p.y);if(d<bd){bd=d;b=q}}
+ return b&&bd<p.r*1.7+14?b:null}
+function los(ax,ay,bx,by){const n=Math.ceil(Math.hypot(bx-ax,by-ay)/24);for(let i=1;i<n;i++){const t=i/n;if(solid(ax+(bx-ax)*t,ay+(by-ay)*t))return false}return true}
+function herrPrey(p){let b=null,bd=720;npcs.forEach(n=>{if(n.al||n.held||n.hp<=0||(n.ty==8&&n.dv))return;const d=Math.hypot(n.x-p.x,n.y-p.y);if(d<bd&&los(p.x,p.y,n.x,n.y)){b=n;bd=d}});return b}
+function herrHit(n,d){const p=P,f=Math.max(.35,1-d/(p.r*3+n.r)*.65);
+ n.hp-=(n.sc||1)*rf(n)*18*S[HERR].dmg*(.5+p.gr/100)*m('dmg')*bonus(n)*2.2*f;n.fl=.12;n.stun=Math.max(n.stun||0,.9);
+ if(n.k=='h'){n.fear=3;n.pv=6}else n.ch=1;if(n.hp<=0)pkill(n)}
+const dvKey=()=>coarse()?'СПУСК':bk1('dive');
+function herrDive(){const p=P;if(!p||p.dead||paused||p.s!=HERR||p.hj||p.hl>0)return;
+ if(p.hc){p.hgo=p.hgo==-1?1:-1;return}
+ if(p.carry||p.cc||p.lt)return;
+ const q=herrTree(p);if(!q){msg('🌲 Рядом нет дерева, на которое можно залезть');return}
+ p.hc=1;p.hgo=1;p.ht=q;p.hb=q.s*4.4*(q.j?1.15:1);p.hz=p.hz||0;p.rest=0;p.cc=null;p.dh=0}
+function herrJump(){const p=P;if(!p||p.s!=HERR||p.hj||p.hl>0)return false;
+ if(!(p.hc&&!p.hgo)){if(p.hc){msg('Сначала доберись до ветки');return false}p.dh=.25;return}
+ const t=p.hv&&p.hv.hp>0&&!p.hv.held?p.hv:null,tx=t?t.x:p.x+Math.cos(p.a)*300,ty=t?t.y:p.y+Math.sin(p.a)*300,dx=tx-p.x,dy=ty-p.y,d=Math.hypot(dx,dy)||1,k=Math.min(560,d/.72)/d;
+ p.hj={t:0,x0:p.x,y0:p.y,z0:p.hz,vx:dx*k,vy:dy*k,H:1.3+p.hz*.18,hit:new Set()};p.a=Math.atan2(dy,dx);p.hc=0;p.hgo=0;p.hAct='jump'}
+function herrAoe(rm){const p=P,j=p.hj;npcs.forEach(n=>{if(n.al||n.held||n.hp<=0||(j&&j.hit.has(n)))return;const d=Math.hypot(n.x-p.x,n.y-p.y);if(d<rm+n.r){if(j)j.hit.add(n);herrHit(n,d)}})}
+function jumpStep(dt){const p=P,j=p.hj,C=.22,Tf=.72;j.t+=dt;p.hAct='jump';
+ if(j.t<C){p.x=j.x0;p.y=j.y0;p.hz=j.z0;return}
+ const u=Math.min(1,(j.t-C)/Tf);mv(p,j.vx*dt,j.vy*dt);p.hz=j.z0*(1-u)+j.H*4*u*(1-u);
+ if(p.hz<j.z0*.75+1.2)herrAoe(p.r*1.5+8);
+ if(u>=1){herrAoe(p.r*2.6);p.hj=null;p.hz=0;p.hl=.45;p.hAct='land';snd('bite')}}
+function herrPost(dt,ox,oy){const p=P;p.hAct=null;p.hAy=0;p.hAp=0;p.hCv=0;p.hArc=0;
+ if(p.hc||p.hj)p.cd=Math.max(p.cd,.12);  // в кроне и в прыжке обычный укус отключён
+ if(p.hj){jumpStep(dt);return}
+ if(p.hl>0){p.hl-=dt;p.x=ox;p.y=oy;p.hz=0;p.hAct='land';return}
+ if(!p.hc){if(p.hz>0){p.hz=Math.max(0,p.hz-9*dt);if(p.hz<=0)p.hl=.4}  // сорвался с кроны
+  else if(!hint&&!p.rest&&!p.carry&&herrTree(p))hint='Залезть на дерево: '+(coarse()?'ЛАЗАТЬ':bk1('dive'));return}
+ const q=p.ht;p.rest=0;p.dv=0;
+ if(p.hgo){p.x=ox;p.y=oy;const a=Math.atan2(q.y-p.y,q.x-p.x),dd=Math.hypot(q.x-p.x,q.y-p.y),want=p.r*.55;
+  if(dd>want+1){const k=Math.min(1,dt*6);p.x+=Math.cos(a)*(dd-want)*k;p.y+=Math.sin(a)*(dd-want)*k}
+  p.a=a;p.hz+=p.hgo*2.8*dt;p.hCv=1;p.hAct='climb';hint=p.hgo>0?'Лезешь вверх · '+dvKey()+' — вниз':'Спускаешься · '+dvKey()+' — снова вверх';
+  if(p.hz>=p.hb){p.hz=p.hb;p.hgo=0}else if(p.hz<=0){p.hz=0;p.hc=0;p.hgo=0}return}
+ if(!isF(tile(p.x,p.y))){p.hc=0;msg('🍃 Ты покинул крону и падаешь');return}
+ p.hvT=(p.hvT||0)-dt;if(p.hvT<=0){p.hvT=.2;p.hv=herrPrey(p)}
+ const pv=p.hv&&p.hv.hp>0&&!p.hv.held?p.hv:null,mvd=Math.hypot(p.x-ox,p.y-oy)/dt>12;
+ if(pv){const d=Math.hypot(pv.x-p.x,pv.y-p.y);p.hAy=wrapA(Math.atan2(pv.y-p.y,pv.x-p.x)-p.a);p.hAp=Math.min(.9,Math.atan2(p.hz,Math.max(6,d/8)));p.hAct='aim'}
+ else p.hAct=mvd?'branchMove':'branch';
+ hint=(pv?'Цель в прицеле · ':'На ветке · ')+AK()+' — прыжок'+(pv?' на добычу':'')+' · '+dvKey()+' — спуск'}
+AB[HERR]=['Прыжок',5,herrJump,'с ветки (лазание — клавиша «Нырок»): прыжок на добычу с уроном при падении; на земле — короткий рывок'];
+// ===== Часть 3: биомы — подсказки при входе, скрытность, болото =====
+const BIOM={5:'🌲 Густой лес: тебя хуже видно',7:'🌴 Джунгли: душно и густо, тебя трудно заметить',8:'🌾 Саванна: открытое место, редкие акации',9:'🌿 Болото: вязко (скорость ниже), пить можно',10:'🏜 Каньон: красные скалы и узкие проходы',12:'🕳 Пещера: укрытие, тебя почти не видно',13:'🌼 Луг или речная долина'};
+let bioT=-1,bioC=0;
+function hideF(){if(!P)return 1;const t=tile(P.x,P.y);let f=t==12?.35:t==7?.7:t==5?.85:t==9?.9:1;if(P.hz>1.5)f*=.75;return f}
+function bioTick(dt){const t=tile(P.x,P.y);bioC-=dt;if(t!=bioT){bioT=t;if(BIOM[t]&&bioC<=0){msg(BIOM[t]);bioC=6}}}
+const _sxB=spx;spx=function(){let v=_sxB();if(!P)return v;const t=tile(P.x,P.y);if(t==9)v*=.7;else if(t==7)v*=.9;
+ if(P.s==HERR){if(P.hj||P.hl>0)return 0;if(P.hc)return P.hgo?0:v*.4}return v};
+const _upH=upd;upd=function(dt){const p=P,ox=p?p.x:0,oy=p?p.y:0;_upH(dt);if(!P||P.dead)return;
+ if(P.s==HERR)herrPost(dt,ox,oy);else if(P.hz||P.hAct){P.hz=0;P.hAct=null;P.hc=0;P.hj=null}
+ bioTick(dt)};
+
 </script></body></html>
